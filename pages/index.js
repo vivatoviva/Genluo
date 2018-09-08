@@ -1,28 +1,52 @@
-import { withRouter } from 'next/router'
-import Link from 'next/link'
-
-
-// 路由这边有两种
-// link 和 withRouter单页
-const ActiveLink = ({ children, router, href }) => {
-  const style = {
-    marginRight: 10,
-    color: router.pathname === false? 'red' : 'black'
+import Head from "../components/Head";
+import React from 'react'
+import Button from '../components/Button'
+class IndexPage extends React.Component {
+  constructor(props) {
+    super(props);
   }
 
-  const handleClick = (e) => {
-    e.preventDefault()
-    router.push('/about/me')
+  render() {
+    return (
+      <div>
+        <Head title="主页" />
+        <div>
+          <h1>Genluo</h1>
+          <ul>
+            <li><Button buttonTitle="主页"/></li>
+            <li><Button buttonTitle="博客"/></li>
+            <li><Button buttonTitle="简历"/></li>
+            <li><Button buttonTitle="关于"/></li>
+            <li><Button buttonTitle="github"/></li>
+          </ul>
+          <style jsx>{`
+            h1 {
+              margin-top: 190px;
+              font-size: 150px;
+              color: #fff;
+              text-align: center;
+            }
+            ul {
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%)
+            }
+            li {
+              display: inline-block;
+              margin: 20px;
+            }
+            `}</style>
+          <style global jsx>{`
+            body {
+              background-color: red;
+              font-family: pingfang;
+            }
+         
+          `}</style>
+        </div>
+      </div>
+    )
   }
-
-  return (
-    <div>
-        <Link as='test' href="/about/me">test</Link>
-        <a href={href} onClick={handleClick} style={style}>
-            onClick
-        </a>
-    </div> 
-  )
 }
 
-export default withRouter(ActiveLink)
+export default IndexPage;
