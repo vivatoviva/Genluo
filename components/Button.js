@@ -11,10 +11,10 @@ export default class Button extends React.Component {
         <style jsx>{`
           .button{
             width: 80px;
-            border: 2px solid #fff;
+            border: 2px solid #999;
             border-radius: 30px;
             text-align: center;
-            color: #fff;
+            color: #999;
             font-weight: 500;
             padding: 10px;
             font-size: 20px;

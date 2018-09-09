@@ -1,6 +1,7 @@
 import Head from "../components/Head";
 import React from 'react'
 import Button from '../components/Button'
+import Link from 'next/link'
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
@@ -13,18 +14,22 @@ class IndexPage extends React.Component {
         <div>
           <h1>Genluo</h1>
           <ul>
-            <li><Button buttonTitle="主页"/></li>
+            <li><Link href='/blog'><a><Button buttonTitle="主页"/></a></Link></li>
             <li><Button buttonTitle="博客"/></li>
             <li><Button buttonTitle="简历"/></li>
             <li><Button buttonTitle="关于"/></li>
             <li><Button buttonTitle="github"/></li>
           </ul>
           <style jsx>{`
-            h1 {
+          h1 {
               margin-top: 190px;
               font-size: 150px;
-              color: #fff;
+              color: #000;
               text-align: center;
+              letter-spacing: 9px;
+            }
+            a {
+              text-decoration: none;
             }
             ul {
               position: absolute;
@@ -38,10 +43,8 @@ class IndexPage extends React.Component {
             `}</style>
           <style global jsx>{`
             body {
-              background-color: red;
-              font-family: pingfang;
+              font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
             }
-         
           `}</style>
         </div>
       </div>
