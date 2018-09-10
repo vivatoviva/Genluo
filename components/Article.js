@@ -30,10 +30,10 @@ export default () =>
       li {
         padding: 0 10px 0 10px;
         line-height: 1;
+        color: rgb(153, 153, 153)
       }
       li + li {
         border-left: 1.5px solid rgb(153, 153, 153);
-        
       }
       h1 span:hover {
         border-bottom: 2px solid #000;

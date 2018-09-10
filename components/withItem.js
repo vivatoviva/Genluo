@@ -8,7 +8,7 @@ export default (Item) =>
           <Item />
           <style jsx>{`
             .wraper {
-              width: 300px;
+              width: 230px;
             }
           `}</style>
         </div>

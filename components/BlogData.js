@@ -10,14 +10,12 @@ const BlogData =  () =>
     </ul>
     <style jsx>{`
       .warper {
-        width: 300px;
         padding: 30px 0 30px;
         background-color: #fff;
-        margin-top: 30px;
       }
       .avtor {
-        width: 130px;
-        height: 130px;
+        width: 43.3%;
+        padding-top: 44%;
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center;
@@ -43,17 +41,15 @@ const BlogData =  () =>
       li span {
         display: block;
         text-align: center;
-        font-size: 15px;
       }
       li span:nth-child(1) {
         font-weight: 600;
-        font-size: 17px;
+        font-size: 15px;
       }
       li span:nth-child(2) {
         color: #999;
         font-size: 15px;
         margin-top: 3px;
-
       }
       li + li {
         border-left: 1px solid rgb(238, 238, 238);
@@ -61,4 +57,4 @@ const BlogData =  () =>
     `}</style>
   </div>
 
-  export default withItem(BlogData);
+export default withItem(BlogData);
