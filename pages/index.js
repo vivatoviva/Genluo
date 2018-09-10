@@ -14,8 +14,8 @@ class IndexPage extends React.Component {
         <div>
           <h1>Genluo</h1>
           <ul>
-            <li><Link href='/blog'><a><Button buttonTitle="主页"/></a></Link></li>
-            <li><Button buttonTitle="博客"/></li>
+            <li><Link href='#'><a><Button buttonTitle="主页"/></a></Link></li>
+            <li><Link href='/blog'><a><Button buttonTitle="博客"/></a></Link></li>
             <li><Button buttonTitle="简历"/></li>
             <li><Button buttonTitle="关于"/></li>
             <li><Button buttonTitle="github"/></li>

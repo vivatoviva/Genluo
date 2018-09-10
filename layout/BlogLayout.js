@@ -43,13 +43,14 @@ class BlogPage extends React.Component {
   }
   render() {
     const { isFixed, isDisplayToTop } = this.state;
-    const { children } = this.props;
+    const { children, navIndex } = this.props;
+    console.log(navIndex)
     return (
       <div className="wraper">
         <Head title='博客主页' />
         <div className="left">
           <div className="nav" ref={this.nav}>
-            <BlogNav></BlogNav>
+            <BlogNav navIndex={navIndex} />
           </div>
           <div className={!isFixed ? 'data' : 'data dataNow'}>
             <BlogData></BlogData>
@@ -84,6 +85,7 @@ class BlogPage extends React.Component {
             background-color: #fff;
             box-sizing: border-box;
             padding: 30px;
+            min-height: 110vh;
           }
         `}</style>
         <style global jsx>{`

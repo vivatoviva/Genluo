@@ -18,7 +18,7 @@ const items = [{
 
 class BlogNav extends React.Component {
   state = {
-    currentIndex: 0,
+    currentIndex: this.props.navIndex,
   }
 
   handleClick = (currentIndex) => {
@@ -29,6 +29,7 @@ class BlogNav extends React.Component {
 
   render() {
     const { currentIndex } = this.state;
+    
     return (
       <div>
       <h1>Genluo</h1>

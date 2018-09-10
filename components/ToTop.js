@@ -15,31 +15,31 @@ class ToTop extends React.Component {
       console.log(scrollDistance)
       document.documentElement.scrollTop = document.body.scrollTo = nowDistance;
       if(scrollDistance + scrollDistance === 0) clearInterval(timer)
-      
     }, 30)
-    alert(osTop);
   }
 
   render() {
     const { isDisplay=false } = this.props;
 
     return (
-      <div className="wraper" onClick={this.handleToTop}>
+      <div className={isDisplay ? 'wraper display' : 'wraper'} onClick={this.handleToTop}>
         <div className="toTop">^</div>
         <style jsx>{`
           div.wraper {
             cursor: pointer;
+            transition: 300ms all ease;
+            position: fixed;
+            right: 30px;
+            bottom: -30px;
+          }
+          div.display {
+            bottom: 30px;
           }
           div.toTop {
             width: 24px;
             height: 24px;
-            position: fixed;
-            bottom: 0;
-            right: 30px;
-            bottom: 30px;
             background-color: #222;
             color: #fff;
-            display: ${isDisplay ? '': 'none'}
           }
         `}</style>
       </div>

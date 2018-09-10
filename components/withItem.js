@@ -1,11 +1,12 @@
 import React from 'react';
 
 export default (Item) =>
-  class extends React.Component { 
+  class extends React.Component {
+
     render() {
       return (
         <div className='wraper'>
-          <Item />
+          <Item {...this.props} />
           <style jsx>{`
             .wraper {
               width: 230px;

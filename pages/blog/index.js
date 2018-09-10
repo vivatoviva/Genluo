@@ -6,7 +6,7 @@ import React from 'react';
 class IndexPage extends React.Component {
   render() {
     return (
-      <Layout>
+      <Layout navIndex={0}>
         <Article />
         <Article />
         <Article />
