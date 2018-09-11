@@ -3,6 +3,7 @@ import React from 'react'
 import Button from '../components/Button'
 import Link from 'next/link'
 class IndexPage extends React.Component {
+
   constructor(props) {
     super(props);
   }
@@ -21,7 +22,7 @@ class IndexPage extends React.Component {
             <li><Button buttonTitle="github"/></li>
           </ul>
           <style jsx>{`
-          h1 {
+            h1 {
               margin-top: 190px;
               font-size: 150px;
               color: #000;

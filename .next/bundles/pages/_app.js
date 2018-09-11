@@ -3,50 +3,23 @@ __NEXT_REGISTER_PAGE('/_app', function() {
           var comp =
       webpackJsonp([2],{
 
-/***/ "./node_modules/_@babel_runtime@7.0.0-beta.42@@babel/runtime/helpers/extends.js":
+/***/ "./node_modules/next/app.js":
 /***/ (function(module, exports, __webpack_require__) {
 
-var _Object$assign = __webpack_require__("./node_modules/_@babel_runtime@7.0.0-beta.42@@babel/runtime/core-js/object/assign.js");
-
-function _extends() {
-  module.exports = _extends = _Object$assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-module.exports = _extends;
-
-/***/ }),
-
-/***/ "./node_modules/_next@6.1.2@next/app.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("./node_modules/_next@6.1.2@next/dist/lib/app.js")
+module.exports = __webpack_require__("./node_modules/next/dist/lib/app.js")
 
 
 /***/ }),
 
-/***/ "./node_modules/_next@6.1.2@next/dist/lib/app.js":
+/***/ "./node_modules/next/dist/lib/app.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__("./node_modules/_@babel_runtime@7.0.0-beta.42@@babel/runtime/helpers/interopRequireWildcard.js");
+var _interopRequireWildcard = __webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
 
-var _interopRequireDefault = __webpack_require__("./node_modules/_@babel_runtime@7.0.0-beta.42@@babel/runtime/helpers/interopRequireDefault.js");
+var _interopRequireDefault = __webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -54,33 +27,33 @@ Object.defineProperty(exports, "__esModule", {
 exports.createUrl = createUrl;
 exports.Container = exports.default = void 0;
 
-var _regenerator = _interopRequireDefault(__webpack_require__("./node_modules/_@babel_runtime@7.0.0-beta.42@@babel/runtime/regenerator/index.js"));
+var _regenerator = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/regenerator/index.js"));
 
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__("./node_modules/_@babel_runtime@7.0.0-beta.42@@babel/runtime/helpers/asyncToGenerator.js"));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/asyncToGenerator.js"));
 
-var _extends2 = _interopRequireDefault(__webpack_require__("./node_modules/_@babel_runtime@7.0.0-beta.42@@babel/runtime/helpers/extends.js"));
+var _extends2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/extends.js"));
 
-var _objectSpread2 = _interopRequireDefault(__webpack_require__("./node_modules/_@babel_runtime@7.0.0-beta.42@@babel/runtime/helpers/objectSpread.js"));
+var _objectSpread2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/objectSpread.js"));
 
-var _getPrototypeOf = _interopRequireDefault(__webpack_require__("./node_modules/_@babel_runtime@7.0.0-beta.42@@babel/runtime/core-js/object/get-prototype-of.js"));
+var _getPrototypeOf = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/core-js/object/get-prototype-of.js"));
 
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__("./node_modules/_@babel_runtime@7.0.0-beta.42@@babel/runtime/helpers/classCallCheck.js"));
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/classCallCheck.js"));
 
-var _createClass2 = _interopRequireDefault(__webpack_require__("./node_modules/_@babel_runtime@7.0.0-beta.42@@babel/runtime/helpers/createClass.js"));
+var _createClass2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/createClass.js"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__("./node_modules/_@babel_runtime@7.0.0-beta.42@@babel/runtime/helpers/possibleConstructorReturn.js"));
+var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
 
-var _inherits2 = _interopRequireDefault(__webpack_require__("./node_modules/_@babel_runtime@7.0.0-beta.42@@babel/runtime/helpers/inherits.js"));
+var _inherits2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/inherits.js"));
 
-var _react = _interopRequireWildcard(__webpack_require__("./node_modules/_react@16.5.0@react/index.js"));
+var _react = _interopRequireWildcard(__webpack_require__("./node_modules/react/index.js"));
 
-var _propTypes = _interopRequireDefault(__webpack_require__("./node_modules/_prop-types@15.6.0@prop-types/index.js"));
+var _propTypes = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/prop-types/index.js"));
 
-var _shallowEquals = _interopRequireDefault(__webpack_require__("./node_modules/_next@6.1.2@next/dist/lib/shallow-equals.js"));
+var _shallowEquals = _interopRequireDefault(__webpack_require__("./node_modules/next/dist/lib/shallow-equals.js"));
 
-var _utils = __webpack_require__("./node_modules/_next@6.1.2@next/dist/lib/utils.js");
+var _utils = __webpack_require__("./node_modules/next/dist/lib/utils.js");
 
-var _router = __webpack_require__("./node_modules/_next@6.1.2@next/dist/lib/router/index.js");
+var _router = __webpack_require__("./node_modules/next/dist/lib/router/index.js");
 
 var App =
 /*#__PURE__*/
@@ -290,18 +263,45 @@ function createUrl(router) {
 
 /***/ }),
 
-/***/ "./node_modules/_next@6.1.2@next/dist/pages/_app.js":
+/***/ "./node_modules/next/dist/pages/_app.js":
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./node_modules/_next@6.1.2@next/app.js")
+module.exports = __webpack_require__("./node_modules/next/app.js")
 
+
+/***/ }),
+
+/***/ "./node_modules/next/node_modules/@babel/runtime/helpers/extends.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+var _Object$assign = __webpack_require__("./node_modules/next/node_modules/@babel/runtime/core-js/object/assign.js");
+
+function _extends() {
+  module.exports = _extends = _Object$assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+module.exports = _extends;
 
 /***/ }),
 
 /***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./node_modules/_next@6.1.2@next/dist/pages/_app.js");
+module.exports = __webpack_require__("./node_modules/next/dist/pages/_app.js");
 
 
 /***/ })

@@ -30,7 +30,6 @@ class Item extends Component {
           }
           div.notitle:hover i {
             background-color: #000;
-
           }
           .dot {
             display: inline-block;

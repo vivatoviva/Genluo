@@ -72,18 +72,26 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ 1:
+/***/ "./node_modules/next/dist/pages/_error.js":
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("D:\\github\\personalSite\\node_modules\\_next@6.1.2@next\\dist\\pages\\_error.js");
+module.exports = __webpack_require__("next/error")
 
 
 /***/ }),
 
-/***/ "D:\\github\\personalSite\\node_modules\\_next@6.1.2@next\\dist\\pages\\_error.js":
+/***/ 1:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("./node_modules/next/dist/pages/_error.js");
+
+
+/***/ }),
+
+/***/ "next/error":
 /***/ (function(module, exports) {
 
-module.exports = require("D:\\github\\personalSite\\node_modules\\_next@6.1.2@next\\dist\\pages\\_error.js");
+module.exports = require("next/error");
 
 /***/ })
 
