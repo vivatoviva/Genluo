@@ -1,4 +1,4 @@
-export default () =>
+export default ({isDividing=true}) =>
   <div className="wraper">
     <h1><span>前端之巅</span></h1>
     <div className="data">
@@ -14,8 +14,7 @@ export default () =>
     <style jsx>{`
       .wraper {
         padding: 50px 0 50px;
-        border-bottom: 1px dotted #999;
-
+        ${isDividing? 'border-bottom: 1px dotted #999;': ''}
       }
       h1 {
         text-align: center;
