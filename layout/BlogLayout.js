@@ -3,6 +3,7 @@ import Head from '../components/Head'
 import BlogNav from '../components/BlogNav'
 import BlogData from '../components/BlogData'
 import ToTop from '../components/ToTop'
+import Footer from '../components/Footer'
 
 class BlogPage extends React.Component {
   state = {
@@ -19,7 +20,7 @@ class BlogPage extends React.Component {
     const windowHeight = document.body.clientHeight + 100;
     window.addEventListener('scroll', e => {
       const nowHeight = window.pageYOffset;
-
+      
       if(nowHeight >= height) {
         this.setState({
           isFixed: true,
@@ -44,21 +45,28 @@ class BlogPage extends React.Component {
   render() {
     const { isFixed, isDisplayToTop } = this.state;
     const { children, navIndex } = this.props;
-    console.log(navIndex)
     return (
       <div className="wraper">
         <Head title='博客主页' />
-        <div className="left">
-          <div className="nav" ref={this.nav}>
-            <BlogNav navIndex={navIndex} />
+        <div className="can">
+          <div className="left">
+            <div className="nav" ref={this.nav}>
+              <BlogNav navIndex={navIndex} />
+            </div>
+            <div className={!isFixed ? 'data' : 'data dataNow'}>
+              <BlogData></BlogData>
+            </div>
           </div>
-          <div className={!isFixed ? 'data' : 'data dataNow'}>
-            <BlogData></BlogData>
+          <div className="right">
+            <div className="content">
+              {children}
+            </div>
+            <footer>
+              <Footer></Footer>
+            </footer>
           </div>
         </div>
-        <div className="content right">
-          {children}
-        </div>
+  
         <div className="toTap">
           <ToTop isDisplay={isDisplayToTop} />
         </div>
@@ -86,6 +94,10 @@ class BlogPage extends React.Component {
             box-sizing: border-box;
             padding: 30px;
             min-height: 110vh;
+          }
+          footer{
+            padding: 50px 0;
+
           }
         `}</style>
         <style global jsx>{`

@@ -29,7 +29,7 @@ class BlogNav extends React.Component {
 
   render() {
     const { currentIndex } = this.state;
-    
+
     return (
       <div>
       <h1>Genluo</h1>
@@ -40,7 +40,9 @@ class BlogNav extends React.Component {
               <li
                 className={index === currentIndex && 'navNow'}
                 onClick={this.handleClick.bind(this, index)}
-              >{item.name}</li>
+              >
+                <span>{item.name}</span>
+              </li>
             </Link>
           )
         }
@@ -69,6 +71,10 @@ class BlogNav extends React.Component {
           line-height: 2.5;
           cursor: pointer;
           position: relative;
+        }
+        li span {
+          margin-left: 10px;
+
         }
         li.navNow::before{
           content: '';
