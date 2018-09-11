@@ -13,7 +13,7 @@ const items = [{
   link: '/blog/category'
 }, {
   name: '归档',
-  link: '/blog/search'
+  link: '/blog/archives'
 }, {
   name: '搜索',
   link: '/blog/search'
