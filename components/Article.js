@@ -1,3 +1,5 @@
+import WithLink from './WithLink';
+
 export default ({isDividing=true}) =>
   <div className="wraper">
     <h1><span>前端之巅</span></h1>
@@ -10,7 +12,7 @@ export default ({isDividing=true}) =>
       </ul>
     </div>
     <p>这段时间在学习缓存优化，在进行LS缓存优化的时候，动态插入script标签的时候，代码执行顺序前后会出错，但是代码插入到html中的顺序是正确的，思考了很久，最后发现这是 script的async的影响，但是通过这个过程发现自己对于页面渲染和代码执行顺序还是很模糊啊，一直想研究webkit，这次就做一个先驱吧，先行了解一波web页面是如何渲染出来</p>
-    <button>阅读全文 »</button>
+    <button><WithLink href="/blog/article" as="/blog/1">阅读全文 »</WithLink></button>
     <style jsx>{`
       .wraper {
         padding: 50px 0 50px;

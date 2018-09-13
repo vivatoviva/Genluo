@@ -15,7 +15,9 @@ class BlogPage extends React.Component {
     super(props);
     this.nav = React.createRef();
   }
+
   componentDidMount() {
+    
     const height = this.nav.current.clientHeight + 10;
     const windowHeight = document.body.clientHeight + 100;
     window.addEventListener('scroll', e => {
@@ -42,6 +44,7 @@ class BlogPage extends React.Component {
       }
     })
   }
+
   render() {
     const { isFixed, isDisplayToTop } = this.state;
     const { children, navIndex } = this.props;
@@ -66,7 +69,6 @@ class BlogPage extends React.Component {
             </footer>
           </div>
         </div>
-  
         <div className="toTap">
           <ToTop isDisplay={isDisplayToTop} />
         </div>

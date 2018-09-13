@@ -3,15 +3,16 @@ const Koa = require('koa')
 const router = require('koa-route')
 
 
-const port = parseInt(process.env.PORT, 10) || 8868
+const port = parseInt(process.env.PORT, 10) || 8080
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
 function renderAndCache(ctx, pagePath, queryParams=null) {
-  console.log('=================')
+
   return app.renderToHTML(ctx.req, ctx.res, pagePath, queryParams)
     .then((html) => {
+      // Let's cache this page
       ctx.body = html
     })
     .catch((err) => {
@@ -25,9 +26,10 @@ app.prepare()
 
     server.use(router.get('/', ctx => renderAndCache(ctx, '/index')))
     server.use(router.get('/blog/tag/:id', ctx => renderAndCache(ctx, '/blog/tag/detail')))
-
+    server.use(router.get('/blog/:id', ctx => renderAndCache(ctx, '/blog/article')))
 
     server.use(async (ctx) => {
+      console.log('=====')
       await handle(ctx.req, ctx.res)
       ctx.respond = false
     })

@@ -7,6 +7,7 @@ class IndexPage extends React.Component {
   constructor(props) {
     super(props);
   }
+  
 
   render() {
     return (
@@ -17,7 +18,7 @@ class IndexPage extends React.Component {
           <ul>
             <li><Link href='#'><a><Button buttonTitle="主页"/></a></Link></li>
             <li><Link href='/blog'><a><Button buttonTitle="博客"/></a></Link></li>
-            <li><Button buttonTitle="简历"/></li>
+            <li><Link to="http://resume.congm.in/"><Button buttonTitle="简历"/></Link></li>
             <li><Button buttonTitle="关于"/></li>
             <li><Button buttonTitle="github"/></li>
           </ul>
