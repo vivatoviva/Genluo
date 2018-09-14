@@ -6,9 +6,8 @@ const regex = /^( {0,3}#+ )|^( {0,}[\*|\-] )|^( ?\-{3,})|^( {0,3}```)/g
 
 // 判断是块级标签
 const isBlock = str => {
-
+  const regex = /^( {0,3}#+ )|^( {0,}[\*|\-] )|^( ?\-{3,})|^( {0,3}```)/g
   return regex.test(str);
-  
 }
 
 class Converter {
@@ -28,7 +27,6 @@ class Converter {
 
   toBlock(md) {
     let mdarr = md.split('\n').filter(item => item.trim().length !== 0)
-    
     let blockMD = [];
     let identification = false;
     // 分割形成块级元素
@@ -43,9 +41,7 @@ class Converter {
       if(/^( {0,3}`{3})/g.test(mdarr[i])) {
         identification = !identification;
       }
-
       if(i>0 && !isBlock(mdarr[i])) {
-
         if(!isBlock(mdarr[i-1])) {
           blockMD[blockMD.length - 1] += ' ' + mdarr[i];
           continue;
@@ -53,7 +49,7 @@ class Converter {
       }
       blockMD.push(mdarr[i])
     }
-
+    
     return blockMD
   }
 
@@ -65,12 +61,12 @@ class Converter {
 
       // #
       if(/#/g.test(blockIdentifident)) {
-        blockHtmlArr.push(`<h${blockIdentifident.length}>${item.replace(/^( {0,3}#+ )/g,'')}</h${blockIdentifident.length}>`)
+        blockHtmlArr.push(`<h${blockIdentifident.length} class='ace ace-h'>${item.replace(/^( {0,3}#+ )/g,'')}</h${blockIdentifident.length}>`)
         continue
       }
       // * | -
       if(/\*|\-/g.test(blockIdentifident)) {
-        blockHtmlArr.push(`<li>${item.replace(/^( {0,}[\*|\-] )/g,'')}</li>`)
+        blockHtmlArr.push(`<li class='ace ace-li'>${item.replace(/^( {0,}[\*|\-] )/g,'')}</li>`)
         continue
       }
       // ---
@@ -80,33 +76,66 @@ class Converter {
       }
       // ```
       if(/```/g.test(blockIdentifident)) {
-        blockHtmlArr.push(`<pre>${item.replace(/(```)/g, '')}</pre>`)
+        blockHtmlArr.push(`<pre class="ace ace-code">${item.replace(/(```)/g, '')}</pre>`)
         continue
       }
       // 行内标签
-      blockHtmlArr.push(`<p>${item}</p>`)
+      blockHtmlArr.push(`<p class='ace ace-p'>${item}</p>`)
     }
 
     return blockHtmlArr;
   }
 
   // 处理行行内标签
-  inLineHtml(md) {
-    const html = [];
+  inLineHtml = (md) => {
+    const html = [this.getHtmlStyle()];
     for(let item of md) {
       let str = item;
-      if(str.includes('<pre>')) {
+      if(str.includes('<pre class="ace ace-code">')) {
         html.push(str)
         continue
       }
       // *xianzia*
       str = str.replace(/[^\*]\*([^\*]+)\*/g, '<i>$1</i>')
+      console.log(str, item)
       // **xianzai*
-      str = str.replace(/\*{2}[^\*](\S*)\*{2}/g, '<strong>$1</strong>')
+      str = str.replace(/\*{2}([^\*]\S*)\*{2}/g, '<strong>$1</strong>')
 
       html.push(str)
     }
     return html;
+  }
+
+  getHtmlStyle() {
+    return `
+      <style>
+      .ace {
+
+      }
+      .ace-p, .ace-i, .ace-code, .ace-li {
+        text-align: justify;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        line-height: 2;
+        color: #555;
+      }
+      .ace-li {
+        list-style: inside;
+        line-height: 1;
+      }
+      .ace-code {
+        background-color: rgba(247, 247,247);
+        padding: 5px 20px;
+        font-size: 14px;
+        display: block;
+        box-sizing: border-box;
+      }
+      </style>
+    `
   }
 }
 const converter = new Converter();

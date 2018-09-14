@@ -1,1 +1,1 @@
-{"/blog/article":"bundles\\pages\\blog\\article.js","/blog/tag":"bundles\\pages\\blog\\tag.js","/blog/category":"bundles\\pages\\blog\\category.js","/blog/archives":"bundles\\pages\\blog\\archives.js","/blog":"bundles\\pages\\blog.js","/_app":"bundles\\pages\\_app.js","/_error":"bundles\\pages\\_error.js","/_document":"bundles\\pages\\_document.js"}
+{"/blog":"bundles\\pages\\blog.js","/blog/article":"bundles\\pages\\blog\\article.js","/_app":"bundles\\pages\\_app.js","/_error":"bundles\\pages\\_error.js","/_document":"bundles\\pages\\_document.js"}
