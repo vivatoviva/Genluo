@@ -25,11 +25,15 @@ app.prepare()
     const server = new Koa()
 
     server.use(router.get('/', ctx => renderAndCache(ctx, '/index')))
-    server.use(router.get('/blog/tag/:id', ctx => renderAndCache(ctx, '/blog/tag/detail')))
     server.use(router.get('/blog/:id', ctx => renderAndCache(ctx, '/blog/article')))
+    server.use(router.get('/blog', ctx=> renderAndCache(ctx, '/blog')))
+    server.use(router.get('/blog/tag', ctx=> renderAndCache(ctx, '/blog/tag')))
+    server.use(router.get('/blog/tag/:id', ctx => renderAndCache(ctx, '/blog/tag/detail')))
+    server.use(router.get('/blog/category', ctx=> renderAndCache(ctx, '/blog/category')))
+    server.use(router.get('/blog/archives', ctx=> renderAndCache(ctx, '/blog/archives')))
 
+    
     server.use(async (ctx) => {
-      console.log('=====')
       await handle(ctx.req, ctx.res)
       ctx.respond = false
     })

@@ -1,6 +1,10 @@
 import React from 'react'
 
-export default class Button extends React.Component {
+
+// 圆角button
+// 点击阅读的button
+
+class IndexButton extends React.Component {
   render() {
     const { buttonTitle, buttonStyle } = this.props;
     return (
@@ -25,3 +29,4 @@ export default class Button extends React.Component {
     )
   }
 }
+export default IndexButton;

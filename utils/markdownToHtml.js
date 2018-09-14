@@ -2,7 +2,7 @@
 
 var md = '# xianzai xianzaij \n xian *'
 
-const regex = /^( {0,3}#+ )|( {0,}[\*|\-] )|( ?\-{3,})|( {0,3}```)/g
+const regex = /^( {0,3}#+ )|^( {0,}[\*|\-] )|^( ?\-{3,})|^( {0,3}```)/g
 
 // 判断是块级标签
 const isBlock = str => {
@@ -13,8 +13,12 @@ const isBlock = str => {
 
 class Converter {
   // 转化成html标记语言
-  toHtml(md) {
-    return this.blockToHtml(this.toBlock(md))
+  toHtml = (md) => {
+    const block = this.toBlock(md);
+    const blockHtml = this.blockToHtml(block)
+    const inlineHtml = this.inLineHtml(blockHtml);
+  
+    return inlineHtml.join('')
   }
 
   // 渲染生成富文本，用于添加添加样式
@@ -24,6 +28,7 @@ class Converter {
 
   toBlock(md) {
     let mdarr = md.split('\n').filter(item => item.trim().length !== 0)
+    
     let blockMD = [];
     let identification = false;
     // 分割形成块级元素
@@ -35,9 +40,10 @@ class Converter {
         blockMD[blockMD.length-1] += '\n' + mdarr[i]
         continue;
       }
-      if(/^( {0,3}`{3,3})/g.test(mdarr[i])) {
+      if(/^( {0,3}`{3})/g.test(mdarr[i])) {
         identification = !identification;
       }
+
       if(i>0 && !isBlock(mdarr[i])) {
 
         if(!isBlock(mdarr[i-1])) {
@@ -47,6 +53,7 @@ class Converter {
       }
       blockMD.push(mdarr[i])
     }
+
     return blockMD
   }
 
@@ -54,9 +61,8 @@ class Converter {
   blockToHtml(blockArr) {
     const blockHtmlArr = [];
     for(const item of blockArr) {
-      console.log(item.match(regex))
       let blockIdentifident = item.match(regex) && item.match(regex)[0].trim();
-      
+
       // #
       if(/#/g.test(blockIdentifident)) {
         blockHtmlArr.push(`<h${blockIdentifident.length}>${item.replace(/^( {0,3}#+ )/g,'')}</h${blockIdentifident.length}>`)
@@ -69,28 +75,43 @@ class Converter {
       }
       // ---
       if(/-+/g.test(blockIdentifident)) {
-        blockHtmlArr.push(`<dl></dl>`)
+        blockHtmlArr.push(`<hr>`)
         continue
       }
       // ```
       if(/```/g.test(blockIdentifident)) {
-        blockHtmlArr.push(`<div class="code">${item.replace(/^( {0,3}```)/g, '')}</div>`)
+        blockHtmlArr.push(`<pre>${item.replace(/(```)/g, '')}</pre>`)
         continue
       }
       // 行内标签
       blockHtmlArr.push(`<p>${item}</p>`)
     }
+
     return blockHtmlArr;
   }
 
   // 处理行行内标签
   inLineHtml(md) {
-    
+    const html = [];
+    for(let item of md) {
+      let str = item;
+      if(str.includes('<pre>')) {
+        html.push(str)
+        continue
+      }
+      // *xianzia*
+      str = str.replace(/[^\*]\*([^\*]+)\*/g, '<i>$1</i>')
+      // **xianzai*
+      str = str.replace(/\*{2}[^\*](\S*)\*{2}/g, '<strong>$1</strong>')
+
+      html.push(str)
+    }
+    return html;
   }
-
 }
-
-
 const converter = new Converter();
 
-console.log(converter.toHtml('# xianan \n x  **###** genge \n xianzai \n``` \n xianzaijing \n xian  \n```' ))
+export default {
+  toHtml: converter.toHtml
+};
+
