@@ -7,6 +7,7 @@ export default class Content extends React.Component {
     return (
       <div>
         <div
+        style={{}}
           dangerouslySetInnerHTML={{
             __html: mdUtils.toHtml(md)
           }}></div>
