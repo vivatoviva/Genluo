@@ -14,7 +14,7 @@ const query = (sql, values) => {
           } else {
             resolve(rows)
           }
-          connection.end()
+          connection.release()
         })
       }
     })

@@ -2,24 +2,29 @@
 const mysql = require('../db')
 
 async function getArticle(page) {
-  let sql = 'select * from Blog where id = 1'
-  
-  return {
-    pagination: {
-        page:1,
-        pageNum: 100,
-    },
-    acticleList: [{
-        id: 10,
-        title: '前端之巅',
-        publishTime: 2642613746278,
-    updateTime: 236423764782,
-        tag: [1,2,3],
-        readNum: 100,
-        content: '',
-        describe: ''
-    }]
+  let sql = `SELECT * FROM article LIMIT ${(page - 1) * 10},10;`
+  let count = 'select count(*) FROM article'
+  let result = [];
+  try {
+    // let [data, pageNum] = await Promise.all(mysql.query(sql), mysql.query(count))
+
+    
+    let data = await mysql.query(sql);
+    let pageNum = await mysql.query(count);
+    console.log('count', pageNum)
+
+    result = {
+      pagination: {
+        page,
+        pageNum: pageNum[0]['count(*)']
+      },
+      list: data
+    }
+  } catch(e) {
+    console.log(e);
+    throw e;
   }
+  return result;
 }
 
  module.exports = {

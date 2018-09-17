@@ -4,8 +4,8 @@ const config = {
   // 数据库配置
   mysql: {
     host: '120.78.71.60',
-    user: 'genluo',
-    password: '******',
+    user: 'root',
+    password: 'genluo123',
     database: 'personSite',
     HOST: 'localhost'    
   }
