@@ -7,12 +7,9 @@ async function getArticle(page) {
   let result = [];
   try {
     // let [data, pageNum] = await Promise.all(mysql.query(sql), mysql.query(count))
-
-    
     let data = await mysql.query(sql);
     let pageNum = await mysql.query(count);
-    console.log('count', pageNum)
-
+    
     result = {
       pagination: {
         page,
@@ -20,13 +17,18 @@ async function getArticle(page) {
       },
       list: data
     }
+
   } catch(e) {
-    console.log(e);
     throw e;
   }
   return result;
 }
 
- module.exports = {
+async function getTag() {
+  // 获取tag列表
+  
+}
+
+module.exports = {
   getArticle,
- }
+}

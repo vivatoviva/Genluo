@@ -3,11 +3,16 @@ import Title from '../Title';
 import Content from '../Content'
 import Button from '../Button'
 
-export default ({isDividing=true}) =>
+
+export default ({isDividing=true,data, data: { title, content, descript }}) =>
   <div className="wraper">
-    <Title></Title>
-    <Content />
-    <Button.Artic></Button.Artic>
+    <Title 
+      title={title}
+    />
+    <Content
+      content={descript}
+    />
+    <Button.Artic paramData={data}></Button.Artic>
     <style jsx>{`
       .wraper {
         padding: 50px 0 50px;

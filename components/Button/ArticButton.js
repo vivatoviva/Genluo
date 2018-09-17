@@ -4,8 +4,10 @@ import WithLink from './../WithLink'
 
 class ArticButton extends React.Component {
   render() {
+    const buttonText = this.props.children || '阅读全文 »';
+    const data = this.props.paramData;
     return (
-      <button><WithLink href="/blog/article" as="/blog/1">阅读全文 »</WithLink><style jsx>{`
+      <button><WithLink href="/blog/article" as="/blog/1" data={data}>{buttonText}</WithLink><style jsx>{`
       button {
         background-color: #fff;
         outline: 0;

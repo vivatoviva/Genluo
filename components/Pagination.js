@@ -2,18 +2,20 @@ import React,{ Component } from 'react'
 
 class Pagination extends Component {
   state = {
-    currentIndex: this.props.index ? this.props.index : 1,
-    pageSum: this.props.pageSum ? this.props.pageSum : 20,
+    currentIndex: this.props.pagination ? parseInt(this.props.pagination.page) : 1,
+    pageSum: this.props.pagination ? this.props.pagination.pageNum : 1,
   }
 
   handleClick = (currentIndex) => {
     this.setState({
       currentIndex,
     })
+    this.props.onPageChange(currentIndex);
   }
-  
+
   renderLi = () => {
-    const { currentIndex, pageSum } = this.state;
+    let { currentIndex, pageSum } = this.state;
+    pageSum = Math.ceil(pageSum / 10);
     let nextMax = currentIndex + 2;
     let lastMin = currentIndex - 2;
     // 生成页码对象
@@ -158,7 +160,6 @@ class Pagination extends Component {
             text-align: center;
             border-top: 1px solid #ccc;
           }
-
         `}</style>
       </div>
     )

@@ -2,8 +2,9 @@ import React from 'react'
 
 export default class Title extends React.Component {
   render() {
+    const { title } = this.props;
     return <div>
-      <h1><span>前端之巅</span></h1>
+      <h1><span>{title}</span></h1>
       <div className="data">
         <ul>
           <li>发表于：2018年9月5日</li>
