@@ -1,10 +1,9 @@
-const Router = require('koa-router');
-
+const Router = require('koa-router')
+const controller = require('../controller');
 const router = new Router();
 
 // 博文列表
-router.get('/api', ctx=> ctx.body="xianz")
-router.get('/api/article/list')
+router.get('/api/article/list', controller.client.articleList)
 // 标签列表
 router.get('/api/tag/list')
 // 分类列表

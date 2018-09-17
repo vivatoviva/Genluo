@@ -97,7 +97,6 @@ class Converter {
       }
       // *xianzia*
       str = str.replace(/[^\*]\*([^\*]+)\*/g, '<i>$1</i>')
-      console.log(str, item)
       // **xianzai*
       str = str.replace(/\*{2}([^\*]\S*)\*{2}/g, '<strong>$1</strong>')
 
