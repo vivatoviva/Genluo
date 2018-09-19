@@ -5,7 +5,7 @@ const config = {
   mysql: {
     host: '120.78.71.60',
     user: 'root',
-    password: 'xianzai',
+    password: 'genluo123',
     database: 'personSite',
     HOST: 'localhost'    
   }
