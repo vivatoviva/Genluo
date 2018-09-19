@@ -69,7 +69,6 @@ class Pagination extends Component {
     }
 
     return lis.map((item, index) =>{
-      // 判断CLassname
       const className = [item.name];
       if(item.value === currentIndex) className.push('nowIndex');
       if(item.isDisabled) className.push('disabled');
@@ -147,7 +146,6 @@ class Pagination extends Component {
   }
 
   render() {
-    const { currentIndex } = this.state;
     return (
       <div>
         <ul>

@@ -10,7 +10,6 @@ export default class extends React.Component {
     if(query) return { query };
   }
   render() {
-    console.log(this.props.query.tags)
     return (
       <Layout navIndex={0}>
         <Article.Detail data={this.props.query}/>

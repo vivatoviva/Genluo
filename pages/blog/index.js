@@ -7,17 +7,20 @@ import React from 'react';
 
 class IndexPage extends React.Component {
   
-  static async getInitialProps({ req }) {
-    const res = await fetch('/api/article/list', {
+  static async getInitialProps({ req, query, pathname }) {
+    // 获取page参数
+    // 获取数据
+    const res = await fetch('http://localhost:8080/api/article/list', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        page: 1
+        page: 1,
       })
     })
-    const { data: { pagination, list}} = await res.json()
+    const { data: { pagination, list } } = await res.json()
+    // 初始化组件props
     return { pagination, list }
   }
 
@@ -27,7 +30,7 @@ class IndexPage extends React.Component {
   }
 
   handlePageChange = async (page) => {
-    const res = await fetch('/api/article/list', {
+    const res = await fetch('http://localhost:8080/api/article/list', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

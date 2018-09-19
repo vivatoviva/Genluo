@@ -16,7 +16,7 @@ class Item extends Component {
         <span className="dot"><i></i></span>
         <span className="time">{time}</span>
         {
-          isTitle ? children : <WithLink paramsData={data} as={`/blog/${data['article_id']}`} href={`/blog/detail}`}>{children}</WithLink>
+          isTitle ? children : <WithLink paramsData={data} as={`/blog/${data['article_id']}`} href='/blog/article'>{children}</WithLink>
         }
         <style jsx>{`
           div {

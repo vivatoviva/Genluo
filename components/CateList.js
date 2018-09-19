@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import WithLink from './WithLink'
+
 export default ({ data }) => {
 
   return (
@@ -7,9 +9,9 @@ export default ({ data }) => {
         {
           data.map((item, index)=>
             <li>
-              <Link prefetch href={`/blog/category/${item.id}`}>
+              <WithLink prefetch paramsData={{cateId: item.id}} as={`/blog/category/${item.id}`} href={`/blog/archives`}>
               {item.name}
-              </Link>
+              </WithLink>
               <span>({item.num})</span>
             </li>)
         }

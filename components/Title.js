@@ -12,10 +12,10 @@ export default class Title extends React.Component {
           <li>更新于：{updateTime}</li>
           <li>分类于： {categroyName}</li>
           <li>阅读次数：{readNum}</li>
-          <li>标签: {tags.map(item => item.name).join('、')}</li>
+          { tags ? <li>标签: {tags.map(item => item.name).join('、')}</li> : '' }
         </ul>
       </div>
-
+      
       <style jsx>{`
         h1 {
           text-align: center;

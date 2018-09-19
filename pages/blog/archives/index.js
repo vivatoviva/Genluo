@@ -1,6 +1,8 @@
 import React from 'react';
 import Layout from '../../../layout/BlogLayout'
 import TimeLine from '../../../components/TimeLine'
+import fetch from 'isomorphic-unfetch'
+import Pagination from '../../../components/Pagination'
 
 const data = [{
   id: 1,
@@ -12,11 +14,57 @@ const data = [{
   timestamp: '',
 }]
 class ActivePage extends React.Component {
+  
+  static async getInitialProps({ query }) {
+    const { tagId, cateId } = query;
+    
+    const res = await fetch('/api/article/list', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        page: 1,
+        tagId,
+        categroyId: cateId,
+      })
+    })
+    const { data: { pagination, list }} = await res.json();
+    return { pagination, list }
+  }
+
+  state = {
+    pagination: this.props.pagination,
+    list: this.props.list,
+  }
+
+  handlePageChange = async page => {
+    const res = await fetch('/api/article/list', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        page,
+        tagId,
+      })
+    })
+    const { data: { pagination, list}} = await res.json()
+
+    this.setState({
+      pagination,
+      list,
+    })
+  }
+  
   render() {
+    const { list, pagination } = this.state;
     return (
       <Layout navIndex={3}>
-        <TimeLine />
-        
+        <TimeLine list={list} />
+        <Pagination
+          pagination={pagination} onPageChange={this.handlePageChange}
+        ></Pagination>
       </Layout>
     )
   }

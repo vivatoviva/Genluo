@@ -4,8 +4,11 @@ import Content from '../Content'
 import Button from '../Button'
 
 
-export default ({isDividing=true, data, data: { article_id, title, content, descript, update_time, create_time, read_num, categroy_name, tags }}) =>
-
+export default ({
+  isDividing=true,
+  data,
+  data: { article_id, title, descript, update_time, create_time, read_num, categroy_name, tags }
+}) =>
   <div className="wraper">
     <Title 
       title={title}
@@ -15,6 +18,7 @@ export default ({isDividing=true, data, data: { article_id, title, content, desc
       categroyName={categroy_name}
       tags={tags}
     />
+    
     <Content
       content={descript}
     />
