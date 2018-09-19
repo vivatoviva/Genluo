@@ -5,11 +5,15 @@ import Pagination from '../../components/Pagination'
 import React from 'react';
 
 export default class extends React.Component {
+
+  static async getInitialProps({ query }) {
+    if(query) return { query };
+  }
   render() {
+    console.log(this.props.query.tags)
     return (
       <Layout navIndex={0}>
-        <Article.Detail />
-
+        <Article.Detail data={this.props.query}/>
       </Layout>
     )
   }

@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import Link from 'next/link'
-
+import WithLink from './WithLink'
+import { TimeTool } from '../utils/time'
 class Item extends Component {
   render() {
-    const { size="normal", time, children, color="#bbb", isTitle=false, isHead=false } = this.props;
+    const { size="normal", time, children, color="#bbb", isTitle=false, isHead=false, data } = this.props;
     let sizetopx = '10';
     switch(size) {
       case 'large': sizetopx = 15;break;
@@ -15,7 +16,7 @@ class Item extends Component {
         <span className="dot"><i></i></span>
         <span className="time">{time}</span>
         {
-          isTitle ? children : <Link href="id">{children}</Link>
+          isTitle ? children : <WithLink paramsData={data} as={`/blog/${data['article_id']}`} href={`/blog/detail}`}>{children}</WithLink>
         }
         <style jsx>{`
           div {
@@ -57,23 +58,39 @@ class Item extends Component {
   }
 }
 
-class TimeLine extends Component {
-  render() {
-    const { children } = this.props;
 
+class TimeLine extends Component {
+  dealData = () => {
+    const { list } = this.props;
+    const data = {};
+    // 处理数据( createTime)
+    for(const item of list) {
+      const time = new TimeTool(item['create_time']);
+      if(!data[time.getYear()]) { data[time.getYear()] = []}
+      data[time.getYear()].push({...item, time: time.getDate()}) 
+    }
+    return data;
+  }
+   
+  render() {
+    const { children, list } = this.props;
+    const data = this.dealData(list)
+    
     return (
       <div>
-        <Item isTitle={true} isHead={true}>嗯..! 目前共计 25 篇日志。 继续努力。</Item>
-        <Item size='large' isTitle={true}>2018</Item>
-        <Item time="8-9">深入web渲染基础</Item>
-        <Item time="8-9">深入web渲染基础</Item>
-        <Item time="8-9">深入web渲染基础</Item>
-        <Item time="8-9">深入web渲染基础</Item>
-        <Item size='large' isTitle={true}>2017</Item>
-        <Item time="8-9">深入web渲染基础</Item>
-        <Item time="8-9">深入web渲染基础</Item>
-        <Item time="8-9">深入web渲染基础</Item>
-        <Item time="8-9">深入web渲染基础</Item>
+        <Item isTitle={true} isHead={true}>嗯..! 目前共计 10 篇日志。 继续努力。</Item>
+        {
+          Object.keys(data).map(key => {
+            return (
+              <>
+                <Item size='large' isTitle={true}>{key}</Item>
+                {
+                  data[key].map(item => <Item data={item} time={item.time}>{item.title}</Item>)
+                }
+              </>
+            )
+          })
+        }
         <style jsx>{`
           div {
             border-left: 4px solid #f5f5f5;

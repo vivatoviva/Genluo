@@ -8,9 +8,16 @@ import React from 'react';
 class IndexPage extends React.Component {
   
   static async getInitialProps({ req }) {
-    const res = await fetch('http://localhost:8080/api/article/list?page=1')
+    const res = await fetch('/api/article/list', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        page: 1
+      })
+    })
     const { data: { pagination, list}} = await res.json()
-    console.log(pagination)
     return { pagination, list }
   }
 
@@ -20,7 +27,15 @@ class IndexPage extends React.Component {
   }
 
   handlePageChange = async (page) => {
-    const res = await fetch('http://localhost:8080/api/article/list?page=' + page)
+    const res = await fetch('/api/article/list', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        page,
+      })
+    })
     const { data: { pagination, list}} = await res.json()
     this.setState({
       pagination,

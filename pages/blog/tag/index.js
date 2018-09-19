@@ -1,37 +1,21 @@
 import React from 'react';
 import Layout from '../../../layout/BlogLayout'
 import Tags from '../../../components/Tags'
-const data = [{
-  id: 1,
-  name: 'web',
-  num: 20,
-}, {
-  id: 2,
-  name: '前端',
-  num: 90,
-}, {
-  id: 3,
-  name: '服务器',
-  num: 1,
-}, {
-  id: 4,
-  name: '后端',
-  num: 90,
-}, {
-  id: 5,
-  name: 'linux',
-  num: 50,
-}, {
-  id: 6,
-  name: 'javascript',
-  num: 30,
-}, {
-  id: 6,
-  name: '集群',
-  num: 150,
-}]
+import fetch from 'isomorphic-unfetch'
+
 class TagPage extends React.Component {
+  static async getInitialProps() {
+    const res = await fetch('/api/tag/list', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json'
+      },
+    })
+    const { data } = await res.json();
+    return { data }
+  }
   render() {
+    const { data } = this.props;
     return (
       <Layout navIndex={1}>
         <h1>Tags</h1>

@@ -18,9 +18,16 @@ export default class extends PureComponent {
   }
 
   render() {
-    const { href, children, className, as, style, ...rest } = this.props;
+    const { href, children, className, as, style, paramsData, ...rest } = this.props;
     if(isLink(href)) {
-      return <Link prefetch href={href} as={as}><a className={className} style={style} {...rest}>{children}</a></Link>
+      return <Link
+          prefetch
+          href={{
+            pathname: href,
+            query: paramsData
+          }}
+          as={as}><a className={className} style={style} {...rest}>{children}</a>
+        </Link>
     }
     if(isHref) {
       return <a className={className} style={style} {...rest}>{children}</a>;

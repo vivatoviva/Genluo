@@ -1,30 +1,21 @@
 import Layout from '../../../layout/BlogLayout'
 import CateList from '../../../components/CateList'
-
-const data = [{
-  id: 1,
-  categoryName: '前端',
-  num: 100,
-}, {
-  id: 1,
-  categoryName: '后端',
-  num: 100,
-}, {
-  id: 1,
-  categoryName: '服务器',
-  num: 100,
-}, {
-  id: 1,
-  categoryName: '高性能架构',
-  num: 100,
-}, {
-  id: 1,
-  categoryName: '云计算与物联网',
-  num: 30,
-}]
+import fetch from 'isomorphic-unfetch'
 
 class CatePage extends React.Component {
+  static async getInitialProps() {
+    const res = await fetch('/api/category/list', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json'
+      },
+    })
+    const { data } = await res.json();
+
+    return { data }
+  }
   render() {
+    const { data } = this.props;
     return (
       <Layout navIndex={2}>
         <h1>Categories</h1>

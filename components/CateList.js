@@ -8,7 +8,7 @@ export default ({ data }) => {
           data.map((item, index)=>
             <li>
               <Link prefetch href={`/blog/category/${item.id}`}>
-              {item.categoryName}
+              {item.name}
               </Link>
               <span>({item.num})</span>
             </li>)

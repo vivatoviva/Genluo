@@ -6,10 +6,12 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 const mysql = require('./db')
+const koaBody = require('koa-body');
 
 app.prepare()
   .then(() => {
     const server = new Koa()
+    server.use(koaBody())
     // 挂载数据库对象
     server.use(async (ctx, next) => {
       ctx.mysql = mysql;

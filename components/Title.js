@@ -2,17 +2,20 @@ import React from 'react'
 
 export default class Title extends React.Component {
   render() {
-    const { title } = this.props;
+
+    const { title, updateTime, createTime, categroyName, tags, readNum } = this.props;
     return <div>
       <h1><span>{title}</span></h1>
       <div className="data">
         <ul>
-          <li>发表于：2018年9月5日</li>
-          <li>更新于：2018年9月6日</li>
-          <li>分类于： web</li>
-          <li>阅读次数：300</li>
+          <li>发表于：{createTime}</li>
+          <li>更新于：{updateTime}</li>
+          <li>分类于： {categroyName}</li>
+          <li>阅读次数：{readNum}</li>
+          <li>标签: {tags.map(item => item.name).join('、')}</li>
         </ul>
       </div>
+
       <style jsx>{`
         h1 {
           text-align: center;
