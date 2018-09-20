@@ -1,4 +1,4 @@
 /node_modules
 /.next
 /.vscode
-/server/config/default.js
+/server/config

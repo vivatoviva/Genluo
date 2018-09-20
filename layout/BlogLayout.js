@@ -4,7 +4,6 @@ import BlogNav from '../components/BlogNav'
 import BlogData from '../components/BlogData'
 import ToTop from '../components/ToTop'
 import Footer from '../components/Footer'
-
 class BlogPage extends React.Component {
   state = {
     isFixed: false,

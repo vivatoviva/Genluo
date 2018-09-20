@@ -1,6 +1,7 @@
 import Layout from '../../layout/BlogLayout'
 import Article from '../../components/Article'
 import Pagination from '../../components/Pagination'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import React from 'react';
 

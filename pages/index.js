@@ -2,6 +2,39 @@ import Head from "../components/Head";
 import React from 'react'
 import Button from '../components/Button'
 import Link from 'next/link'
+// 将图标添加到库中
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+  faCoffee,
+  faHome,
+  faTags,
+  faTable,
+  faSearch,
+  faArchive,
+  faCalendar,
+  faCalendarCheck,
+  faFolder,
+  faEye,
+  faChevronCircleUp,
+  faChevronUp
+} from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+library.add(faCoffee,
+  faHome,
+  faTags,
+  faTable,
+  faSearch,
+  faArchive,
+  faCalendar,
+  faCalendarCheck,
+  faFolder,
+  faEye,
+  faChevronCircleUp,
+  faGithub,
+  faChevronUp,
+)
+
 class IndexPage extends React.Component {
 
   constructor(props) {
@@ -19,7 +52,7 @@ class IndexPage extends React.Component {
             <li><Link href='/blog'><a><Button buttonTitle="博客"/></a></Link></li>
             <li><Link to="http://resume.congm.in/"><Button buttonTitle="简历"/></Link></li>
             <li><Button buttonTitle="关于"/></li>
-            <li><Button buttonTitle="github"/></li>
+            <li><Button buttonTitle="github"><FontAwesomeIcon icon={faGithub} style={{marginRight: '5px'}}/>Github</Button></li>
           </ul>
           <style jsx>{`
             h1 {
@@ -33,6 +66,8 @@ class IndexPage extends React.Component {
               text-decoration: none;
             }
             ul {
+
+              
               position: absolute;
               left: 50%;
               transform: translateX(-50%)

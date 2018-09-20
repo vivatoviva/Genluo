@@ -18,7 +18,7 @@ class ActivePage extends React.Component {
   static async getInitialProps({ query }) {
     const { tagId, cateId } = query;
     
-    const res = await fetch('/api/article/list', {
+    const res = await fetch('http://localhost:8080/api/article/list', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

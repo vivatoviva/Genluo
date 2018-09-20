@@ -1,4 +1,5 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default class Title extends React.Component {
   render() {
@@ -8,11 +9,11 @@ export default class Title extends React.Component {
       <h1><span>{title}</span></h1>
       <div className="data">
         <ul>
-          <li>发表于：{createTime}</li>
-          <li>更新于：{updateTime}</li>
-          <li>分类于： {categroyName}</li>
-          <li>阅读次数：{readNum}</li>
-          { tags ? <li>标签: {tags.map(item => item.name).join('、')}</li> : '' }
+          <li><FontAwesomeIcon icon="calendar" style={{marginRight: '5px', boxSizing: 'border-box', padding: '1px'}}/>发表于：{createTime}</li>
+          <li><FontAwesomeIcon icon="calendar-check" style={{marginRight: '5px', boxSizing: 'border-box', padding: '1px'}}/>更新于：{updateTime}</li>
+          <li><FontAwesomeIcon icon="folder" style={{marginRight: '5px', boxSizing: 'border-box', padding: '1px'}}/>分类于： {categroyName}</li>
+          <li><FontAwesomeIcon icon="eye" style={{marginRight: '5px', boxSizing: 'border-box', padding: '1px'}}/>阅读次数：{readNum}</li>
+          { tags ? <li><FontAwesomeIcon icon="tags" style={{marginRight: '5px', boxSizing: 'border-box', padding: '1px'}}/>标签: {tags.map(item => item.name).join('、')}</li> : '' }
         </ul>
       </div>
       
@@ -30,7 +31,7 @@ export default class Title extends React.Component {
         li {
           padding: 0 10px 0 10px;
           line-height: 1;
-          color: rgb(153, 153, 153)
+          color: rgb(153, 153, 153);
         }
         li + li {
           border-left: 1.5px solid rgb(153, 153, 153);

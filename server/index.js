@@ -1,12 +1,15 @@
 const next = require('next')
-const Koa = require('koa')
-const routers = require('./router/index')
-const port = parseInt(process.env.PORT, 10) || 8080
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
+
+const Koa = require('koa')
+var routers = require('./router/index')
+const port = parseInt(process.env.PORT, 10) || 8080
 const mysql = require('./db')
 const koaBody = require('koa-body');
+
+const fs = require('fs')
 
 app.prepare()
   .then(() => {
@@ -17,6 +20,7 @@ app.prepare()
       ctx.mysql = mysql;
       await next();
     })
+  
     // 添加相关路由
     routers.map(item => {
       server.use(item.routes())
@@ -37,3 +41,17 @@ app.prepare()
       console.info(`> Ready on http://localhost:${port}`)
     })
   })
+
+// 监听文件修改重新加载代码
+fs.watch(require.resolve('./router/index'), function () {
+  cleanCache(require.resolve('./router/index'));
+  try {
+    routers = require('./router/index');
+  } catch (ex) {
+      console.error('module update failed');
+  }
+});
+
+function cleanCache(modulePath) {
+  require.cache[modulePath] = null;
+}

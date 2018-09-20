@@ -6,23 +6,27 @@ import React from 'react'
 
 class IndexButton extends React.Component {
   render() {
-    const { buttonTitle, buttonStyle } = this.props;
+    const { buttonTitle, buttonStyle, children } = this.props;
     return (
       <div>
         <div className="button">
-          {buttonTitle}
+          {children || buttonTitle}
         </div>
         <style jsx>{`
           .button{
-            width: 80px;
+            padding: 15px 30px;
             border: 2px solid #999;
             border-radius: 30px;
             text-align: center;
             color: #999;
             font-weight: 500;
-            padding: 10px;
             font-size: 20px;
             cursor: pointer;
+            transition: .3s all;
+          }
+          .button:hover {
+            color: #000;
+            border-color: #000;
           }
         `}</style>
       </div>

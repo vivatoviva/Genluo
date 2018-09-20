@@ -1,22 +1,29 @@
 import React from 'react'
 import withItem from './withItem'
 import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const items = [{
   name: '首页',
-  link: '/blog'
+  link: '/blog',
+  icon: 'home',
 }, {
   name: '标签',
-  link: '/blog/tag'
+  link: '/blog/tag',
+  icon: 'tags'
 }, {
   name: '分类',
-  link: '/blog/category'
+  link: '/blog/category',
+  icon: 'table',
 }, {
   name: '归档',
-  link: '/blog/archives'
+  link: '/blog/archives',
+  icon: 'archive'
 }, {
   name: '搜索',
-  link: '/blog/search'
+  link: '/blog/search',
+  icon: 'search'
+
 }]
 
 class BlogNav extends React.Component {
@@ -44,6 +51,7 @@ class BlogNav extends React.Component {
                 className={index === currentIndex && 'navNow'}
                 onClick={this.handleClick.bind(this, index)}
               >
+                <FontAwesomeIcon icon={item.icon}/>
                 <span>{item.name}</span>
               </li>
             </Link>

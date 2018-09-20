@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class ToTop extends React.Component {
   
@@ -23,7 +24,7 @@ class ToTop extends React.Component {
 
     return (
       <div className={isDisplay ? 'wraper display' : 'wraper'} onClick={this.handleToTop}>
-        <div className="toTop">^</div>
+        <div className="toTop"><FontAwesomeIcon icon="chevron-up"/></div>
         <style jsx>{`
           div.wraper {
             cursor: pointer;
@@ -38,8 +39,12 @@ class ToTop extends React.Component {
           div.toTop {
             width: 24px;
             height: 24px;
-            background-color: #222;
+            background-color: rgba(65, 64, 64, 0.336);
             color: #fff;
+            text-align: center;
+            line-height: 100%;
+            padding: 4px;
+            box-sizing: border-box;
           }
         `}</style>
       </div>
