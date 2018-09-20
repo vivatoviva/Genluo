@@ -2,7 +2,7 @@ import withItem from './withItem';
 
 const BlogData =  () =>
   <div className="warper">
-    <div className="avtor"></div>
+    <div><a className="avtor" href="https://github.com/vivatoviva"></a></div>
     <h5>Genluo</h5>
     <ul>
       <li><span>25</span><span>日志</span></li>
@@ -15,6 +15,7 @@ const BlogData =  () =>
         background-color: #fff;
       }
       .avtor {
+        display: block;
         width: 43.3%;
         padding-top: 44%;
         background-repeat: no-repeat;

@@ -13,7 +13,6 @@ class ToTop extends React.Component {
       const speed = 4;
       const scrollDistance = Math.floor(-osTop / speed)
       const nowDistance = osTop + scrollDistance;
-      console.log(scrollDistance)
       document.documentElement.scrollTop = document.body.scrollTo = nowDistance;
       if(scrollDistance + scrollDistance === 0) clearInterval(timer)
     }, 30)
@@ -43,7 +42,7 @@ class ToTop extends React.Component {
             color: #fff;
             text-align: center;
             line-height: 100%;
-            padding: 4px;
+            padding: 6px;
             box-sizing: border-box;
           }
         `}</style>

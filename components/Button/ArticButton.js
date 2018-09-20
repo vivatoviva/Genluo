@@ -21,6 +21,7 @@ class ArticButton extends React.Component {
         transform: translateX(-50%);
         transition: 300ms all ease;
         margin-top: 50px;
+        padding: 0;
       }
       button:hover {
         border-color: #000;
