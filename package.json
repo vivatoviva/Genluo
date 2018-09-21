@@ -1,6 +1,11 @@
 {
+  "name": "personSite",
+  "bin": {
+    "push": "./push.sh"
+  },
   "scripts": {
     "dev": "node server/index.js",
+    "push": "./push.sh",
     "build": "next build",
     "start": "next start",
     "css:build": "webpack --config webpack-css.js --progress --color",

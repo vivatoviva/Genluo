@@ -16,26 +16,42 @@ usage() {
 
 pushGithub() {
     # 向github推送最新代码
-    if [ !-n $1] ; then
-        echo ""
-        exit
-    fi
+    local commitName="$1"
+    while [[ ! -n  $commitName ]]; do
+        echo -n "请输入本次推送描述 -> "
+        read commitName
+    done
+
     git add .
-    git commit -m "$1"
+    git commit -m "$commitName"
     git push github
+
+    echo $commitName
     return
 }
 
 commit() {
     # 进行一次commit、
-    if [ !-n $1] ; then
-        echo ""
-        exit
-    fi
+    local commitName="$1"
+    while [[ ! -n  $commitName ]]; do
+        echo -n "请输入本次提交描述 -> "
+        read commitName
+    done
+
     git add .
-    git commit -m "$1"
+    git commit -m "$commitName"
+
+    echo $commitName
+
+
     return
 }
+
+
+if [[ ! -n $1 ]]; then
+    usage
+    exit
+fi
 
 while [[ -n $1 ]]; do
     case $1 in
@@ -55,11 +71,4 @@ while [[ -n $1 ]]; do
     shift
 done
 
-
-# if [ ! -n "$1" ] ;then
-#     echo "you have not input a word!"
-#     exit 0
-# fi
-
-# git add .
-# git commit -m "$1"
+exit
