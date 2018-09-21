@@ -35,14 +35,11 @@ export default class extends PureComponent {
               width: 100%;
               height: 100%;
             }
-              a:hover {
-                color: #fff;
-              }
               a {
                 line-height: 160%;
                 height: 100%;
-                display: block;
                 width: 100%;
+                display: inline-block;
                 text-decoration-style: none;
                 text-decoration-style: none;
               }

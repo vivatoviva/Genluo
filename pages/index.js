@@ -2,6 +2,7 @@ import Head from "../components/Head";
 import React from 'react'
 import Button from '../components/Button'
 import Link from 'next/link'
+
 // 将图标添加到库中
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -52,9 +53,9 @@ class IndexPage extends React.Component {
         <div>
           <h1>Genluo</h1>
           <ul>
-            <li><Link href='#'><a><Button buttonTitle="主页"/></a></Link></li>
+            <li><Link href='/'><a><Button buttonTitle="主页"/></a></Link></li>
             <li><Link href='/blog'><a><Button buttonTitle="博客"/></a></Link></li>
-            <li><Link to="http://resume.congm.in/"><Button buttonTitle="简历"/></Link></li>
+            <li><Link href="/resume"><a><Button buttonTitle="简历"/></a></Link></li>
             <li><Button buttonTitle="关于"/></li>
             <li><Button buttonTitle="github"><FontAwesomeIcon icon={faGithub} style={{marginRight: '5px'}}/>Github</Button></li>
           </ul>
