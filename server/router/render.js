@@ -27,6 +27,7 @@ app.prepare()
     router.get('/blog/category', ctx=> renderAndCache(ctx, '/blog/category'))
     router.get('/blog/category/:cateId', ctx => renderAndCache(ctx, '/blog/archives', ctx.params))
     router.get('/blog/archives', ctx=> renderAndCache(ctx, '/blog/archives'))
+    router.get('/resume', ctx => renderAndCache(ctx, '/resume/index'))
   })
 
 

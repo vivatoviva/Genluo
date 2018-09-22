@@ -21,6 +21,12 @@ import {
   faChevronUp,
   faCopyright,
   faUser,
+  faSchool,
+  faCertificate,
+  faProjectDiagram,
+  faTree,
+  faPhone,
+  faEnvelope,
 } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 library.add(faCoffee,
@@ -38,6 +44,12 @@ library.add(faCoffee,
   faChevronUp,
   faCopyright,
   faUser,
+  faSchool,
+  faCertificate,
+  faProjectDiagram,
+  faTree,
+  faPhone,
+  faEnvelope,
 )
 
 class IndexPage extends React.Component {

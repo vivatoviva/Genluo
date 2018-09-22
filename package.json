@@ -4,12 +4,14 @@
     "push": "./push.sh"
   },
   "scripts": {
+    "next": "next dev",
     "dev": "node server/index.js",
     "push": "./push.sh",
     "build": "next build",
     "start": "next start",
     "css:build": "webpack --config webpack-css.js --progress --color",
-    "css:dev": "webpack --config webpack-css.js --watch --progress --color"
+    "css:dev": "webpack --config webpack-css.js --watch --progress --color",
+    "lint": "eslint --ext .js pages"
   },
   "dependencies": {
     "@babel/core": "^7.0.0",
