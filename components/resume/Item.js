@@ -3,7 +3,14 @@ import Tag from './tag'
 
 class Item extends React.Component {
   render() {
-    const { time, children, tag} = this.props;
+    const { time, children, tag } = this.props;
+    let href, tagName
+    if(tag.name) {
+      href=tag.link;
+      tagName = tag.name
+    } else {
+      tagName = tag
+    }
     return (
       <div>
         <div>
@@ -11,7 +18,7 @@ class Item extends React.Component {
             <span className="time">{time}</span>
             <span className="content">{children}</span>
             <span className="tag">{
-              tag ? <Tag>{tag}</Tag> : ''
+              tag ? <Tag href={href}>{tagName}</Tag> : ''
             }</span>
           </li>
         </div>

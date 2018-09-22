@@ -5,12 +5,13 @@ import React from 'react'
 // 点击阅读的button
 
 class IndexButton extends React.Component {
+
   render() {
     const { buttonTitle, buttonStyle, children } = this.props;
     return (
       <div>
-        <div className="button">
-          {children || buttonTitle}
+        <div className="button" onClick={this.handleClick}>
+          {children }
         </div>
         <style jsx>{`
           .button{

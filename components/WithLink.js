@@ -46,10 +46,9 @@ export default class extends PureComponent {
             `}</style>
         </div> 
       )
- 
     }
     if(isHref) {
-      return <a className={className} style={style} {...rest}>{children}</a>;
+      return <a href={href} className={className} style={style} {...rest}>{children}</a>;
     }
 
     return (

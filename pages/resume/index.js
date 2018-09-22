@@ -29,10 +29,10 @@ class Index extends React.Component {
               </ul>
 
               <ul className="right influence">
-                <li>www.blogoog.com<FontAwesomeIcon icon="home"/></li>
-                <li>17784455445 <FontAwesomeIcon icon="phone"/></li>
-                <li>github.com/vivatoviva <FontAwesomeIcon icon={faGithub} /></li>
-                <li>1461304646@qq.com <FontAwesomeIcon icon="envelope"/></li>
+                <li>www.blogoog.com<span><FontAwesomeIcon icon="home"/></span></li>
+                <li>17784455445 <span><FontAwesomeIcon icon="phone"/></span></li>
+                <li>github.com/vivatoviva <span><FontAwesomeIcon icon={faGithub} /></span></li>
+                <li>1461304646@qq.com <span><FontAwesomeIcon icon="envelope"/></span></li>
               </ul>
             </div>
           </div>
@@ -97,7 +97,7 @@ class Index extends React.Component {
                   title="项目经验"
                   icon="project-diagram"
                 >
-                  <Item time="2015.6" tag="Link">北京crm系统</Item>
+                  <Item time="2015.6" tag={{name: 'Link', link: "https://www.google.com/"}}>北京crm系统</Item>
                   <Descript >学习了比较好的方法，苦于没有一直维护的项目，所以进行此项目，本项目将有自己全权维护，进行开发，在主页关于中有详细的说明</Descript>
                   <Item time="2015.6" tag="Link">内部搭建系统</Item>
                   <Descript >提出想法项目牵头产品策划前端开发代码开源 基于微信小程序MINA框架的WXML、WXSS、JS为代码语言进行开发，视图层采用Flex弹性布局，逻辑层采用模块化模式开发。 此外还利用gulp、Express、ejs、Echarts等技术完成对产品官网及数据大盘的开发。</Descript>
@@ -172,10 +172,20 @@ class Index extends React.Component {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             line-height: 1.5;
             font-size: 14px;
+            transition: color .3s ease;
+          }
+          ul li span {
+            font-size: 13px;
+            line-height: 100%;
+            margin-left: 3px;
           }
           .tech  li {
             text-align: left;
             font-size: 17px;
+          }
+          .influence li:hover {
+            color: rgb(218, 218, 218);
+            cursor: pointer;
           }
 
           .job {
@@ -189,7 +199,7 @@ class Index extends React.Component {
             padding-bottom: 15px;
           }
           .more-info {
-            border-top: 1px solid rgb(218, 218, 218);
+            border-top: 2px solid #00a982;
             padding-top: 15px;
           }
           .body {

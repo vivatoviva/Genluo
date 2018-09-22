@@ -65,11 +65,21 @@ class IndexPage extends React.Component {
         <div>
           <h1>Genluo</h1>
           <ul>
-            <li><Link href='/'><a><Button buttonTitle="主页"/></a></Link></li>
-            <li><Link href='/blog'><a><Button buttonTitle="博客"/></a></Link></li>
-            <li><Link href="/resume"><a><Button buttonTitle="简历"/></a></Link></li>
-            <li><Button buttonTitle="关于"/></li>
-            <li><Button buttonTitle="github"><FontAwesomeIcon icon={faGithub} style={{marginRight: '5px'}}/>Github</Button></li>
+            <li><Link prefetch href='/'><a><Button>主页</Button></a></Link></li>
+            <li><Link prefetch href='/blog'><a><Button>博客</Button></a></Link></li>
+            <li><Link prefetch href="/resume"><a><Button>简历</Button></a></Link></li>
+            <li><Link prefetch href="/about"><a><Button>关于</Button></a></Link></li>
+            <li>
+              <Link href='https://github.com/vivatoviva'>
+                <a><Button buttonTitle="github">
+                  <FontAwesomeIcon
+                    icon={faGithub}
+                    style={{marginRight: '5px'}}
+                  />Github
+                  </Button>
+                </a>
+              </Link>
+            </li>
           </ul>
           <style jsx>{`
             h1 {
