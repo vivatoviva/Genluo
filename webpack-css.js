@@ -21,6 +21,7 @@ module.exports = {
     historyApiFallback: true, // 不跳转
     inline: true,
     hot: true,
+    port:  8080,
   },
   module: {
     rules: [{

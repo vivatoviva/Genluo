@@ -4,7 +4,7 @@ export default ({title}) => {
   return (
     <div>
       <Head>
-        <title>{title}</title>
+        <title>{title} | Genluo</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon.png"></link>
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"></link>

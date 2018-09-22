@@ -88,20 +88,19 @@ class Index extends React.Component {
                   <Item time="2018.7 - 2017.6" tag="校级">二等奖学金</Item>
                 </Dividing>
               </div>
-
             </div>
-
+            
             <div className="left item">
               <div>
                 <Dividing
                   title="项目经验"
                   icon="project-diagram"
                 >
-                  <Item time="2015.6" tag={{name: 'Link', link: "https://www.google.com/"}}>北京crm系统</Item>
+                  <Item time="2015.6" tag={{name: 'Link', link: "https://www.google.com/"}}>北京crm系统 · 中后台</Item>
                   <Descript >学习了比较好的方法，苦于没有一直维护的项目，所以进行此项目，本项目将有自己全权维护，进行开发，在主页关于中有详细的说明</Descript>
-                  <Item time="2015.6" tag="Link">内部搭建系统</Item>
+                  <Item time="2015.6" tag="Link">内部搭建系统 · 搭建生态</Item>
                   <Descript >提出想法项目牵头产品策划前端开发代码开源 基于微信小程序MINA框架的WXML、WXSS、JS为代码语言进行开发，视图层采用Flex弹性布局，逻辑层采用模块化模式开发。 此外还利用gulp、Express、ejs、Echarts等技术完成对产品官网及数据大盘的开发。</Descript>
-                  <Item time="2015.6" tag="Link">享即达商业项目</Item>
+                  <Item time="2015.6" tag="Link">享即达项目 · 外包项目</Item>
                   <Descript >提出想法项目牵头产品策划前端开发代码开源 基于微信小程序MINA框架的WXML、WXSS、JS为代码语言进行开发，视图层采用Flex弹性布局，逻辑层采用模块化模式开发。 此外还利用gulp、Express、ejs、Echarts等技术完成对产品官网及数据大盘的开发。</Descript>
                 </Dividing>
               </div>
@@ -132,13 +131,17 @@ class Index extends React.Component {
             }
         `}</style>
         <style jsx>{`
+          @media screen and (max-width: 1340px) {
+            
+          }
+
           div.wraper {
             box-sizing: border-box;
-            padding: 40px 60px;
+            padding-top: 40px;
             width: 100%;
           }
           div.resume {
-            width: 1024px;
+            max-width: 1024px;
             margin: 0 auto;
             background-color: #fff;
             box-shadow: 0px 0px 15px rgb(208, 208, 208);

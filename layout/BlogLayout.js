@@ -72,8 +72,19 @@ class BlogPage extends React.Component {
           <ToTop isDisplay={isDisplayToTop} />
         </div>
         <style jsx>{`
+          @media screen and (max-width: 1340px) {
+            .left {
+              width: 100%;
+            }
+            .data {
+              display: none;
+            }
+            .content {
+              width: 100vw!important;
+            }
+          }
           .wraper {
-            width: 1340px;
+            max-width: 1340px;
             margin: 0 auto;
           }
           .left {
@@ -98,13 +109,14 @@ class BlogPage extends React.Component {
           }
           footer{
             padding: 50px 0;
-
           }
+
         `}</style>
         <style global jsx>{`
           body {
-            background: #f5f7f9;
+            background: #f5f7f9!important;
           }
+
         `}</style>
       </div>
     )

@@ -30,6 +30,7 @@ export default ({
     />
 
     <style jsx>{`
+      
       .wraper {
         padding: 50px 0 50px;
         ${isDividing? 'border-bottom: 1px dotted #999;': ''}

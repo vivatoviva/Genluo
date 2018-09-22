@@ -2,6 +2,24 @@ import React from 'react'
 import withItem from './withItem'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+  faCoffee,
+  faHome,
+  faTags,
+  faTable,
+  faSearch,
+  faArchive,
+  faBars,
+} from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+library.add(faCoffee,
+  faHome,
+  faTags,
+  faTable,
+  faSearch,
+  faArchive,
+)
+
 
 const items = [{
   name: '首页',
@@ -27,8 +45,10 @@ const items = [{
 }]
 
 class BlogNav extends React.Component {
+
   state = {
     currentIndex: this.props.navIndex,
+    isBar: true,
   }
 
   handleClick = (currentIndex) => {
@@ -37,28 +57,72 @@ class BlogNav extends React.Component {
     })
   }
 
+  handelBarClick = () => {
+    const { isBar } = this.state;
+    this.setState({
+      isBar: !isBar,
+    })
+  }
+
+
   render() {
     const { currentIndex } = this.state;
-
     return (
       <div>
-      <h1>Genluo</h1>
-      <ul>
-        {
-          items.map((item, index)=>
-            <Link href={item.link} key={index}>
-              <li
-                className={index === currentIndex && 'navNow'}
-                onClick={this.handleClick.bind(this, index)}
-              >
-                <FontAwesomeIcon icon={item.icon}/>
-                <span>{item.name}</span>
-              </li>
-            </Link>
-          )
-        }
-      </ul>
+        <div className="header">
+          <div
+            className="btn"
+            onClick={this.handelBarClick}
+          >
+            <FontAwesomeIcon
+              style={{width: '100%', height:'100%'}}
+              icon={faBars}
+            />
+          </div>
+          <h1>Genluo</h1>
+        </div>
+        
+        <ul className={this.state.isBar && 'tagle'}>
+          {
+            items.map((item, index)=>
+              <Link href={item.link} key={index}>
+                <li
+                  className={index === currentIndex ? 'navNow navLi' : 'navLi' }
+                  onClick={this.handleClick.bind(this, index)}
+                >
+                  <i><FontAwesomeIcon icon={item.icon}/></i>
+                  <span>{item.name}</span>
+                </li>
+              </Link>
+            )
+          }
+        </ul>
       <style jsx>{`
+        @media screen and (max-width: 1340px) {
+          .btn {
+            display: block!important;
+            color: #fff;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 30px;
+          }
+          .right {
+            width: 100%!important;
+          }
+          ul.tagle {
+            max-height: 0;
+            padding: 0!important;
+          }
+        }
+        .btn {
+          display: none;
+        }
+        .header {
+          position: relative;
+        }
         h1 {
           background: #000;
           color: #fff;
@@ -71,6 +135,8 @@ class BlogNav extends React.Component {
         ul {
           background: #fff;
           padding: 10px 0;
+          overflow: hidden;
+          transition: all 1s ease;
         }
         li+li {
           margin-top: 10px;
@@ -86,6 +152,11 @@ class BlogNav extends React.Component {
         li span {
           margin-left: 10px;
 
+        }
+        li i {
+          display: inline-block;
+          min-width: 13px;
+          line-height: 1;
         }
         li.navNow::before{
           content: '';

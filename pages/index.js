@@ -51,6 +51,73 @@ library.add(faCoffee,
   faPhone,
   faEnvelope,
 )
+const Style = () =>
+  <>
+    <style jsx>{`
+      @media screen and (max-width: 768px) {
+          h1{
+            font-size: 100px!important;
+          }
+          li {
+            margin: 5px!important;
+          }
+          li span {
+            height: 16px;
+            width: 16px;
+            margin-right: 5px;
+          }
+      }
+      @media screen and (max-width: 550px) {
+          h1{
+            font-size: 80px!important;
+          }
+          li span {
+            height: 16px;
+            width:16px;
+            margin-right: 5px;
+          }
+      }
+      h1 {
+        margin-top: 190px;
+        font-size: 150px;
+        color: #000;
+        text-align: center;
+        letter-spacing: 9px;
+        transition: all .3s ease;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+      }
+      li {
+        display: inline-block;
+        margin: 20px;
+      }
+      li span {
+        line-height: 1;
+        margin-right: 5px;
+        display: inline-block;
+        overflow: hidden;
+      }
+      a:hover {
+        color: #000;
+        text-decoration: none;
+      }
+    `}</style>
+    <style global jsx>{`
+      * {
+        padding: 0;
+
+      }
+      body {
+        font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+      }
+  `}</style>
+  </>
 
 class IndexPage extends React.Component {
 
@@ -62,7 +129,8 @@ class IndexPage extends React.Component {
     return (
       <div>
         <Head title="主页" />
-        <div>
+        <Style />
+        <div className="index-page">
           <h1>Genluo</h1>
           <ul>
             <li><Link prefetch href='/'><a><Button>主页</Button></a></Link></li>
@@ -71,44 +139,18 @@ class IndexPage extends React.Component {
             <li><Link prefetch href="/about"><a><Button>关于</Button></a></Link></li>
             <li>
               <Link href='https://github.com/vivatoviva'>
-                <a><Button buttonTitle="github">
-                  <FontAwesomeIcon
-                    icon={faGithub}
-                    style={{marginRight: '5px'}}
-                  />Github
+                <a><Button>
+                  <span>
+                    <FontAwesomeIcon
+                      icon={faGithub}
+                    />
+                  </span>
+                  Github
                   </Button>
                 </a>
               </Link>
             </li>
           </ul>
-          <style jsx>{`
-            h1 {
-              margin-top: 190px;
-              font-size: 150px;
-              color: #000;
-              text-align: center;
-              letter-spacing: 9px;
-            }
-            a {
-              text-decoration: none;
-            }
-            ul {
-
-              
-              position: absolute;
-              left: 50%;
-              transform: translateX(-50%)
-            }
-            li {
-              display: inline-block;
-              margin: 20px;
-            }
-            `}</style>
-          <style global jsx>{`
-            body {
-              font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-            }
-          `}</style>
         </div>
       </div>
     )

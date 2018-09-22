@@ -1,1 +1,1 @@
-import './common/resume/index.scss'
+import './common/common.scss'

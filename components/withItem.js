@@ -8,6 +8,11 @@ export default (Item) =>
         <div className='wraper'>
           <Item {...this.props} />
           <style jsx>{`
+            @media screen and (max-width: 1340px) {
+              .wraper {
+                width: 100%!important;
+              }
+            }
             .wraper {
               width: 230px;
             }

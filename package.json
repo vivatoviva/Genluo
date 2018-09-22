@@ -4,7 +4,7 @@
     "push": "./push.sh"
   },
   "scripts": {
-    "next": "next dev",
+    "next": "next dev ",
     "dev": "node server/index.js",
     "push": "./push.sh",
     "build": "next build",
@@ -30,7 +30,8 @@
     "next": "^7.0.0",
     "npm": "^6.4.1",
     "react": "^16.5.0",
-    "react-dom": "^16.5.0"
+    "react-dom": "^16.5.0",
+    "webpack-dev-server": "^3.1.8"
   },
   "devDependencies": {
     "autoprefixer": "^9.1.5",

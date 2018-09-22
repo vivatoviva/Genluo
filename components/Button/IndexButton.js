@@ -14,6 +14,19 @@ class IndexButton extends React.Component {
           {children }
         </div>
         <style jsx>{`
+          @media screen and (max-width: 750px) {
+            .button {
+              font-size: 17px!important;
+              padding: 10px 20px!important;
+            }
+        }
+        @media screen and (max-width: 550px) {
+            .button {
+              font-size: 13px!important;
+              padding: 5px 10px!important;
+            }
+        }
+
           .button{
             padding: 15px 30px;
             border: 2px solid #999;

@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./static/style/common/resume/index.scss":
-/*!***********************************************!*\
-  !*** ./static/style/common/resume/index.scss ***!
-  \***********************************************/
+/***/ "./static/style/common/common.scss":
+/*!*****************************************!*\
+  !*** ./static/style/common/common.scss ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -106,8 +106,8 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _common_resume_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common/resume/index.scss */ "./static/style/common/resume/index.scss");
-/* harmony import */ var _common_resume_index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_common_resume_index_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _common_common_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common/common.scss */ "./static/style/common/common.scss");
+/* harmony import */ var _common_common_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_common_common_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 
 /***/ })
