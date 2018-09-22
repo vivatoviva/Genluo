@@ -9,9 +9,15 @@ export default ({ data }) => {
         {
           data.map((item, index)=>
             <li>
-              <WithLink prefetch paramsData={{cateId: item.id}} as={`/blog/category/${item.id}`} href={`/blog/archives`}>
-              {item.name}
-              </WithLink>
+              <div>
+                <WithLink
+                  paramsData={{cateId: item.id}}
+                  as={`/blog/category/${item.id}`}
+                  href={`/blog/archives`}
+                >
+                  <a>{item.name}</a>
+                </WithLink>
+              </div>
               <span>({item.num})</span>
             </li>)
         }
@@ -25,8 +31,12 @@ export default ({ data }) => {
           font-size: 15px;
           margin: 20px;
         }
+        li div {
+          display: inline-block;
+        }
         li span {
           margin-left: 5px;
+          display: inline-block;
 
         }
       `}</style>

@@ -1,5 +1,21 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+  faUser,
+  faSchool,
+  faCertificate,
+  faProjectDiagram,
+  faTree,
+} from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+library.add(
+  faTree,
+  faSchool,
+  faCertificate,
+  faProjectDiagram,
+  faUser,
+)
+
 
 class Item extends React.Component {
   render() {
@@ -9,7 +25,7 @@ class Item extends React.Component {
         <div className="dividing">
           <p className="line"></p>
           <p>
-            <span><FontAwesomeIcon icon={icon}/></span><span>{title}</span>
+            <i><FontAwesomeIcon icon={icon}/></i><span>{title}</span>
           </p>
         </div>
         <div className="content">
@@ -39,7 +55,15 @@ class Item extends React.Component {
             text-indent: 20px;
             line-height: 1;
           }
-          span+span {
+          p i {
+            line-height: 1;
+            width: 13px;
+            text-indent: 0px;
+            display: inline-block;
+            vertical-align: -3%;
+            text-indent: 0px;
+          }
+          span {
             padding: 0 20px 0px 10px;
             font-size: 16px;
             background-color: #fff;

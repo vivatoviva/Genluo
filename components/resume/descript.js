@@ -5,7 +5,7 @@ export default class extends Component {
     const { children, isItem } = this.props
     return (
       <div>
-        <p className={isItem ? 'item descript' : 'descript'}>{children}</p>
+        <p className={isItem ? 'item1 descript' : 'descript'}>{children}</p>
         <style jsx>{`
           p {
             padding: 5px 12px;
@@ -13,14 +13,14 @@ export default class extends Component {
             line-height: 1.5;
             position: relative;
           }
-          .item {
+          .item1 {
             padding-left: 25px;
           }
-          .item::after {
+          .item1::after {
             content: "";
             display: block;
-            width: 2px;
-            height: 2px;
+            width: 3px;
+            height: 3px;
             border: 1px solid #000;
             border-radius: 50%;
             position: absolute;

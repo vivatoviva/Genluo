@@ -4,15 +4,7 @@ import TimeLine from '../../../components/TimeLine'
 import fetch from 'isomorphic-unfetch'
 import Pagination from '../../../components/Pagination'
 
-const data = [{
-  id: 1,
-  name: 'web页面进行渲染',
-  timestamp: '',
-}, {
-  id: 2,
-  name: 'web性能优化之缓存',
-  timestamp: '',
-}]
+
 class ActivePage extends React.Component {
   
   static async getInitialProps({ query }) {

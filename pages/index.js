@@ -88,7 +88,7 @@ const Style = () =>
       a {
         text-decoration: none;
       }
-      ul {
+      nav {
         display: flex;
         justify-content: center;
         overflow: hidden;
@@ -96,12 +96,16 @@ const Style = () =>
       li {
         display: inline-block;
         margin: 20px;
+        font-size: 0;
       }
       li span {
+        display: inline-block;
         line-height: 1;
+        min-width: 15px;
         margin-right: 5px;
         display: inline-block;
         overflow: hidden;
+        vertical-align: -3%;
       }
       a:hover {
         color: #000;
@@ -111,7 +115,6 @@ const Style = () =>
     <style global jsx>{`
       * {
         padding: 0;
-
       }
       body {
         font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
@@ -132,25 +135,24 @@ class IndexPage extends React.Component {
         <Style />
         <div className="index-page">
           <h1>Genluo</h1>
-          <ul>
-            <li><Link prefetch href='/'><a><Button>主页</Button></a></Link></li>
-            <li><Link prefetch href='/blog'><a><Button>博客</Button></a></Link></li>
-            <li><Link prefetch href="/resume"><a><Button>简历</Button></a></Link></li>
-            <li><Link prefetch href="/about"><a><Button>关于</Button></a></Link></li>
+          <nav>
             <li>
-              <Link href='https://github.com/vivatoviva'>
-                <a><Button>
-                  <span>
-                    <FontAwesomeIcon
-                      icon={faGithub}
-                    />
-                  </span>
-                  Github
-                  </Button>
-                </a>
-              </Link>
+              <Button href="/">主页</Button>
             </li>
-          </ul>
+            <li><Button href="/blog">博客</Button></li>
+            <li><Button href="/resume">简历</Button></li>
+            <li><Button href="/about">关于</Button></li>
+            <li>
+              <Button href="https://github.com/vivatoviva">
+                <span>
+                  <FontAwesomeIcon
+                    icon={faGithub}
+                  />
+                </span>
+                Github
+              </Button>
+            </li>
+          </nav>
         </div>
       </div>
     )

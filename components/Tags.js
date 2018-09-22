@@ -5,12 +5,22 @@ const Tag = ({item:{name, num, id}, sum }) => {
   let sizetopx = parseInt(num/sum * 60 + 15, 10);
   return (
     <div>
-      <WithLink href={`/blog/archives`} paramsData={{tagId: id}} as={`/blog/tag/${id}`}>{name}</WithLink>
+      <WithLink
+        href={`/blog/archives`}
+        paramsData={{tagId: id}}
+        as={`/blog/tag/${id}`}
+      >
+        <a>{name}</a>
+      </WithLink>
       <style jsx>{`
         div {
           font-size: ${sizetopx}px;
           display: inline-block;
           margin: 0 20px;
+        }
+        a {
+          text-decoration: none;
+          
         }
       `}</style>
     </div>

@@ -7,7 +7,16 @@ import Button from '../Button'
 export default ({
   isDividing=true,
   data,
-  data: { article_id, title, descript, update_time, create_time, read_num, categroy_name, tags }
+  data: {
+    article_id,
+    title,
+    descript,
+    update_time,
+    create_time,
+    read_num,
+    categroy_name,
+    tags
+  }
 }) =>
   <div className="wraper">
     <Title 
@@ -18,11 +27,10 @@ export default ({
       categroyName={categroy_name}
       tags={tags}
     />
-    
     <Content
       content={descript}
     />
-    
+
     <Button.Artic
       paramsData={data}
       href='/blog/article'
@@ -30,7 +38,6 @@ export default ({
     />
 
     <style jsx>{`
-      
       .wraper {
         padding: 50px 0 50px;
         ${isDividing? 'border-bottom: 1px dotted #999;': ''}

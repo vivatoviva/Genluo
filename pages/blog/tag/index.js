@@ -17,7 +17,10 @@ class TagPage extends React.Component {
   render() {
     const { data } = this.props;
     return (
-      <Layout navIndex={1}>
+      <Layout
+        navIndex={1}
+        title="标签"
+      >
         <h1>Tags</h1>
         <div>
           <Tags items={data} />

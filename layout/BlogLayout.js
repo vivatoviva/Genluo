@@ -46,10 +46,10 @@ class BlogPage extends React.Component {
 
   render() {
     const { isFixed, isDisplayToTop } = this.state;
-    const { children, navIndex } = this.props;
+    const { children, navIndex, title } = this.props;
     return (
       <div className="wraper">
-        <Head title='博客主页' />
+        <Head title={title || '博客主页'} />
         <div className="can">
           <div className="left">
             <div className="nav" ref={this.nav}>

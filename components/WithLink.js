@@ -28,7 +28,9 @@ export default class extends PureComponent {
               pathname: href,
               query: paramsData
             }}
-            as={as}><a className={className} style={style} {...rest}>{children}</a>
+            as={as}
+          >
+            {children}
           </Link>
           <style jsx>{`
             div {

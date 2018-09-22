@@ -5,12 +5,14 @@ class Item extends React.Component {
   render() {
     const { time, children, tag } = this.props;
     let href, tagName
-    if(tag.name) {
+
+    if(Object.prototype.toString.call(tag) === '[object Object]') {
       href=tag.link;
       tagName = tag.name
-    } else {
+    } else if(tag) { 
       tagName = tag
     }
+    
     return (
       <div>
         <div>

@@ -49,9 +49,10 @@ class IndexPage extends React.Component {
   render() {
     const { pagination, list } = this.state;
     var a = 1;
-    
     return (
-      <Layout navIndex={0}>
+      <Layout
+        navIndex={0}
+      >
         {
           list.map((item, index) => 
             <Article

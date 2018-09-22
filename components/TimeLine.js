@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Link from 'next/link'
 import WithLink from './WithLink'
 import { TimeTool } from '../utils/time'
 class Item extends Component {
@@ -16,7 +15,12 @@ class Item extends Component {
         <span className="dot"><i></i></span>
         <span className="time">{time}</span>
         {
-          isTitle ? children : <WithLink paramsData={data} as={`/blog/${data['article_id']}`} href='/blog/article'>{children}</WithLink>
+          isTitle ? children : <span><WithLink
+            paramsData={data}
+            as={`/blog/${data['article_id']}`}
+            href='/blog/article'>
+            <a>{children}</a> 
+            </WithLink></span>
         }
         <style jsx>{`
           div {
@@ -25,6 +29,9 @@ class Item extends Component {
             font-size: ${sizetopx*1.5}px;
             border-bottom: ${!isHead ? `1px dotted rgb(224, 204, 204)`: ''};
             transition: 300ms all ease;
+          }
+          div span {
+            display: inline-block;
           }
           div.notitle:hover {
             border-bottom: 1px dotted #999;

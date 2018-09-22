@@ -17,7 +17,10 @@ class CatePage extends React.Component {
   render() {
     const { data } = this.props;
     return (
-      <Layout navIndex={2}>
+      <Layout
+        navIndex={2}
+        title="分类"
+      >
         <h1>Categories</h1>
         <div>
             <CateList data={data}/>
@@ -29,7 +32,6 @@ class CatePage extends React.Component {
             color: rgb(85, 85, 85);
             margin-bottom: 50px;
           }
-
         `}</style>
       </Layout>
     )
