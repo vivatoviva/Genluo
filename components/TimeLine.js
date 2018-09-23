@@ -24,6 +24,8 @@ class Item extends Component {
         }
         <style jsx>{`
           div {
+            box-sizing: border-box;
+            width: 100%;
             line-height: 30px;
             padding: ${isHead ? "0px 0px " + sizetopx * 2 + 'px' : `${sizetopx * 2}px 0px`};
             font-size: ${sizetopx*1.5}px;
@@ -99,6 +101,11 @@ class TimeLine extends Component {
           })
         }
         <style jsx>{`
+          @media screen and (max-width: 1340px) {
+            div {
+              margin-left: 20px!important;
+            }  
+          }
           div {
             border-left: 4px solid #f5f5f5;
             margin-left: 55px;
