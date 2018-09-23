@@ -18,5 +18,4 @@ router.post('/api/category/list', controller.client.categroyList)
 router.get('/api/statistics/detail')
 // 文章点击相关
 
-
 module.exports = router;

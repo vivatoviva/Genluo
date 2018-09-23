@@ -17,6 +17,7 @@ function renderAndCache(ctx, pagePath, queryParams) {
       return app.renderError(err, ctx.req, ctx.res, pagePath, queryParams)
     })
 }
+
 app.prepare()
   .then(() => {
     router.get('/', ctx => renderAndCache(ctx, '/'))
