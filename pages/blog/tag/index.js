@@ -5,7 +5,7 @@ import fetch from 'isomorphic-unfetch'
 
 class TagPage extends React.Component {
   static async getInitialProps() {
-    const res = await fetch('/api/tag/list', {
+    const res = await fetch('http://localhost:8080/api/tag/list', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json'

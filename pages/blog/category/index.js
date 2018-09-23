@@ -1,17 +1,12 @@
 import Layout from '../../../layout/BlogLayout'
 import CateList from '../../../components/CateList'
-import fetch from 'isomorphic-unfetch'
+import http from '../../../utils/http'
+
 
 class CatePage extends React.Component {
   static async getInitialProps() {
-    const res = await fetch('/api/category/list', {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json'
-      },
-    })
-    const { data } = await res.json();
-
+    console.log(http)
+    const { data } = await http.request('/api/category/list');
     return { data }
   }
   render() {

@@ -12,6 +12,29 @@ async function articleList(ctx, next) {
     ctx.body = Tip.datebaseError;
   }
 }
+async function articleContent(ctx, next) {
+  const { id } = ctx.params;
+  let data = null;
+  try {
+    data = await service.blog.getContent({id}) 
+    ctx.body = { ...Tip.ok, data }
+  } catch (e) {
+    console.log('===============获取内容=============', e)
+    ctx.body = Tip.datebaseError
+  }
+}
+
+async function  articleDetail(ctx, next) {
+  const { id } = ctx.params;
+  let data = null;
+  try {
+    data = await service.blog.getDetail({id}) 
+    ctx.body = { ...Tip.ok, data }
+  } catch (e) {
+    console.log('===============文章详情=============', e)
+    ctx.body = Tip.datebaseError
+  }
+}
 // 获取相关tag列表
 async function tagList(ctx, next) {
   let data = null;
@@ -37,4 +60,6 @@ module.exports = {
   articleList,
   tagList,
   categroyList,
+  articleContent,
+  articleDetail,
 }

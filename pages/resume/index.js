@@ -105,6 +105,7 @@ const Style = () =>
       }
       .body {
         padding-top: 20px;
+        padding-bottom: 30px;
       }
       .body .item {
         display: inline-block;

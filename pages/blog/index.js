@@ -2,6 +2,8 @@ import Layout from '../../layout/BlogLayout'
 import Article from '../../components/Article'
 import Pagination from '../../components/Pagination'
 import fetch from 'isomorphic-unfetch'
+import http from '../../utils/http'
+
 
 import React from 'react';
 
@@ -10,16 +12,11 @@ class IndexPage extends React.Component {
   static async getInitialProps({ req, query, pathname }) {
     // 获取page参数
     // 获取数据
-    const res = await fetch('http://localhost:8080/api/article/list', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+    const { data: { pagination, list } } = await http.request('/api/article/list', {
       body: JSON.stringify({
         page: 1,
       })
     })
-    const { data: { pagination, list } } = await res.json()
     // 初始化组件props
     return { pagination, list }
   }

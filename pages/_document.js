@@ -14,9 +14,18 @@ export default class MyDocument extends Document {
           <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
           <meta name="format-detection" content="telephone=no" />
-          <style>{`
-            
-          `}</style>
+          <link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon.png"></link>
+          <style global jsx>{`
+            body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0} 
+              body{font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 13px;background:#fff;-webkit-text-size-adjust:100%;} 
+              a{color:#2d374b;text-decoration:none}
+              a:hover{color:#cd0200;text-decoration:underline}
+              em{font-style:normal}
+              li{list-style:none}
+              img{border:0;vertical-align:middle}
+              table{border-collapse:collapse;border-spacing:0}
+              p{word-wrap:break-word}
+        `}</style>
         </Head>
         <body className="custom_class">
           <Main />
