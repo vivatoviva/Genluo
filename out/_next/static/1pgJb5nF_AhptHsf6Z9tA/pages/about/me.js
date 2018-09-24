@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[17],{245:function(n,e,t){__NEXT_REGISTER_PAGE("/about/me",function(){return n.exports=t(246),{page:n.exports.default}})},246:function(n,e,t){"use strict";t.r(e);var u=t(0),o=t.n(u);e.default=function(){return o.a.createElement("div",null,"genluo")}}},[[245,1,0]]]);
