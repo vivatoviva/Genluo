@@ -3,14 +3,34 @@ const next = require('next')
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const router = new Router();
+const LRUCache = require('lru-cache')
 
+
+const ssrCache = new LRUCache({
+  max: 100,
+  maxAge: 1000 * 60 * 60 // 1hour
+})
+
+function getCacheKey (ctx) {
+  return `${ctx.request.url}`
+}
+
+
+// 进行渲染缓存
 function renderAndCache(ctx, pagePath, queryParams) {
-  console.log(ctx.request.url)
+  const key = getCacheKey(ctx)
+  // 命中缓存(存在优化点)
+  // if (ssrCache.has(key)) {
+  //   ctx.body = ssrCache.get(key)
+  //   return
+  // }
+
   return app.renderToHTML(ctx.req, ctx.res, pagePath, queryParams || ctx.params)
     .then((html) => {
       console.log('render ok ')
       // Let's cache this page
-      ctx.body = html
+      ctx.body = html;
+      ssrCache.set(key, html);
     })
     .catch((err) => {
       console.log('render error')

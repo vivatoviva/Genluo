@@ -40,6 +40,7 @@ class Converter {
   }
 
   toBlock(md) {
+    
     let mdarr = md.split('\n').filter(item => item.trim().length !== 0)
     let blockMD = [];
     let identification = false;

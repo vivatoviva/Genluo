@@ -15,6 +15,8 @@ module.exports = {
     isServer,
     defaultLoaders
   }) => {
+    console.log('服务器端配置', isServer);
+      
     // 提取css文件
     // config.module.rules.push({
     //   test: /\.sass/,
@@ -47,4 +49,9 @@ module.exports = {
       page: '/'
     },
   }),
+  exportPathMap: function(defaultPathMap) {
+    return {
+      '/': { page: '/' },
+    }
+  }
 }

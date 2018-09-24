@@ -15,6 +15,12 @@ async function articleList(ctx, next) {
 async function articleContent(ctx, next) {
   const { id } = ctx.params;
   let data = null;
+  // 测试会不会阻塞渲染，是会的
+  // await new Promise((resolve) => {
+  //   setTimeout(() => {
+  //     resolve()
+  //   },1000)
+  // })
   try {
     data = await service.blog.getContent({id}) 
     ctx.body = { ...Tip.ok, data }

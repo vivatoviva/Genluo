@@ -1,4 +1,6 @@
 import React,{ Component } from 'react'
+import WithLink from '../components/WithLink'
+
 
 class Pagination extends Component {
   state = {
@@ -77,7 +79,16 @@ class Pagination extends Component {
           className={className.join(' ')}
           onClick={item.func}
         >
-          {item.value}
+          {
+            !(className.includes('disabled') || className.includes('nowIndex')) ? 
+              <WithLink
+                href="/blog"
+
+                paramsData={{page: item.value}}
+              ><a>{item.value}</a></WithLink> : item.value
+          }
+          
+
           <style jsx>{`
           li {
             width: 25px;
@@ -104,7 +115,9 @@ class Pagination extends Component {
             width: 100%;
             height: 2px;
             background-color: #ccc;
-
+          }
+          li a {
+            display: block;
           }
           .nowIndex {
             background-color: #ccc;

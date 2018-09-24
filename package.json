@@ -7,8 +7,8 @@
     "next": "next dev ",
     "dev": "node server/index.js",
     "push": "./push.sh",
-    "build": "next build",
-    "start": "next start",
+    "build": "next build && next export",
+    "start": "NODE_ENV=production node server.js",
     "css:build": "webpack --config webpack-css.js --progress --color",
     "css:dev": "webpack --config webpack-css.js --watch --progress --color",
     "lint": "eslint --ext .js pages"
@@ -26,9 +26,11 @@
     "koa-body": "^4.0.4",
     "koa-route": "^3.2.0",
     "koa-router": "^7.4.0",
+    "lru-cache": "^4.1.3",
     "mysql": "^2.16.0",
     "next": "^7.0.0",
     "npm": "^6.4.1",
+    "nprogress": "^0.2.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "webpack-dev-server": "^3.1.8"
@@ -51,3 +53,4 @@
     "webpack-sources": "^1.2.0"
   }
 }
+

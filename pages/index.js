@@ -1,38 +1,47 @@
 import Head from "../components/Head";
 import React from 'react'
-import Button from '../components/Button'
-
 // 将图标添加到库中
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import dynamic from 'next/dynamic'
+
+// import Button from '../components/Button';
+
+const Button = dynamic(import('../components/Button'), {
+  loading: () => <p>...</p>,
+  ssr: true,
+  })
+  
 const Style = () =>
   <>
     <style jsx>{`
       @media screen and (max-width: 768px) {
-          h1{
-            font-size: 100px!important;
-          }
-          li {
-            margin: 5px!important;
-          }
-          li span {
-            height: 16px;
-            width: 16px;
-            margin-right: 5px;
-          }
+        h1{
+          font-size: 100px!important;
+        }
+        li {
+          margin: 5px!important;
+        }
+        li span {
+          height: 16px;
+          width: 16px;
+          margin-right: 5px;
+        }
       }
       @media screen and (max-width: 550px) {
-          h1{
-            font-size: 80px!important;
-          }
-          li span {
-            height: 16px;
-            width:16px;
-            margin-right: 5px;
-          }
+        h1{
+          font-size: 80px!important;
+        }
+        li span {
+          height: 16px;
+          width:16px;
+          margin-right: 5px;
+        }
+      }
+      .index-page {
+        margin-top: 200px;
       }
       h1 {
-        margin-top: 190px;
         font-size: 150px;
         color: #000;
         text-align: center;
@@ -72,6 +81,8 @@ const Style = () =>
       }
       body {
         font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+        background-image: radial-gradient(circle, #D7D7D7, #D7D7D7 1px, #FFF 1px, #FFF);
+        background-size: 28px 28px;
       }
   `}</style>
   </>
