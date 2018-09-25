@@ -1,20 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
-  faUser,
-  faSchool,
-  faCertificate,
-  faProjectDiagram,
-  faTree,
-} from '@fortawesome/free-solid-svg-icons'
-import { library } from '@fortawesome/fontawesome-svg-core'
-library.add(
-  faTree,
-  faSchool,
-  faCertificate,
-  faProjectDiagram,
-  faUser,
-)
+
 
 
 class Item extends React.Component {
@@ -25,7 +11,7 @@ class Item extends React.Component {
         <div className="dividing">
           <p className="line"></p>
           <p>
-            <i><FontAwesomeIcon icon={icon}/></i><span>{title}</span>
+          <i class={`fas fa-${icon}`}></i><span>{title}</span>
           </p>
         </div>
         <div className="content">

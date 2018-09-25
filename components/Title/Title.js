@@ -1,13 +1,6 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import WithLink from './WithLink';
-import { 
-  faTags,
-  faCalendar,
-  faCalendarCheck,
-  faFolder,
-  faEye,
-} from '@fortawesome/free-solid-svg-icons'
+import WithLink from '../WithLink';
+
 
 const IconTitle = ({
   icon,
@@ -15,12 +8,7 @@ const IconTitle = ({
   children,
 }) => (
   <li>
-    <i>
-      <FontAwesomeIcon
-        icon={icon}
-        style={{marginRight: '5px', boxSizing: 'border-box', padding: '1px'}}
-      />
-    </i>
+    <i><i class={`fas fa-${icon}`}></i> </i>
     <span>{name} : </span>{children}
     <style jsx>{`
       @media screen and (max-width: 1340px) {
@@ -37,9 +25,10 @@ const IconTitle = ({
       li + li {
         border-left: 1.5px solid rgb(153, 153, 153);
       }
-      i {
+      li i {
         display: inline-block;
         line-height: 1;
+        margin-right: 7px;
       }
     `}</style>
   </li>
@@ -71,25 +60,25 @@ export default class Title extends React.Component {
         <ul>
           {/* 发表时间 */}
           <IconTitle
-            icon={faCalendarCheck}
+            icon="calendar-check"
             name="发表于"
           >
             2016-9
           </IconTitle>
           <IconTitle
-            icon={faCalendar}
+            icon="calendar"
             name="更新于"
           >
             2016-9
           </IconTitle>
           <IconTitle
-            icon={faFolder}
+            icon="folder"
             name="分类于"
           >
             <SpanLink link={`/blog/category/1`}>{categroyName}</SpanLink>
           </IconTitle>
           <IconTitle
-            icon={faEye}
+            icon="eye"
             name="阅读次数"
           >
             {readNum}
@@ -97,7 +86,7 @@ export default class Title extends React.Component {
           {
             tags  && tags.length > 0 ? (
               <IconTitle
-              icon={faTags}
+              icon="tags"
               name="标签"
             >
               {tags.map(item => <><SpanLink link={`/blog/tag/${item.tag_id}`}>{item.name}</SpanLink>、</>)}

@@ -1,9 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-
-  faChevronUp,
-} from '@fortawesome/free-solid-svg-icons'
 
 class ToTop extends React.Component {
   
@@ -26,7 +21,9 @@ class ToTop extends React.Component {
     const { isDisplay=false } = this.props;
     return (
       <div className={isDisplay ? 'wraper display' : 'wraper'} onClick={this.handleToTop}>
-        <div className="toTop"><FontAwesomeIcon icon={faChevronUp} /></div>
+        <div className="toTop">
+          <i className="far fa-chevron-up"></i>
+        </div>
         <style jsx>{`
           div.wraper {
             cursor: pointer;

@@ -1,7 +1,6 @@
 import Layout from '../../layout/BlogLayout'
 import Article from '../../components/Article'
 import Pagination from '../../components/Pagination'
-import fetch from 'isomorphic-unfetch'
 import http from '../../utils/http'
 
 
@@ -27,11 +26,7 @@ class IndexPage extends React.Component {
   }
 
   handlePageChange = async (page) => {
-    const res = await fetch('http://localhost:8080/api/article/list', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+    const res = await http.request('http://localhost:8080/api/article/list', {
       body: JSON.stringify({
         page,
       })

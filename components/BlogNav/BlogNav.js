@@ -1,24 +1,6 @@
 import React from 'react'
-import withItem from './withItem'
+import withItem from '../withItem'
 import Link from 'next/link'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
-  faCoffee,
-  faHome,
-  faTags,
-  faTable,
-  faSearch,
-  faArchive,
-  faBars,
-} from '@fortawesome/free-solid-svg-icons'
-import { library } from '@fortawesome/fontawesome-svg-core'
-library.add(faCoffee,
-  faHome,
-  faTags,
-  faTable,
-  faSearch,
-  faArchive,
-)
 
 
 const items = [{
@@ -58,10 +40,9 @@ class BlogNav extends React.Component {
   }
 
   handelBarClick = () => {
-    const { isBar } = this.state;
-    this.setState({
-      isBar: !isBar,
-    })
+    this.setState(prevState => ({
+      isBar: !prevState.isBar,
+    }))
   }
 
 
@@ -74,10 +55,7 @@ class BlogNav extends React.Component {
             className="btn"
             onClick={this.handelBarClick}
           >
-            <FontAwesomeIcon
-              style={{width: '100%', height:'100%'}}
-              icon={faBars}
-            />
+            <i class="fas fa-bars"></i> 
           </div>
           <h1>Genluo</h1>
         </div>
@@ -90,7 +68,7 @@ class BlogNav extends React.Component {
                   className={index === currentIndex ? 'navNow navLi' : 'navLi' }
                   onClick={this.handleClick.bind(this, index)}
                 >
-                  <i><FontAwesomeIcon icon={item.icon}/></i>
+                  <i><i class={`fas fa-${item.icon}`}></i> </i>
                   <span>{item.name}</span>
                 </li>
               </Link>

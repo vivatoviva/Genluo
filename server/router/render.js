@@ -12,7 +12,7 @@ const ssrCache = new LRUCache({
 })
 
 function getCacheKey (ctx) {
-  return `${ctx.request.url}`
+  return `${ctx.req.url}`
 }
 
 
@@ -20,14 +20,13 @@ function getCacheKey (ctx) {
 function renderAndCache(ctx, pagePath, queryParams) {
   const key = getCacheKey(ctx)
   // 命中缓存(存在优化点)
-  // if (ssrCache.has(key)) {
-  //   ctx.body = ssrCache.get(key)
-  //   return
-  // }
+  if (ssrCache.has(key)) {
+    ctx.body = ssrCache.get(key)
+    return
+  }
 
   return app.renderToHTML(ctx.req, ctx.res, pagePath, queryParams || ctx.params)
     .then((html) => {
-      console.log('render ok ')
       // Let's cache this page
       ctx.body = html;
       ssrCache.set(key, html);

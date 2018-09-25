@@ -1,17 +1,14 @@
-import Head from "../components/Head";
+import Head from "components/Head";
+import H from 'components/Head'
 import React from 'react'
 // 将图标添加到库中
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import dynamic from 'next/dynamic'
-
-// import Button from '../components/Button';
 
 const Button = dynamic(import('../components/Button'), {
   loading: () => <p>...</p>,
   ssr: true,
   })
-  
+
 const Style = () =>
   <>
     <style jsx>{`
@@ -38,8 +35,12 @@ const Style = () =>
           margin-right: 5px;
         }
       }
-      .index-page {
-        margin-top: 200px;
+      .index {
+        width: 100vw;
+        height: 100vh;
+        display:flex;
+        justify-content:center;
+        align-items: center;
       }
       h1 {
         font-size: 150px;
@@ -55,6 +56,7 @@ const Style = () =>
         display: flex;
         justify-content: center;
         overflow: hidden;
+        padding-bottom: 150px;
       }
       li {
         display: inline-block;
@@ -62,13 +64,8 @@ const Style = () =>
         font-size: 0;
       }
       li span {
-        display: inline-block;
-        line-height: 1;
-        min-width: 15px;
-        margin-right: 5px;
-        display: inline-block;
-        overflow: hidden;
-        vertical-align: -3%;
+        margin-right: 7px;
+
       }
       a:hover {
         color: #000;
@@ -87,6 +84,24 @@ const Style = () =>
   `}</style>
   </>
 
+const buttonData = [{
+  name: 'HOME',
+  href: '/'
+}, {
+  name: 'BLOG',
+  href: '/blog'
+}, {
+  name: 'RESUME',
+  href: '/resume'
+}, {
+  name: 'ABOUT',
+  href: '/about'
+}, {
+  name: 'GITHUB',
+  icon: 'github',
+  href: 'https://github.com/vivatoviva'
+}]
+
 class IndexPage extends React.Component {
 
   constructor(props) {
@@ -95,28 +110,21 @@ class IndexPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="index">
         <Head title="主页" />
         <Style />
         <div className="index-page">
           <h1>Genluo</h1>
           <nav>
-            <li>
-              <Button href="/">主页</Button>
-            </li>
-            <li><Button href="/blog">博客</Button></li>
-            <li><Button href="/resume">简历</Button></li>
-            <li><Button href="/about">关于</Button></li>
-            <li>
-              <Button href="https://github.com/vivatoviva">
-                <span>
-                  <FontAwesomeIcon
-                    icon={faGithub}
-                  />
-                </span>
-                Github
-              </Button>
-            </li>
+            {
+              buttonData.map((item) => (
+                  <li><Button href={item.href}>
+                    {item.icon && <span class="fa fa-heart"></span>}
+                    {item.name}
+                  </Button></li>
+              ))
+            }
+   
           </nav>
         </div>
       </div>

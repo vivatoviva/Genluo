@@ -1,19 +1,12 @@
 import React, {Component } from 'react'
 import Content from '../../components/Content'
 import Head from '../../components/Head'
-import Modal from '../../components/Modal'
 
 export default class extends Component {
   render() {
     return (
       <div className="wraper">
         <Head title="关于"></Head>
-        <Modal
-          title="Genluo"
-          visible={false}
-          >
-          前端之巅
-        </Modal>
         <div className="content">
           <Content 
             content={`

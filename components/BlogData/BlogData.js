@@ -1,4 +1,4 @@
-import withItem from './withItem';
+import withItem from '../withItem';
 
 const BlogData =  () =>
   <div className="warper">

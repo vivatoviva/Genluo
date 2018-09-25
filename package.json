@@ -7,11 +7,12 @@
     "next": "next dev ",
     "dev": "node server/index.js",
     "push": "./push.sh",
-    "build": "next build && next export",
-    "start": "NODE_ENV=production node server/index.js",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=production node server/index.js  ",
     "css:build": "webpack --config webpack-css.js --progress --color",
     "css:dev": "webpack --config webpack-css.js --watch --progress --color",
-    "lint": "eslint --ext .js pages"
+    "lint": "eslint --ext .js pages",
+    "analyze": "cross-env ANALYZE=1 next build"
   },
   "dependencies": {
     "@babel/core": "^7.0.0",
@@ -37,6 +38,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.1.5",
+    "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "eslint": "^5.6.0",
     "eslint-loader": "^2.1.1",
@@ -49,8 +51,8 @@
     "scss-loader": "0.0.1",
     "style-loader": "^0.23.0",
     "webpack": "^4.19.1",
+    "webpack-bundle-analyzer": "^3.0.2",
     "webpack-cli": "^3.1.0",
     "webpack-sources": "^1.2.0"
   }
 }
-

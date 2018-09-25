@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import WithLink from './WithLink'
+import WithLink from '../WithLink'
 
 export default ({ data }) => {
 

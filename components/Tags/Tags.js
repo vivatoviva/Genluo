@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import WithLink from './WithLink';
+import WithLink from '../WithLink';
 
 const Tag = ({item:{name, num, id}, sum }) => {
   let sizetopx = parseInt(num/sum * 60 + 15, 10);

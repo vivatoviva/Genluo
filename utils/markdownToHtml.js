@@ -141,7 +141,6 @@ class Converter {
 
       str = str.replace(/\!\[\S?\]\((\S+)\)/g, `<img src="$1" class="ace ace-img"></img>`)
       // 图片加载
-      debugger
       if(/\!\[[\S]*\]\[(\d+)\]/g.test(str)) {
         let regex = /\!\[([\S]*)\]\[(\d+)\]/g
         let match;

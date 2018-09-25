@@ -1,16 +1,8 @@
 import React from 'react';
 import Head from '../../components/Head'
-import Avtor from '../../components/Avtor'
 import Dividing from '../../components/resume/DivdingLine'
 import Item from '../../components/resume/Item'
 import Descript from '../../components/resume/descript'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { 
-  faHome,
-  faPhone,
-  faEnvelope,
-} from '@fortawesome/free-solid-svg-icons'
 
 const Style = () =>
   <>
@@ -117,7 +109,7 @@ const Style = () =>
 class Index extends React.Component {
   render() {
     return (
-      <div className="wraper"> 
+      <div className="wraper">
         <Head title="简历"></Head>
         <div className="resume">
           <header>
@@ -136,28 +128,29 @@ class Index extends React.Component {
               </ul>
               <ul className="right influence">
                 <li>
-                  <a href="http://blogoog.com/">www.blogoog.com<span><FontAwesomeIcon icon={faHome}/></span></a>
+                  <a href="http://blogoog.com/">www.blogoog.com<span><i class="fas fa-home"></i> </span></a>
                 </li>
                 <li>
                   <a href="tel:17784455445">
-                    17784455445 <span><FontAwesomeIcon icon={faPhone}/></span>
+                    17784455445 <span><i class="fas fa-phone"></i> </span>
                   </a>
                 </li>
                 <li>
                   <a href="https://github.com/vivatoviva">
-                    github.com/vivatoviva <span><FontAwesomeIcon icon={faGithub} /></span>
+                    github.com/vivatoviva
+                    <span><i class="fas fa-github"></i></span>
                   </a>
                 </li>
                 <li>
                   <a href="mailto:1461304646@qq.com">
-                    1461304646@qq.com <span><FontAwesomeIcon icon={faEnvelope}/></span>
+                    1461304646@qq.com 
+                    <span><i class="fas fa-envelope"></i></span>
                   </a>
                 </li>
               </ul>
             </div>
           </header>
           <div className="body clear">
-            {/* 左边栏 */}
             <div className="item left">
               <section>
                 <Dividing
@@ -210,7 +203,6 @@ class Index extends React.Component {
                 </Dividing>
               </section>
             </div>
-            {/* 右边栏 */}
             <div className="left item">
               <section>
                 <Dividing

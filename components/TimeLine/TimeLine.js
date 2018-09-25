@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import WithLink from './WithLink'
-import { TimeTool } from '../utils/time'
+import WithLink from '../WithLink'
+import { TimeTool } from '../../utils/time'
 class Item extends Component {
   render() {
     const { size="normal", time, children, color="#bbb", isTitle=false, isHead=false, data } = this.props;

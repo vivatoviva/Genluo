@@ -1,5 +1,5 @@
 import React,{ Component } from 'react'
-import WithLink from '../components/WithLink'
+import WithLink from '../WithLink'
 
 
 class Pagination extends Component {

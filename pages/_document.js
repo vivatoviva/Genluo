@@ -11,28 +11,15 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <link rel="stylesheet" href="../static/style/dist/app_min.css" />
-          <link rel="stylesheet" href="../static/prismjs/prism.css"/>
-          <script src="../static/prismjs/prism.js"></script>
           <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
           <meta name="format-detection" content="telephone=no" />
           <link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon.png"></link>
           <link rel='stylesheet' type='text/css' href='/static/nprogress.css' />
-          <style global jsx>{`
-            body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0} 
-              body{
-                font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-                font-size: 13px;
-                background:#fff;-webkit-text-size-adjust:100%;
-              } 
-              a{color:#2d374b;text-decoration:none}
-              a:hover{color:#cd0200;text-decoration:underline}
-              em{font-style:normal}
-              li{list-style:none}
-              img{border:0;vertical-align:middle}
-              table{border-collapse:collapse;border-spacing:0}
-              p{word-wrap:break-word}
-        `}</style>
+          <link rel="stylesheet" href="../static/prismjs/prism.css"/>
+          <script src="../static/prismjs/prism.js"></script>
+          {/* <link rel="stylesheet" href="../static/font-awesome-4.7.0/css/font-awesome.css"/> */}
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" />
         </Head>
         <body className="custom_class">
           <Main />
