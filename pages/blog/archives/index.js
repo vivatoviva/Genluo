@@ -9,7 +9,7 @@ class ActivePage extends React.Component {
   static async getInitialProps({ query }) {
     const { tagId, cateId } = query;
     
-    const res = await http.request('http://localhost:8080/api/article/list', {
+    const res = await http.request('/api/article/list', {
 
       body: JSON.stringify({
         page: 1,

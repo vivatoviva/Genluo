@@ -8,11 +8,12 @@
     "dev": "node server/index.js",
     "push": "./push.sh",
     "build": "next build",
-    "start": "cross-env NODE_ENV=production node server/index.js  ",
+    "start": "cross-env NODE_ENV=production node server/index.js",
     "css:build": "webpack --config webpack-css.js --progress --color",
     "css:dev": "webpack --config webpack-css.js --watch --progress --color",
     "lint": "eslint --ext .js pages",
-    "analyze": "cross-env ANALYZE=1 next build"
+    "analyze": "cross-env ANALYZE=1 next build",
+    "deploy": "npm run build && pm2 stop index && npm run start"
   },
   "dependencies": {
     "@babel/core": "^7.0.0",
