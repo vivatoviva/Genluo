@@ -9,15 +9,13 @@ class ActivePage extends React.Component {
   static async getInitialProps({ query }) {
     const { tagId, cateId } = query;
     
-    const res = await http.request('/api/article/list', {
-
+    const { data: { pagination, list }} = await http.request('/api/article/list', {
       body: JSON.stringify({
         page: 1,
         tagId,
         categroyId: cateId,
       })
     })
-    const { data: { pagination, list }} = await res.json();
     return { pagination, list }
   }
 

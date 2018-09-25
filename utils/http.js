@@ -11,7 +11,8 @@ const request = async (url, option) => {
   const newUrl = `${config.domain}:${config.port}` + url;
   const newOption = { ...defaultOption, ...option };
   const request = await fetch(newUrl, newOption);
-  return await request.json()
+  const data = await request.json();
+  return data;
 }
 
 export default {

@@ -5,8 +5,7 @@ import http from '../../../utils/http'
 
 class TagPage extends React.Component {
   static async getInitialProps() {
-    const res = await http.request('/api/tag/list')
-    const { data } = await res.json();
+    const { data }  = await http.request('/api/tag/list')
     return { data }
   }
   render() {
