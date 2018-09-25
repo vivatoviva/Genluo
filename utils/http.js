@@ -8,7 +8,7 @@ const request = async (url, option) => {
       'Content-Type': 'application/json'
     },
   }
-  const newUrl = `http://localhost:${config.port}` + url;
+  const newUrl = `${config.domain}:${config.port}` + url;
   const newOption = { ...defaultOption, ...option };
   const request = await fetch(newUrl, newOption);
   return await request.json()
