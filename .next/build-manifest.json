@@ -1,60 +1,35 @@
 {
-  "devFiles": [],
+  "devFiles": [
+    "static/development/dll/dll_d713f4d20c9358cd3797.js"
+  ],
   "pages": {
     "/_app": [
-      "static/runtime/webpack-ae071232556e7c002558.js",
-      "static/chunks/commons.84cdbf80efacb0ba2a63.js",
-      "static/runtime/main-6a6c4330d86418dd7956.js"
-    ],
-    "/about": [
-      "static/runtime/webpack-ae071232556e7c002558.js",
-      "static/chunks/commons.84cdbf80efacb0ba2a63.js",
-      "static/runtime/main-6a6c4330d86418dd7956.js"
-    ],
-    "/blog/archives": [
-      "static/runtime/webpack-ae071232556e7c002558.js",
-      "static/chunks/commons.84cdbf80efacb0ba2a63.js",
-      "static/runtime/main-6a6c4330d86418dd7956.js"
-    ],
-    "/blog/article": [
-      "static/runtime/webpack-ae071232556e7c002558.js",
-      "static/chunks/commons.84cdbf80efacb0ba2a63.js",
-      "static/runtime/main-6a6c4330d86418dd7956.js"
-    ],
-    "/blog/category": [
-      "static/runtime/webpack-ae071232556e7c002558.js",
-      "static/chunks/commons.84cdbf80efacb0ba2a63.js",
-      "static/runtime/main-6a6c4330d86418dd7956.js"
-    ],
-    "/blog": [
-      "static/runtime/webpack-ae071232556e7c002558.js",
-      "static/chunks/commons.84cdbf80efacb0ba2a63.js",
-      "static/runtime/main-6a6c4330d86418dd7956.js"
-    ],
-    "/blog/tag": [
-      "static/runtime/webpack-ae071232556e7c002558.js",
-      "static/chunks/commons.84cdbf80efacb0ba2a63.js",
-      "static/runtime/main-6a6c4330d86418dd7956.js"
-    ],
-    "/index": [
-      "static/runtime/webpack-ae071232556e7c002558.js",
-      "static/chunks/commons.84cdbf80efacb0ba2a63.js",
-      "static/runtime/main-6a6c4330d86418dd7956.js"
-    ],
-    "/resume": [
-      "static/runtime/webpack-ae071232556e7c002558.js",
-      "static/chunks/commons.84cdbf80efacb0ba2a63.js",
-      "static/runtime/main-6a6c4330d86418dd7956.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/_error": [
-      "static/runtime/webpack-ae071232556e7c002558.js",
-      "static/chunks/commons.84cdbf80efacb0ba2a63.js",
-      "static/runtime/main-6a6c4330d86418dd7956.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/blog": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/about": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/resume": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/index": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/": [
-      "static/runtime/webpack-ae071232556e7c002558.js",
-      "static/chunks/commons.84cdbf80efacb0ba2a63.js",
-      "static/runtime/main-6a6c4330d86418dd7956.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }

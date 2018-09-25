@@ -3,10 +3,11 @@ const dev = process.env.NODE_ENV !== 'production'
 console.log('环境配置', dev)
 const app = next({ dev })
 const handle = app.getRequestHandler()
+const config = require('./config/default')
 
 const Koa = require('koa')
 var routers = require('./router/index')
-const port = parseInt(process.env.PORT, 10) || 3000
+const port = parseInt(process.env.PORT, 10) || config.port
 const mysql = require('./db')
 const koaBody = require('koa-body');
 

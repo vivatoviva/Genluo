@@ -1,16 +1,11 @@
 import React from 'react';
 import Layout from '../../../layout/BlogLayout'
 import Tags from '../../../components/Tags'
-import fetch from 'isomorphic-unfetch'
+import http from '../../../utils/http'
 
 class TagPage extends React.Component {
   static async getInitialProps() {
-    const res = await fetch('http://localhost:8080/api/tag/list', {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json'
-      },
-    })
+    const res = await http.request('http://localhost:8080/api/tag/list')
     const { data } = await res.json();
     return { data }
   }

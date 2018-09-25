@@ -1,20 +1,16 @@
 import React from 'react';
 import Layout from '../../../layout/BlogLayout'
 import TimeLine from '../../../components/TimeLine'
-import fetch from 'isomorphic-unfetch'
 import Pagination from '../../../components/Pagination'
-
+import http from '../../../utils/http'
 
 class ActivePage extends React.Component {
   
   static async getInitialProps({ query }) {
     const { tagId, cateId } = query;
     
-    const res = await fetch('http://localhost:8080/api/article/list', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+    const res = await http.request('http://localhost:8080/api/article/list', {
+
       body: JSON.stringify({
         page: 1,
         tagId,
@@ -31,11 +27,8 @@ class ActivePage extends React.Component {
   }
 
   handlePageChange = async page => {
-    const res = await fetch('/api/article/list', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+    const res = await http.request('/api/article/list', {
+
       body: JSON.stringify({
         page,
         tagId,
