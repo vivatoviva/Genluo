@@ -5,7 +5,7 @@
   },
   "scripts": {
     "next": "next dev ",
-    "dev": "nodemon server/index.js",
+    "dev": "node server/index.js",
     "push": "./push.sh",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node server/index.js",

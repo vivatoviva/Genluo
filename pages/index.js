@@ -41,6 +41,7 @@ const Style = () =>
         display:flex;
         justify-content:center;
         align-items: center;
+    
       }
       h1 {
         font-size: 150px;
@@ -119,7 +120,7 @@ class IndexPage extends React.Component {
             {
               buttonData.map((item) => (
                   <li><Button href={item.href}>
-                    {item.icon && <span class="fa fa-heart"></span>}
+                    {item.icon && <span className="fa fa-heart"></span>}
                     {item.name}
                   </Button></li>
               ))

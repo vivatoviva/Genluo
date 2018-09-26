@@ -8,7 +8,7 @@ const IconTitle = ({
   children,
 }) => (
   <li>
-    <i><i class={`fas fa-${icon}`}></i> </i>
+    <i><i className={`fas fa-${icon}`}></i> </i>
     <span>{name} : </span>{children}
     <style jsx>{`
       @media screen and (max-width: 1340px) {

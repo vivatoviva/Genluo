@@ -55,7 +55,7 @@ class BlogNav extends React.Component {
             className="btn"
             onClick={this.handelBarClick}
           >
-            <i class="fas fa-bars"></i> 
+            <i className="fas fa-bars"></i> 
           </div>
           <h1>Genluo</h1>
         </div>
@@ -68,7 +68,7 @@ class BlogNav extends React.Component {
                   className={index === currentIndex ? 'navNow navLi' : 'navLi' }
                   onClick={this.handleClick.bind(this, index)}
                 >
-                  <i><i class={`fas fa-${item.icon}`}></i> </i>
+                  <i><i className={`fas fa-${item.icon}`}></i> </i>
                   <span>{item.name}</span>
                 </li>
               </Link>

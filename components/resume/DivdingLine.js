@@ -11,7 +11,7 @@ class Item extends React.Component {
         <div className="dividing">
           <p className="line"></p>
           <p>
-          <i class={`fas fa-${icon}`}></i><span>{title}</span>
+          <i className={`fas fa-${icon}`}></i><span>{title}</span>
           </p>
         </div>
         <div className="content">

@@ -128,23 +128,23 @@ class Index extends React.Component {
               </ul>
               <ul className="right influence">
                 <li>
-                  <a href="http://blogoog.com/">www.blogoog.com<span><i class="fas fa-home"></i> </span></a>
+                  <a href="http://blogoog.com/">www.blogoog.com<span><i className="fas fa-home"></i> </span></a>
                 </li>
                 <li>
                   <a href="tel:17784455445">
-                    17784455445 <span><i class="fas fa-phone"></i> </span>
+                    17784455445 <span><i className="fas fa-phone"></i> </span>
                   </a>
                 </li>
                 <li>
                   <a href="https://github.com/vivatoviva">
                     github.com/vivatoviva
-                    <span><i class="fas fa-github"></i></span>
+                    <span><i className="fas fa-github"></i></span>
                   </a>
                 </li>
                 <li>
                   <a href="mailto:1461304646@qq.com">
                     1461304646@qq.com 
-                    <span><i class="fas fa-envelope"></i></span>
+                    <span><i className="fas fa-envelope"></i></span>
                   </a>
                 </li>
               </ul>
