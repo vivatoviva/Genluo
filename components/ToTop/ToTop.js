@@ -22,7 +22,7 @@ class ToTop extends React.Component {
     return (
       <div className={isDisplay ? 'wraper display' : 'wraper'} onClick={this.handleToTop}>
         <div className="toTop">
-          <i className="far fa-chevron-up"></i>
+          <i className="fas fa-chevron-up"></i>
         </div>
         <style jsx>{`
           div.wraper {

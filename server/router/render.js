@@ -18,6 +18,8 @@ function getCacheKey (ctx) {
 
 // 进行渲染缓存
 function renderAndCache(ctx, pagePath, queryParams) {
+  console.log(ctx.query)
+
   const key = getCacheKey(ctx)
   // 命中缓存(存在优化点)
   if (ssrCache.has(key)) {
@@ -25,7 +27,11 @@ function renderAndCache(ctx, pagePath, queryParams) {
     return
   }
 
-  return app.renderToHTML(ctx.req, ctx.res, pagePath, queryParams || ctx.params)
+  const params = {
+    ...ctx.query,
+    ...ctx.params,
+  }
+  return app.renderToHTML(ctx.req, ctx.res, pagePath, params)
     .then((html) => {
       // Let's cache this page
       ctx.body = html;
@@ -51,6 +57,5 @@ app.prepare()
     router.get('/about', ctx => renderAndCache(ctx, '/about'))
 
   })
-
 
 module.exports = router;

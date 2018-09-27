@@ -4,29 +4,33 @@ import WithLink from '../WithLink'
 
 class Pagination extends Component {
   state = {
-    currentIndex: this.props.pagination ? parseInt(this.props.pagination.page) : 1,
-    pageSum: this.props.pagination ? this.props.pagination.pageNum : 1,
+    currentIndex: 1,
+    pageSum: 1,
   }
 
   handleClick = (currentIndex) => {
     this.setState({
       currentIndex,
     })
-    this.props.onPageChange(currentIndex);
+    this.props.onPageChange && this.props.onPageChange(currentIndex);
   }
 
+  createPage = ({text, value=1, isDisabled=false,name='',toValue=value}) => ({
+    text, // 显示的值
+    toValue, // 跳转的值
+    isDisabled, // 是否禁止点击
+    name, // 
+  })
+
   renderLi = () => {
-    let { currentIndex, pageSum } = this.state;
+    let currentIndex =  this.props.pagination ? parseInt(this.props.pagination.page) : 1;
+    let pageSum = this.props.pagination ? this.props.pagination.pageNum : 1;
+
     pageSum = Math.ceil(pageSum / 10);
     let nextMax = currentIndex + 2;
     let lastMin = currentIndex - 2;
     // 生成页码对象
-    const page = ({value=1, isDisabled=false,name='',toValue=value}) => ({
-      value, //页码值
-      isDisabled, // 是否禁止
-      name,
-      func: this.handleClick.bind(this, toValue), // 点击触发函数
-    })
+    const page = this.createPage;
 
     let lis = [];
     // 页面最少5个项目
@@ -38,42 +42,49 @@ class Pagination extends Component {
     }
     // 渲染前面
     if(lastMin>=3) {
-      lis = lis.concat([page({value:1}), page({value:'...', toValue: currentIndex-1, name:'lastomit omit'})])
+      lis = lis.concat([
+              page({text:1, toValue:1}),
+              page({text:'...', toValue: currentIndex-1, name:'lastomit omit'})
+            ])
       for(let i = lastMin; i<=currentIndex; i++) {
-        lis.push(page({value:i}))
+        lis.push(page({text: i,toValue: i}))
       }
     } else {
       for(let i = 1; i<=currentIndex;i++) {
-        lis.push(page({value:i}))
+        lis.push(page({text: i, toValue: i}))
       }
     }
     // 渲染后面
     if(nextMax<pageSum-2) {
       for(let i = currentIndex+1; i<=nextMax; i++) {
-        lis.push(page({value: i}));
+        lis.push(page({text: i,toValue: i}));
       }
-      lis = lis.concat([ page({value: '...', toValue: currentIndex+1, name: 'nextomit omit'}), page({value: pageSum})])
+      lis = lis.concat([
+              page({text: '...', toValue: currentIndex+1, name: 'nextomit omit'}),
+              page({text: pageSum, toValue: pageSum})
+            ])
     } else {
       for(let i = currentIndex+1; i<=pageSum;i++) {
-        lis.push(page({value: i}))
+        lis.push(page({text:i, toValue: i}))
       }
     }
     // 箭头判断
     if(currentIndex===1) {
-      lis.unshift(page({value: '<',toValue:1, isDisabled: true}))
+      lis.unshift(page({text: '<',toValue:1, isDisabled: true}))
     } else {
-      lis.unshift(page({value: '<', toValue:currentIndex-1}))
+      lis.unshift(page({text: '<', toValue:currentIndex-1}))
     }
     if(currentIndex===pageSum) {
-      lis.push(page({value: '>', toValue: currentIndex, isDisabled: true}))
+      lis.push(page({text: '>', toValue: currentIndex, isDisabled: true}))
     } else {
-      lis.push(page({value: '>', toValue: currentIndex+1}))
+      lis.push(page({text: '>', toValue: currentIndex+1}))
     }
 
     return lis.map((item, index) =>{
       const className = [item.name];
-      if(item.value === currentIndex) className.push('nowIndex');
+      if(item.toValue === currentIndex && item.toValue === item.text) className.push('nowIndex');
       if(item.isDisabled) className.push('disabled');
+      const { domain, paramName } = this.props;
       return (
         <li
           className={className.join(' ')}
@@ -82,13 +93,13 @@ class Pagination extends Component {
           {
             !(className.includes('disabled') || className.includes('nowIndex')) ? 
               <WithLink
-                href="/blog"
-
-                paramsData={{page: item.value}}
-              ><a>{item.value}</a></WithLink> : item.value
+                href={`${domain}`}
+                paramsData={{[paramName]: item.toValue}}
+                onClick={this.handleClick}
+              >
+                <a>{item.text}</a>
+              </WithLink> : item.text
           }
-          
-
           <style jsx>{`
           li {
             width: 25px;
@@ -159,6 +170,7 @@ class Pagination extends Component {
   }
 
   render() {
+
     return (
       <div>
         <ul>

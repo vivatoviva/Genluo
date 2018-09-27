@@ -9,37 +9,20 @@ import React from 'react';
 class IndexPage extends React.Component {
   
   static async getInitialProps({ req, query, pathname }) {
+    const { page=1 } = query;
+
     // 获取page参数
     // 获取数据
     const { data: { pagination, list } } = await http.request('/api/article/list', {
       body: JSON.stringify({
-        page: 1,
+        page: page,
       })
     })
-    // 初始化组件props
     return { pagination, list }
   }
 
-  state = {
-    pagination: this.props.pagination,
-    list: this.props.list,
-  }
-
-  handlePageChange = async (page) => {
-    const res = await http.request('http://localhost:8080/api/article/list', {
-      body: JSON.stringify({
-        page,
-      })
-    })
-    const { data: { pagination, list}} = await res.json()
-    this.setState({
-      pagination,
-      list,
-    })
-  }
-
   render() {
-    const { pagination, list } = this.state;
+    const { pagination, list } = this.props;
     var a = 1;
     return (
       <Layout
@@ -53,7 +36,11 @@ class IndexPage extends React.Component {
               isDividing={index === list.length - 1}
             />)
         }
-        <Pagination pagination={pagination} onPageChange={this.handlePageChange}/>
+        <Pagination
+          pagination={pagination}
+          domain="/blog"
+          paramName="page"
+        />
       </Layout>
     )
   }
