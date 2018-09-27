@@ -27,6 +27,7 @@ function renderAndCache(ctx, pagePath, queryParams) {
     return
   }
 
+  // 合并参数
   const params = {
     ...ctx.query,
     ...ctx.params,

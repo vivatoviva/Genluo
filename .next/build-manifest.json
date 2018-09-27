@@ -15,11 +15,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/index": [
+    "/blog/tag": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/": [
+    "/blog/category": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

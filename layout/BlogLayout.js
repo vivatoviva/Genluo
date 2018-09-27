@@ -4,6 +4,27 @@ import BlogNav from '../components/BlogNav'
 import BlogData from '../components/BlogData'
 import ToTop from '../components/ToTop'
 import Footer from '../components/Footer'
+const items = [{
+  name: '首页',
+  link: '/blog',
+  icon: 'home',
+}, {
+  name: '标签',
+  link: '/blog/tag',
+  icon: 'tags'
+}, {
+  name: '分类',
+  link: '/blog/category',
+  icon: 'table',
+}, {
+  name: '归档',
+  link: '/blog/archives',
+  icon: 'archive'
+}, {
+  name: '搜索',
+  icon: 'search'
+}]
+
 class BlogPage extends React.Component {
   state = {
     isFixed: false,
@@ -53,7 +74,22 @@ class BlogPage extends React.Component {
         <div className="can">
           <div className="left">
             <div className="nav" ref={this.nav}>
-              <BlogNav navIndex={navIndex} />
+              <BlogNav
+                navIndex={navIndex}
+                items={items}
+                renderItem= {
+                  (currentIndex, items) => {
+                    return items.map((item,index) => {
+                      return <BlogNav.Item 
+                                href={item.link}
+                                icon={item.icon}
+                                currentIndex={currentIndex === index}
+                              >{item.name}</BlogNav.Item>
+                    })
+                  }
+                }
+              >
+              </BlogNav>
             </div>
             <div className={!isFixed ? 'data' : 'data dataNow'}>
               <BlogData></BlogData>
@@ -110,7 +146,6 @@ class BlogPage extends React.Component {
           footer{
             padding: 50px 0;
           }
-
         `}</style>
         <style global jsx>{`
           body {

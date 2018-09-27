@@ -163,6 +163,10 @@ class Pagination extends Component {
             opacity: 0;
             transition: 500ms all ease;
           }
+          li a {
+            text-decoration: none;
+            
+          }
           `}</style>
         </li>
       )

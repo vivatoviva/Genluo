@@ -23,7 +23,6 @@ const items = [{
   name: '搜索',
   link: '/blog/search',
   icon: 'search'
-
 }]
 
 class BlogNav extends React.Component {
@@ -48,6 +47,7 @@ class BlogNav extends React.Component {
 
   render() {
     const { currentIndex } = this.state;
+    const { items, renderItem } = this.props;
     return (
       <div>
         <div className="header">
@@ -59,21 +59,11 @@ class BlogNav extends React.Component {
           </div>
           <h1>Genluo</h1>
         </div>
-        
         <ul className={this.state.isBar && 'tagle'}>
           {
-            items.map((item, index)=>
-              <Link href={item.link} key={index}>
-                <li
-                  className={index === currentIndex ? 'navNow navLi' : 'navLi' }
-                  onClick={this.handleClick.bind(this, index)}
-                >
-                  <i><i className={`fas fa-${item.icon}`}></i> </i>
-                  <span>{item.name}</span>
-                </li>
-              </Link>
-            )
+            renderItem(currentIndex, items)
           }
+          {this.props.children}
         </ul>
       <style jsx>{`
         @media screen and (max-width: 1340px) {
@@ -129,7 +119,6 @@ class BlogNav extends React.Component {
         }
         li span {
           margin-left: 10px;
-
         }
         li i {
           display: inline-block;
