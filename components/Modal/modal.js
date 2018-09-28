@@ -54,7 +54,8 @@ export default class Modal extends PureComponent {
 
   render() {
     const { title } = this.state;
-    const { visible, children } = this.props;
+    const { visible, children, onCancel, onOk } = this.props;
+    const haveButton = onCancel && onOk;
 
     return (!visible &&
       <NewPortal>
@@ -66,11 +67,12 @@ export default class Modal extends PureComponent {
             <div className="modal-body">
               {children}
             </div>
-            <div className="modal-operator"
-            >
-              <button className="cancel" onClick={this.handleCancle}>取消</button>
-              <button className="ok" onClick={this.handleConfim}>确定</button>
-            </div>
+            {
+              haveButton &&  <div className="modal-operator">
+                <button className="cancel" onClick={this.handleCancle}>取消</button>
+                <button className="ok" onClick={this.handleConfim}>确定</button>
+              </div>
+            }
           </div>
           <div className="mask"></div>
           <style jsx global>{`
@@ -100,7 +102,7 @@ export default class Modal extends PureComponent {
               left: 50%;
               transform: translate(-50%, -50%);
               border-radius: 5px;
-              padding-bottom: 60px;
+              ${ haveButton && 'padding-bottom: 60px;'}
             }
             .modal-title {
               width: 100%;

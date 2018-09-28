@@ -6,7 +6,7 @@ import ToTop from '../components/ToTop'
 import Footer from '../components/Footer'
 import Modal from '../components/Modal'
 import Search from '../components/Search'
-
+import List from '../components/List'
 
 class BlogPage extends React.Component {
   state = {
@@ -120,6 +120,18 @@ class BlogPage extends React.Component {
                 visible={visible}
               >
                 <Search></Search>
+                <div className="list">
+                  <List 
+                    dataSource={['xian','zai', 'xian', 'baijin', 'jinxing']}
+                    renderItem={item =>
+                      <List.Item
+                        title={item}
+                        content="xiand afsdfsdhfkjsdh"
+                      />
+                      }
+                  />
+                </div>
+                
               </Modal>
             </div>
             <div className={!isFixed ? 'data' : 'data dataNow'}>
@@ -176,6 +188,12 @@ class BlogPage extends React.Component {
           }
           footer{
             padding: 50px 0;
+          }
+          .list {
+            width: 900px;
+            height: 500px;
+            overflow-y: scroll;
+
           }
         `}</style>
         <style global jsx>{`
