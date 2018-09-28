@@ -4,27 +4,20 @@ import ReactDOM from 'react-dom';
 // 将节点渲染到body根部使用
 class NewPortal extends React.Component {
 
-  state = {
-    renderDom: <div>xianzai</div>
+  constructor(props) {
+    super(props);
+    this.el = document.createElement('div')
   }
-  // 组件渲染完成之后进行
-  getSnapshotBeforeUpdate(prevProps, prevState) {
-    const { children } = this.props;
-    this.node = document.createElement('div');
-    document.body.appendChild(this.node);
-    this.setState({
-      renderDom: ReactDOM.createPortal(children, this.node)
-    })
-    return {
-      renderDom: ReactDOM.createPortal(children, this.node)
-    }
-  }
+
   render() {
-    return this.state.renderDom
+    const { children } = this.props;
+    const appRoot = document.body;
+    return ReactDOM.createPortal(
+      children,
+      appRoot,
+    )
   }
 }
-
-
 
 /**
  *
@@ -48,10 +41,6 @@ export default class Modal extends PureComponent {
   handleConfim = () => {
     const { onOK } = this.props;
     onOK && onOK();
-    
-    this.setState({
-      visible: false,
-    })
   }
 
   handleCancle = () => {
@@ -64,10 +53,11 @@ export default class Modal extends PureComponent {
   }
 
   render() {
-    const { title, children } = this.props;
-    const { visible = null } = this.state;
+    const { title } = this.state;
+    const { visible, children } = this.props;
 
-    return (visible &&
+    return (!visible &&
+      <NewPortal>
         <div className="wrapper">
           <div className="modal">
             <div className="modal-title">
@@ -83,11 +73,14 @@ export default class Modal extends PureComponent {
             </div>
           </div>
           <div className="mask"></div>
+          <style jsx global>{`
+          `}</style>
           <style jsx>{`
             .wrapper {
               width: 100%;
               height: 100%;
-              position: absolute;
+              position: fixed;
+              z-index: 2;
             }
             .mask {
               position: absolute;
@@ -115,9 +108,6 @@ export default class Modal extends PureComponent {
               line-height: 3;
               text-indent: 10px;
               background-color: rgb(238,238,238);
-            }
-            .modal-body {
-              padding: 10px;
             }
             button {
               display: inline-block;
@@ -156,6 +146,7 @@ export default class Modal extends PureComponent {
             }
           `}</style>
         </div>
+      </NewPortal>
     )
   }
 }

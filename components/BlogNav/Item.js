@@ -36,7 +36,9 @@ class Item extends React.PureComponent {
 
   renderButton = () => {
     const { children, icon } = this.props;
-    return <a>{
+    return <a
+      onClick={this.handleClick}
+    >{
       icon && <i className={`fas fa-${icon}`}></i>
     }{children}
       <style jsx>{`
@@ -47,8 +49,8 @@ class Item extends React.PureComponent {
           height: 100%;
           padding: 0 20px;
           box-sizing: border-box;
+          transition: 200ms all ease;
           text-decoration: none;
-          transition: 300ms ease all;
         }
         i {
           margin-right: 10px;

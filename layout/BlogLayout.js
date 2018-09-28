@@ -4,31 +4,15 @@ import BlogNav from '../components/BlogNav'
 import BlogData from '../components/BlogData'
 import ToTop from '../components/ToTop'
 import Footer from '../components/Footer'
-const items = [{
-  name: '首页',
-  link: '/blog',
-  icon: 'home',
-}, {
-  name: '标签',
-  link: '/blog/tag',
-  icon: 'tags'
-}, {
-  name: '分类',
-  link: '/blog/category',
-  icon: 'table',
-}, {
-  name: '归档',
-  link: '/blog/archives',
-  icon: 'archive'
-}, {
-  name: '搜索',
-  icon: 'search'
-}]
+import Modal from '../components/Modal'
+import Search from '../components/Search'
+
 
 class BlogPage extends React.Component {
   state = {
     isFixed: false,
     isDisplayToTop: false,
+    visible: false,
   }
   
   constructor(props) {
@@ -65,9 +49,48 @@ class BlogPage extends React.Component {
     })
   }
 
+  changeVisible = () => {
+    this.setState(prevSate => ({
+      visible: !prevSate.visible,
+    }))
+  }
+
+  handleModalOk = () => {
+    this.setState({
+      visible: false,
+    })
+  }
+
+  handleModalCancel = () => {
+    this.setState({
+      visible: false,
+    })
+  }
+
   render() {
-    const { isFixed, isDisplayToTop } = this.state;
+    const { isFixed, isDisplayToTop, visible } = this.state;
     const { children, navIndex, title } = this.props;
+    const items = [{
+      name: '首页',
+      link: '/blog',
+      icon: 'home',
+    }, {
+      name: '标签',
+      link: '/blog/tag',
+      icon: 'tags'
+    }, {
+      name: '分类',
+      link: '/blog/category',
+      icon: 'table',
+    }, {
+      name: '归档',
+      link: '/blog/archives',
+      icon: 'archive'
+    }, {
+      name: '搜索',
+      icon: 'search',
+      onClick: this.changeVisible
+    }]
     return (
       <div className="wraper">
         <Head title={title || '博客主页'} />
@@ -83,6 +106,7 @@ class BlogPage extends React.Component {
                       return <BlogNav.Item 
                                 href={item.link}
                                 icon={item.icon}
+                                onClick={item.onClick}
                                 currentIndex={currentIndex === index}
                               >{item.name}</BlogNav.Item>
                     })
@@ -90,6 +114,13 @@ class BlogPage extends React.Component {
                 }
               >
               </BlogNav>
+              <Modal
+                onOK={this.handleModalOk}
+                onCancel={this.handleModalCancel}
+                visible={visible}
+              >
+                <Search></Search>
+              </Modal>
             </div>
             <div className={!isFixed ? 'data' : 'data dataNow'}>
               <BlogData></BlogData>
