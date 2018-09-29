@@ -1,6 +1,3 @@
-// 传入md 转化成html
-
-var md = '# xianzai xianzaij \n xian *'
 
 const regex = /^( {0,3}#+ )|^( {0,}[\*|\-] )|^( ?\-{3,})|^( {0,3}```)/g
 
@@ -11,23 +8,38 @@ const isBlock = str => {
 }
 
 class Converter {
-  // 转化成html标记语言
-  toHtml = (md) => {
-    const { markdown, data } = this.getGlobalData(md);
-    const block = this.toBlock(markdown);
-    const blockHtml = this.blockToHtml(block)
-    const inlineHtml = this.inLineHtml(blockHtml, data);
   
-    return inlineHtml.join('')
+  constructor(markdown) {
+    this.data = {};
+    this.markdown = markdown;
+  }
+
+  toHtml = (md) => {
+    // 去除data相关片段
+    const { markdown, data } = this.getGlobalData(this.markdown);
+    // 将代码进行分割成块
+    const block = this.toBlock(markdown);
+    // 对于每块进行处理，形成标签
+    const blockHtml = this.blockToHtml(block);
+    // 将块标签转化成行内标签
+    const inlineHtml = this.inLineHtml(blockHtml);
+    // 返回拼装的html代码
+    return inlineHtml.join('');
   }
 
   // 渲染生成富文本，用于添加添加样式
   toRich(md) {
-
+    
   }
 
+  /**
+   *
+   * 提取全局数据，然后将之清除
+   * @memberof Converter
+   * @param md md string
+   * @return { markdown, data }
+   */
   getGlobalData = (md) => {
-    // 提出全局data，然后将data数据删除
     let regex = /\[(\d+)\]: ?([\S]*)/g;
     let tempR;
     let data = {};
@@ -36,11 +48,11 @@ class Converter {
       data[tempR[1]] = tempR[2]
     }
     const markdown = md.replace(/\[(\d+)\]: ?([\S]*)/g, '')
+    this.data = data;
     return { markdown, data }
   }
 
   toBlock(md) {
-    
     let mdarr = md.split('\n').filter(item => item.trim().length !== 0)
     let blockMD = [];
     let identification = false;
@@ -57,7 +69,22 @@ class Converter {
         blockMD[blockMD.length-1] += '\n' + mdarr[i]
         continue;
       }
-
+      // 处table逻辑
+      if(/^\|/g.test(mdarr[i])) {
+        if(/^\|\-\-|/g.test(mdarr[i+1])) {
+          blockMD.push(mdarr[i]);
+          i+=2;
+          for(;i<mdarr.length;i++) {
+            if(/^\|/g.test(mdarr[i])) {
+              blockMD[blockMD.length - 1] += '\n' + mdarr[i]; 
+            } else {
+              break;
+            }
+          }
+          mdarr[i] && blockMD.push(mdarr[i]);
+          continue;
+        }
+      }
       if(i>0 && !isBlock(mdarr[i])) {
         if(!isBlock(mdarr[i-1])) {
           blockMD[blockMD.length - 1] += ' ' + mdarr[i];
@@ -102,10 +129,12 @@ class Converter {
       if(/```/g.test(blockIdentifident)) {
         // 使用插件进行代码格式化
         blockHtmlArr.push(`<pre class="line-numbers ace ace-code"><code class="language-javascript line-numbers">${item.replace(/(```)/g, '')}</code></pre>`)
-
         // blockHtmlArr.push(`<pre class="ace ace-code">${item.replace(/(```)/g, '')}</pre>`)
         continue
       }
+
+      // table
+
       
       // 行内标签
       blockHtmlArr.push(this.specialHtml(item));
@@ -119,11 +148,29 @@ class Converter {
     if(/^( {0,3}> )/g.test(md)) {
       return `<div class='ace ace-ref ace-p'>${md.replace(/^( {0,3}> )/g, '')}</div>`
     }
+    if(/^\|/g.test(md)) {
+      // 对table进行渲染
+
+      const rows = md.split('\n');
+      const regex = /\|([\s|\S]*?)\|/g;
+      let match = null;
+      let table = ''
+      for(let i = 0; i < rows.length; i++) {
+        const str = '';
+        while(match  = regex.exec(rows[i])) {
+          let content = match[1];
+          str += `<div class='ace ace-table-cell'>${content}</div>`
+        }
+        table += `<div class="ace ace-table-row">${str}</div>`
+      }
+      return `<div class='ace ace-table'>${table}</div>`
+    }
     return `<p class='ace ace-p'>${md}</p>`
   }
 
   // 处理行行内标签
-  inLineHtml = (md, data) => {
+  inLineHtml = (md) => {
+    const data = this.data;
     const html = [this.getHtmlStyle()];
     for(let item of md) {
       let str = item;
@@ -131,6 +178,7 @@ class Converter {
         html.push(str)
         continue
       }
+      // table 
       // *xianzia*
       str = str.replace(/[^\*]\*([^\*]+)\*/g, '<i>$1</i>')
       // **xianzai*
@@ -166,9 +214,6 @@ class Converter {
   getHtmlStyle() {
     return `
       <style>
-      .ace {
-
-      }
       .ace-code-inline {
         display:inline-block;
         background-color:#eee;
@@ -238,13 +283,29 @@ class Converter {
         display: block;
         box-sizing: border-box;
       }
+      .ace-table {
+        margin: 10px 0px;
+        border:1px solid #eee;
+        border-radius: 5px;
+      }
+      .ace-table-row {
+        display: -webkit-flex; /* Safari */
+        display: flex;
+      }
+      .ace-table-row:nth-child(odd) {
+        background-color: #eee;
+      }
+      .ace-table-cell {
+        flex:1;
+        padding: 20px;
+        border:1px solid rgb(100, 100, 100);
+      }
       </style>
     `
   }
 }
-const converter = new Converter();
 
 export default {
-  toHtml: converter.toHtml
+  Converter
 };
 

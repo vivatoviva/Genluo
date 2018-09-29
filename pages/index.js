@@ -72,6 +72,9 @@ const Style = () =>
         color: #000;
         text-decoration: none;
       }
+      a:nth-child(n) {
+        
+      }
     `}</style>
     <style global jsx>{`
       * {
