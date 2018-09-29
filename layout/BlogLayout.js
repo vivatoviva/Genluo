@@ -114,25 +114,29 @@ class BlogPage extends React.Component {
                 }
               >
               </BlogNav>
-              <Modal
-                onOK={this.handleModalOk}
-                onCancel={this.handleModalCancel}
-                visible={visible}
-              >
-                <Search></Search>
-                <div className="list">
-                  <List 
-                    dataSource={['xian','zai', 'xian', 'baijin', 'jinxing']}
-                    renderItem={item =>
-                      <List.Item
-                        title={item}
-                        content="xiand afsdfsdhfkjsdh"
-                      />
-                      }
-                  />
-                </div>
-                
-              </Modal>
+              {
+                <Modal
+                  onOK={this.handleModalOk}
+                  onCancel={this.handleModalCancel}
+                  visible={visible}
+                >
+                  <Search
+                    onClose={this.handleModalCancel}
+                  ></Search>
+                  <div className="list">
+                    <List 
+                      dataSource={['xian','zai', 'xian', 'baijin', 'jinxing']}
+                      renderItem={item =>
+                        <List.Item
+                          title={item}
+                          content="xiand afsdfsdhfkjsdh"
+                        />
+                        }
+                    />
+                  </div>
+                </Modal>
+              }
+              
             </div>
             <div className={!isFixed ? 'data' : 'data dataNow'}>
               <BlogData></BlogData>

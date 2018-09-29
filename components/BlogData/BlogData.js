@@ -24,7 +24,7 @@ const BlogData =  () =>
         border: 3px solid transparent;
         outline: 1px solid rgb(238, 238, 238);
         margin: 0 auto;
-        background-image: url('../static/images/98575859.jpg');
+        background-image: url('/static/images/98575859.jpg');
         position: relative;
         cursor: pointer;
 
@@ -35,7 +35,7 @@ const BlogData =  () =>
         right: 0;
         width: 50%;
         height: 50%;
-        background-image: url('../static/images/github.png');
+        background-image: url('/static/images/github.png');
         background-size: 100%;
 
         position: absolute;

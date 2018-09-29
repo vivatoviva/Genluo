@@ -2,6 +2,20 @@ import React,{ Component } from 'react'
 import WithLink from '../WithLink'
 
 
+/**
+ *
+ *
+ * @class Pagination
+ * @extends {Component}
+ * @param pagination {page, pagNum}
+ * @param domain 实际跳转地址 
+ * @param paramName 跳转上会将页码赋值给此参数的值，并与paramData进行拼合
+ * @param paramData 跳转时候带上的参数
+ * @param isAS 开启跳转到跳转地址到实际网站的转化
+ * @param asDomain 浏览器中显示的实际网址
+ * @param onPageChange 点击跳转触发的函数
+ * 
+ */
 class Pagination extends Component {
   state = {
     currentIndex: 1,
@@ -23,6 +37,7 @@ class Pagination extends Component {
   })
 
   renderLi = () => {
+    const { paramsData } = this.props;
     let currentIndex =  this.props.pagination ? parseInt(this.props.pagination.page) : 1;
     let pageSum = this.props.pagination ? this.props.pagination.pageNum : 1;
 
@@ -84,7 +99,7 @@ class Pagination extends Component {
       const className = [item.name];
       if(item.toValue === currentIndex && item.toValue === item.text) className.push('nowIndex');
       if(item.isDisabled) className.push('disabled');
-      const { domain, paramName } = this.props;
+      const { domain, paramName, isAs, asDomain } = this.props;
       return (
         <li
           className={className.join(' ')}
@@ -94,8 +109,9 @@ class Pagination extends Component {
             !(className.includes('disabled') || className.includes('nowIndex')) ? 
               <WithLink
                 href={`${domain}`}
-                paramsData={{[paramName]: item.toValue}}
+                paramsData={{[paramName]: item.toValue, ...paramsData}}
                 onClick={this.handleClick}
+                as={isAs && `${asDomain}/${item.toValue}`}
               >
                 <a>{item.text}</a>
               </WithLink> : item.text

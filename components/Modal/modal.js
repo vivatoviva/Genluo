@@ -4,17 +4,12 @@ import ReactDOM from 'react-dom';
 // 将节点渲染到body根部使用
 class NewPortal extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.el = document.createElement('div')
-  }
-
   render() {
     const { children } = this.props;
-    const appRoot = document.body;
-    return ReactDOM.createPortal(
+
+    return document && ReactDOM.createPortal(
       children,
-      appRoot,
+      document.body,
     )
   }
 }
@@ -57,7 +52,7 @@ export default class Modal extends PureComponent {
     const { visible, children, onCancel, onOk } = this.props;
     const haveButton = onCancel && onOk;
 
-    return (!visible &&
+    return (visible && 
       <NewPortal>
         <div className="wrapper">
           <div className="modal">

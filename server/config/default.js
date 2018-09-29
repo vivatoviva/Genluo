@@ -8,7 +8,13 @@ const config = {
     password: 'genluo123',
     database: 'personSite',
     HOST: 'localhost'    
-  }
+  },
+  // 缓存进行优化
+  openUrlCache: false,
+  urlCache: {
+    max: 100,
+    maxAge: 1000 * 60 * 60 // 1hour
+  },
 }
 
 module.exports = config;

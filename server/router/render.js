@@ -4,12 +4,9 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const router = new Router();
 const LRUCache = require('lru-cache')
+const config = require('../config/default')
+const ssrCache = new LRUCache(config.urlCache)
 
-
-const ssrCache = new LRUCache({
-  max: 100,
-  maxAge: 1000 * 60 * 60 // 1hour
-})
 
 function getCacheKey (ctx) {
   return `${ctx.req.url}`
@@ -22,11 +19,10 @@ function renderAndCache(ctx, pagePath, queryParams) {
 
   const key = getCacheKey(ctx)
   // 命中缓存(存在优化点)
-  if (ssrCache.has(key)) {
+  if (ssrCache.has(key) && config.openUrlCache) {
     ctx.body = ssrCache.get(key)
     return
   }
-
   // 合并参数
   const params = {
     ...ctx.query,
@@ -51,12 +47,14 @@ app.prepare()
     router.get('/blog/category', ctx=> renderAndCache(ctx, '/blog/category'))
     router.get('/blog', ctx=> renderAndCache(ctx, '/blog'))
     router.get('/blog/archives', ctx=> renderAndCache(ctx, '/blog/archives'))
+    router.get('/blog/archives/:page', ctx=> renderAndCache(ctx, '/blog/archives'))
     router.get('/blog/tag/:tagId', ctx => renderAndCache(ctx, '/blog/archives'))
-    router.get('/blog/:id', ctx => renderAndCache(ctx, '/blog/article'))
+    router.get('/blog/tag/:tagId/:page', ctx => renderAndCache(ctx, '/blog/archives'))
     router.get('/blog/category/:cateId', ctx => renderAndCache(ctx, '/blog/archives'))
+    router.get('/blog/category/:cateId/:page', ctx => renderAndCache(ctx, '/blog/archives'))
+    router.get('/blog/:id', ctx => renderAndCache(ctx, '/blog/article'))
     router.get('/resume', ctx => renderAndCache(ctx, '/resume'))
     router.get('/about', ctx => renderAndCache(ctx, '/about'))
-
   })
 
 module.exports = router;

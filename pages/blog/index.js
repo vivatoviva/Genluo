@@ -3,16 +3,12 @@ import Article from '../../components/Article'
 import Pagination from '../../components/Pagination'
 import http from '../../utils/http'
 
-
 import React from 'react';
 
 class IndexPage extends React.Component {
   
   static async getInitialProps({ req, query, pathname }) {
     const { page=1 } = query;
-
-    // 获取page参数
-    // 获取数据
     const { data: { pagination, list } } = await http.request('/api/article/list', {
       body: JSON.stringify({
         page: page,
