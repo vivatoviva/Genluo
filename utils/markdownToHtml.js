@@ -1,4 +1,3 @@
-
 const regex = /^( {0,3}#+ )|^( {0,}[\*|\-] )|^( ?\-{3,})|^( {0,3}```)/g
 
 // 判断是块级标签
@@ -128,8 +127,9 @@ class Converter {
       // ```
       if(/```/g.test(blockIdentifident)) {
         // 使用插件进行代码格式化
-        blockHtmlArr.push(`<pre class="line-numbers ace ace-code"><code class="language-javascript line-numbers">${item.replace(/(```)/g, '')}</code></pre>`)
-        // blockHtmlArr.push(`<pre class="ace ace-code">${item.replace(/(```)/g, '')}</pre>`)
+        blockHtmlArr.push(`<pre class="line-numbers ace ace-code"><code class="language-javascript">${
+          Prism.highlight(item.replace(/(```)/g, ''), Prism.languages.javascript, 'javascript')
+        }</code></pre>`)
         continue
       }
 
@@ -171,10 +171,10 @@ class Converter {
   // 处理行行内标签
   inLineHtml = (md) => {
     const data = this.data;
-    const html = [this.getHtmlStyle()];
+    const html = [];
     for(let item of md) {
       let str = item;
-      if(str.includes('<pre class="ace ace-code">')) {
+      if(str.includes('<pre class="line-numbers ace ace-code"><code class="language-javascript">')) {
         html.push(str)
         continue
       }
@@ -209,99 +209,6 @@ class Converter {
       html.push(str)
     }
     return html;
-  }
-
-  getHtmlStyle() {
-    return `
-      <style>
-      .ace-code-inline {
-        display:inline-block;
-        background-color:#eee;
-        padding: 3px 5px;
-        line-height: 1;
-        border-radius: 5px;
-      }
-      .ace-img {
-        display: block;
-        width: 100%;
-      }
-      .ace-link {
-        color: #45B6F7;
-      }
-      .ace-ref {
-        background-color: #eee;
-        padding: 10px 10px;
-        border-left: 2px solid yellow;
-      }
-      .ace-p, .ace-i, .ace-code, .ace-li{
-        text-align: justify;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-        font-size: 16px;
-        line-height: 2;
-        color: #555;
-      }
-      .ace-li {
-        line-height: 2;
-        position: relative;
-        padding-left: 20px;
-      }
-      .ace-li::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 1.3ex;
-        left: 0px;
-        width: 6px;
-        height: 6px;
-        background-color: #000;
-  	    border-radius: 50%;
-      }
-      .ace-li-2 {
-        padding-left: 50px;
-      }
-      .ace-li-2::after {
-        left: 30px;
-        border:1px solid #000;
-        background-color: #fff;
-      }
-      .ace-li-3 {
-        padding-left:70px;
-      }
-      .ace-li-3::after {
-        left: 50px;
-        border:1px solid #000;
-        border-radius: 0;
-      }
-      .ace-code {
-        background-color: rgba(247, 247,247);
-        padding: 5px 20px;
-        font-size: 14px;
-        display: block;
-        box-sizing: border-box;
-      }
-      .ace-table {
-        margin: 10px 0px;
-        border:1px solid #eee;
-        border-radius: 5px;
-      }
-      .ace-table-row {
-        display: -webkit-flex; /* Safari */
-        display: flex;
-      }
-      .ace-table-row:nth-child(odd) {
-        background-color: #eee;
-      }
-      .ace-table-cell {
-        flex:1;
-        padding: 20px;
-        border:1px solid rgb(100, 100, 100);
-      }
-      </style>
-    `
   }
 }
 

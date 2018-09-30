@@ -10,14 +10,6 @@
     "/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
-    ],
-    "/blog/article": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/blog": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
     ]
   }
 }

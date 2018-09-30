@@ -1,5 +1,7 @@
 import React from 'react'
 import mdUtils  from '../../utils/markdownToHtml'
+import '../../static/prismjs/prism.js'
+
 
 export default class Content extends React.Component {
   constructor(props) {
