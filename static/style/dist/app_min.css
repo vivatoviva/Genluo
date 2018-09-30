@@ -60,7 +60,8 @@ p {
   background-color: #eee;
   padding: 3px 5px;
   line-height: 1;
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin: 0 5px; }
 
 .ace-img {
   display: block;

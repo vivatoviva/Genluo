@@ -7,9 +7,13 @@ const isBlock = str => {
 }
 
 class Converter {
-  
   constructor(markdown) {
     this.data = {};
+    this.title=""; // 标题
+    this.date = ""; // 时间
+    this.tags =[]; // tags 标记列表
+    this.categories =''; // 分类名称
+    this.content = [];
     this.markdown = markdown;
   }
 
@@ -28,7 +32,30 @@ class Converter {
 
   // 渲染生成富文本，用于添加添加样式
   toRich(md) {
-    
+  }
+
+  isFixedData = (item) => {
+    if(/^title[:|：]/g.test(item)) {
+      this.title = item.replace(/^title:/g,'').trim();
+      return true;
+    }
+    if(/^date[:|：]/g.test(item)) {
+      this.date = item.replace(/^date[:|：]/g, '').trim();
+      return true;
+    }
+    if(/^tags[:|：]/g.test(item)) {
+      const regex = /d/g;
+      let match;
+      while(match = regex.exec(item)) {
+        this.tags.push(match[1]);
+      }
+      return true;
+    }
+    if(/^categories[:|：]/g.test(item)) {
+      this.categories = item.replace(/^categories[:|：]/g, '').trim();
+      return true;
+    }
+    return false;
   }
 
   /**
@@ -53,12 +80,18 @@ class Converter {
 
   toBlock(md) {
     let mdarr = md.split('\n').filter(item => item.trim().length !== 0)
+
     let blockMD = [];
     let identification = false;
     // 分割形成块级元素
     for(let i = 0; i < mdarr.length; i++) {
+      // 
+      if(this.isFixedData(mdarr[i])) {
+        i++;
+        continue;
+      }
       // 判断当前是不是块级元素，如果是的话判他的上一个是不是块级元素，不是的话进行合并
-      // 处理``` 格式
+      // ``` 拦截处理
       if(/^( {0,3}`{3})/g.test(mdarr[i])) {
         identification = !identification;
         if(identification) blockMD.push(mdarr[i]);
@@ -68,7 +101,7 @@ class Converter {
         blockMD[blockMD.length-1] += '\n' + mdarr[i]
         continue;
       }
-      // 处table逻辑
+      // table 拦截
       if(/^\|/g.test(mdarr[i])) {
         if(/^\|\-\-|/g.test(mdarr[i+1])) {
           blockMD.push(mdarr[i]);
@@ -84,9 +117,15 @@ class Converter {
           continue;
         }
       }
+      // >拦截
+      if(/^> /g.test(mdarr[i])) {
+        blockMD.push(mdarr[i++]);
+        continue;
+      }
+
       if(i>0 && !isBlock(mdarr[i])) {
         if(!isBlock(mdarr[i-1])) {
-          blockMD[blockMD.length - 1] += ' ' + mdarr[i];
+          blockMD[blockMD.length - 1] += '<br>' + mdarr[i];
           continue;
         }
       }
@@ -102,7 +141,14 @@ class Converter {
       let blockIdentifident = item.match(regex) && item.match(regex)[0].trim();
       // #
       if(/#/g.test(blockIdentifident)) {
-        blockHtmlArr.push(`<h${blockIdentifident.length} class='ace ace-h'>${item.replace(/^( {0,3}#+ )/g,'')}</h${blockIdentifident.length}>`)
+        const title = item.replace(/^( {0,3}#+ )/g,'');
+        const level = blockIdentifident.length;
+        blockHtmlArr.push(`<h${level} class='ace ace-h' id="${title}">${title}</h${level}>`)
+        // 推进目录中
+        this.content.push({
+          title,
+          level: blockIdentifident.length,
+        })
         continue
       }
       // * | -

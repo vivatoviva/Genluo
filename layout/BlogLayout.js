@@ -7,6 +7,8 @@ import Footer from '../components/Footer'
 import Modal from '../components/Modal'
 import Search from '../components/Search'
 import List from '../components/List'
+import Structure from '../components/BlogStructure'
+
 
 class BlogPage extends React.Component {
   state = {
@@ -138,8 +140,12 @@ class BlogPage extends React.Component {
               }
               
             </div>
+            {/* 在这边显示相关目录 */}
             <div className={!isFixed ? 'data' : 'data dataNow'}>
               <BlogData></BlogData>
+            </div>
+            <div>
+            <Structure></Structure>
             </div>
           </div>
           <div className="right">
