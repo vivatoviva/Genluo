@@ -1,8 +1,7 @@
 import Layout from '../../layout/BlogLayout'
 import Article from '../../components/Article'
-import Pagination from '../../components/Pagination'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import http from '../../utils/http'
+import mdUtils from '../../utils/markdownToHtml';
 
 import React from 'react';
 
@@ -29,14 +28,35 @@ export default class extends React.Component {
     data.read_num++;
     return { data };
   }
+
+  constructor(props) {
+    super(props);
+    this.content = new mdUtils.Converter(props.data.content).getContent();
+  }
+
+  state = {
+    now: 1,
+  }
+
+  handleContentChange = (now) => {
+    this.setState({
+      now,
+    })
+  }
+
   render() {
     const { data } = this.props;
+    const { now } = this.state;
     return (
-      <Layout navIndex={0}>
+      <Layout
+        navIndex={0}
+        isArticle
+        content={this.content}
+        now={now}
+      >
         {
-          data ? <Article.Detail data={data}/> : ''
+          data ? <Article.Detail data={data} onContentChange={this.handleContentChange} /> : ''
         }
-        
       </Layout>
     )
   }

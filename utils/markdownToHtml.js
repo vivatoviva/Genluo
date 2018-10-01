@@ -30,6 +30,11 @@ class Converter {
     return inlineHtml.join('');
   }
 
+  getContent = () => {
+    this.toHtml();
+    return this.content;
+  }
+
   // 渲染生成富文本，用于添加添加样式
   toRich(md) {
   }

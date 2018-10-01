@@ -23,7 +23,6 @@ class BlogPage extends React.Component {
   }
 
   componentDidMount() {
-    
     const height = this.nav.current.clientHeight + 10;
     const windowHeight = document.body.clientHeight + 100;
     window.addEventListener('scroll', e => {
@@ -71,7 +70,7 @@ class BlogPage extends React.Component {
 
   render() {
     const { isFixed, isDisplayToTop, visible } = this.state;
-    const { children, navIndex, title } = this.props;
+    const { children, navIndex, title, isArticle, content, now } = this.props;
     const items = [{
       name: '首页',
       link: '/blog',
@@ -142,10 +141,9 @@ class BlogPage extends React.Component {
             </div>
             {/* 在这边显示相关目录 */}
             <div className={!isFixed ? 'data' : 'data dataNow'}>
-              <BlogData></BlogData>
-            </div>
-            <div>
-            <Structure></Structure>
+              {
+                isArticle ? <Structure data={content} now={now}></Structure> : <BlogData></BlogData>
+              }
             </div>
           </div>
           <div className="right">
