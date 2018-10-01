@@ -50,7 +50,7 @@ const SpanLink = ({
       }
     `}</style>
   </span>
-
+  
 export default class Title extends React.Component {
   render() {
     const { article_id, categroy_id, title, updateTime, createTime, categroyName, tags, readNum } = this.props;

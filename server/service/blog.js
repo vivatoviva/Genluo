@@ -34,12 +34,27 @@ async function getArticle({ page = 1, tagId, categroyId, id },hasContent = false
     LIMIT ${(page - 1) * 10},
     10;
   `
-  console.log(sql);
-  let count = 'select count(*) FROM article';
+  // 统计条数sql语句
+  let count = `
+    SELECT
+      count(*)
+    FROM
+      article,
+      categroy
+    WHERE
+      article.categroy_id = categroy.id 
+      ${ id ? `
+      and article.id = ${id}
+      ` : ''}
+      ${ tagId ? `
+      and article.id in (
+        select article_id from article_tag where tag_id = ${tagId}
+      )
+      ` : ''}
+      ${categroyId ? 'and categroy_id =' + categroyId: ''}
+  `
   let result = [];
-  
   try {
-
     // const request = await Promise.all(mysql.query(sql), mysql.query(count));
     // console.log(request)
     // const [ data, pageNum ] = request;
@@ -100,10 +115,31 @@ async function  getDetail({id}) {
   const data = await getArticle({id}, true)
   return data.list[0] || null
 }
+
+async function read(id) {
+  let querySql = `
+    select
+      read_num
+    from article
+    where id = ${id}
+  `
+  const query = await mysql.query(querySql);
+  const num = query && query[0]['read_num'];
+
+  let updateSql = `
+    update
+      article
+      set read_num = ${num + 1}
+    where id = ${id}
+  `
+  await mysql.query(updateSql);
+}
+
 module.exports = {
   getArticle,
   getTag,
   getCategroy,
   getContent,
   getDetail,
+  read,
 }

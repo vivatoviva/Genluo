@@ -62,10 +62,24 @@ async function categroyList(ctx, next) {
   }
 }
 
+async function articleRead(ctx, next) {
+  let data = null;
+  const { id } = ctx.params;
+  try {
+    data = await service.blog.read(id);
+    ctx.body = { ...Tip.ok };
+  } catch (e) {
+    ctx.body = Tip.datebaseError;
+    console.log('报错', e);
+
+  }
+} 
+
 module.exports = {
   articleList,
   tagList,
   categroyList,
   articleContent,
   articleDetail,
+  articleRead,
 }

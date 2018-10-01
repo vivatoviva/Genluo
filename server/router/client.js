@@ -14,6 +14,8 @@ router.post('/api/article/detail/:id', controller.client.articleDetail)
 router.post('/api/tag/list', controller.client.tagList)
 // 分类列表
 router.post('/api/category/list', controller.client.categroyList)
+// 文章查询热度加一
+router.post('/api/article/read/:id', controller.client.articleRead)
 // 统计相关信息
 router.get('/api/statistics/detail')
 // 文章点击相关
