@@ -36,14 +36,12 @@ module.exports = {
         '${time}',
         ${cateId});
     `
-    const query =await mysql.query(`
-        select * from article where title='${title}'
-    `)
-    await mysql.query(sql)
-    await this.operateTags(query[0].id, tagsId)
+    const query =await mysql.query(sql)
+    await this.operateTags(query.insertId, tagsId);
   },
 
   async operateTags(id, tagsId) {
+    if(!(id && tagsId)) throw new Error();
     // 首先清除所有
     let cleanSql = `
       delete from article_tag

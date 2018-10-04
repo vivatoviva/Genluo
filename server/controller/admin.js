@@ -36,27 +36,28 @@ module.exports = {
       }
       ctx.body = Tip.ok;
     } catch(e) {
+      console.log('操作文章报错',e)
       ctx.body = Tip.datebaseError;
     }
   },
 
   async getArticleList(ctx, next) {
     const {id, status, categroyId, tagId, sort, current = 1, pageSize = 10} = ctx.request.body;
-    const specialQuery = (id||status||categroyId||tagId);
 
     if(sort) {
-      if(['read_num', 'create_time', 'update_time'].includes(sort)) return ctx.body = Tip.paramError;
+      if(!['read_num', 'create_time', 'update_time'].includes(sort.columnKey)) return ctx.body = Tip.paramError;
+      if(!['DESC', 'desc', 'asc', 'ASC'].includes(sort.order)) return ctx.body = Tip.paramError;
     }
 
     // 构造where语句
-    let wheresql = [];
+    let wheresql = ['article.categroy_id = categroy.id '];
     let list = [];
     let pagination = {
       current,
       pageSize,
     };
     if(id) {
-      wheresql.push(`id=${id}`)
+      wheresql.push(`article.id=${id}`)
     }
     if(status) {
       wheresql.push(`status='${status}'`)
@@ -78,11 +79,7 @@ module.exports = {
     let countSql = `
       select count(*)
       from article, categroy
-      ${
-        specialQuery && `
-          where ${wheresql.join(' and ')}
-        `
-      }
+      where ${wheresql.join(' and ')}
     `
     // 查询列表模板
     let querySql = `
@@ -96,13 +93,9 @@ module.exports = {
         name as 'categroy_name',
         article.id AS 'article_id'
       from article, categroy
+      where ${wheresql.join(' and ')}
       ${
-        specialQuery && `
-          where ${wheresql.join(' and ')}
-        `
-      }
-      ${
-        sort ? `ORDER BY ${sort.columnKey} ${sort.order};` : ''
+        sort ? `ORDER BY ${sort.columnKey} ${sort.order}` : ''
       }
       limit ${(current - 1) * pageSize}, ${pageSize}
     `
@@ -118,6 +111,7 @@ module.exports = {
         }
       }
     } catch(e) {
+      console.log('查询文章列表报错', e);
       ctx.body= Tip.datebaseError
     }
   }
