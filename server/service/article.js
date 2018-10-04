@@ -2,7 +2,6 @@ const mysql = require('../db')
 const moment = require('moment')
 const time = moment().format('YYYY-MM-DD HH:mm')
 
-
 module.exports = {
   async updateArticle({id, title, content, descript, tagsId, cateId}) {
     // 首先添加新文章
@@ -15,8 +14,7 @@ module.exports = {
         update_time='${time}'
       where id=${id}
     `
-    await mysql.query(sql);
-    await this.operateTags(id, tagsId);
+    await Promise.all([mysql.query(sql), this.operateTags(id, tagsId)]);
   },
 
   async addArticle({id,title, content, descript, tagsId, cateId}) {
@@ -38,10 +36,10 @@ module.exports = {
         '${time}',
         ${cateId});
     `
-    await mysql.query(sql)
     const query =await mysql.query(`
         select * from article where title='${title}'
     `)
+    await mysql.query(sql)
     await this.operateTags(query[0].id, tagsId)
   },
 
@@ -51,9 +49,11 @@ module.exports = {
       delete from article_tag
       where article_id=${id}
     `
-    await mysql.query(cleanSql)
+    await mysql.query(cleanSql);
+    const inserList = []; 
     for(let i = 0; i < tagsId.length; i++) {
-      await mysql.query(`insert into article_tag(tag_id, article_id) values(${tagsId[i]}, ${id});`)
+      inserList.push(mysql.query(`insert into article_tag(tag_id, article_id) values(${tagsId[i]}, ${id});`));
     }
+    await Promise.all(inserList);
   }
 }

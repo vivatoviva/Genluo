@@ -6,15 +6,13 @@ module.exports = {
   async deleteArticle(ctx, next) {
     const { id } = ctx.request.body;
     if(id.length === 0) return ctx.body = Tip.paramError;
-    let  whereSql = `id=${id[0]}`
-    for(let i = 1; i<id.length; i++) {
-      whereSql+=` or id=${id[i]}`
-    }
+    let  whereSql = id.map(item => `id=${item}`);
+
     try {
       let sql = `
         update article
         set status='delete'
-        where ${whereSql}
+        where ${whereSql.join(' or ')}
       `
       await ctx.mysql.query(sql);
       ctx.body = Tip.ok;
@@ -25,10 +23,10 @@ module.exports = {
 
   async operateArticle(ctx, next) {
     const { id, title, content, descript, tags, categroy } = ctx.request.body;
-    if(!(title||content||descript||tags||categroy)) return ctx.body = Tip.paramError
+    if(!(title||content||descript||tags||categroy)) return ctx.body = Tip.paramError;
+
     try {
-      const  tagsId = await service.tag.getTagsId(tags)
-      const cateId = await service.tag.getCategroyId(categroy)
+      const [ tagsId, cateId ] = await Promise.all([service.tag.getTagsId(tags), service.tag.getCategroyId(categroy)])
       if(id) {
         // 更新操作
         await service.article.updateArticle({id, title, content, descript, tagsId, cateId})
@@ -50,6 +48,7 @@ module.exports = {
       if(['read_num', 'create_time', 'update_time'].includes(sort)) return ctx.body = Tip.paramError;
     }
 
+    // 构造where语句
     let wheresql = [];
     let list = [];
     let pagination = {
@@ -65,7 +64,17 @@ module.exports = {
     if(categroyId) {
       wheresql.push(`categroy_id=${categroyId}`)
     }
-    // 查询统计个数的sql语句
+    if(tagId) {
+      const tagsWhere = [];
+      tagId.map(item => {
+        tagsWhere.push(`tag_id = ${item}`)
+      })
+      wheresql.push(`article.id in (
+        select article_id from article_tag where ${tagsWhere.join(' or ')}
+      )
+      `)
+    }
+    // 统计个数模板
     let countSql = `
       select count(*)
       from article, categroy
@@ -75,7 +84,7 @@ module.exports = {
         `
       }
     `
-    // 查询列表的数据
+    // 查询列表模板
     let querySql = `
       select
         title,
@@ -97,15 +106,17 @@ module.exports = {
       }
       limit ${(current - 1) * pageSize}, ${pageSize}
     `
+    // 查询之后数据进行组装
     try {
-      const count = await mysql.query(countSql);
+      const [ count, listquery ] = await Promise.all([mysql.query(countSql), mysql.query(querySql)])
       pagination.total = count[0]['count(*)'];
-      const listquery = await mysql.query(querySql);
       list = listquery;
+
       ctx.body = { ...Tip.ok, data: {
-        list,
-        pagination,
-      } }
+          list,
+          pagination,
+        }
+      }
     } catch(e) {
       ctx.body= Tip.datebaseError
     }

@@ -55,18 +55,17 @@ async function getArticle({ page = 1, tagId, categroyId, id },hasContent = false
   `
   let result = [];
   try {
-    // const request = await Promise.all(mysql.query(sql), mysql.query(count));
-    // console.log(request)
-    // const [ data, pageNum ] = request;
-    let data = await mysql.query(sql);
-    let pageNum = await mysql.query(count);
-
-    // for(let item of data) {
-    //   // 查询相tag信息
-    //   const sql = `select tag_id, name from article_tag, tag where article_tag.article_id = ${item.article_id} and article_tag.tag_id = tag.id`
-    //   item.tags = await mysql.query(sql);
-    // }
-
+    let [data, pageNum] = await Promise.all([mysql.query(sql),mysql.query(count)])
+    let tagsPromiseList = [];
+    for(let item of data) {
+      // 查询相tag信息
+      const sql = `select tag_id, name from article_tag, tag where article_tag.article_id = ${item.article_id} and article_tag.tag_id = tag.id`
+      tagsPromiseList.push(mysql.query(sql));
+    }
+    const tags = await Promise.all(tagsPromiseList);
+    for(let i = 0; i<tags.length; i++) {
+      data[i].tags = tags[i];
+    }
     result = {
       pagination: {
         page,
