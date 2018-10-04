@@ -16,7 +16,6 @@ export default class Content extends React.Component {
 
   componentDidMount() {
     const content = this.converter.content.map(item => item.title);
-
     window.addEventListener('scroll', (e) => {
       let i = 0;
       for(; i<content.length; i++) {
@@ -29,6 +28,7 @@ export default class Content extends React.Component {
 
     function elementVisible(id) {
       const ele = document.getElementById(id)
+      if(!ele) return false;
       //滚动条高度+视窗高度 = 可见区域底部高度
       var visibleBottom = window.scrollY + document.documentElement.clientHeight;
       //可见区域顶部高度

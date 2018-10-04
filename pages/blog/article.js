@@ -35,7 +35,7 @@ export default class extends React.Component {
   }
 
   state = {
-    now: 1,
+    now: 0,
   }
 
   handleContentChange = (now) => {

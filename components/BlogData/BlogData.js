@@ -37,7 +37,6 @@ const BlogData =  () =>
         height: 50%;
         background-image: url('/static/images/github.png');
         background-size: 100%;
-
         position: absolute;
       }
       h5 {
