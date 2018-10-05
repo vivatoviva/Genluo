@@ -22,5 +22,10 @@ module.exports = {
     code: 20004,
     data: null,
     msg: '账号密码错误',
+  },
+  noLogin: {
+    code: 20005,
+    data: null,
+    msg: '未登录'
   }
 }

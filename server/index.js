@@ -10,6 +10,7 @@ const port = parseInt(process.env.PORT, 10) || config.port
 const mysql = require('./db')
 const koaBody = require('koa-body');
 const KoaSession = require('koa-session');
+const koaStatus = require('./middleware/status')
 const fs = require('fs')
 
 
@@ -28,6 +29,8 @@ app.prepare()
     }
     server.use(KoaSession(CONFIG, server))
     server.use(koaBody())
+    // 中间件插件
+    server.use(koaStatus)
     // 挂载数据库对象
     server.use(async (ctx, next) => {
       ctx.mysql = mysql;

@@ -37,7 +37,6 @@ module.exports = {
     }
   },
   async logout(ctx, next) {
-    console.log(ctx.session)
     ctx.session.isLogin = false;
     const userName = ctx.session.userName;
     // 拿到携带的cookie，如果含有进行清除，没有的话直接返回登录失败
