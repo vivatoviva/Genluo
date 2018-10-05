@@ -22,7 +22,7 @@ module.exports = {
   },
 
   async operateArticle(ctx, next) {
-    const { id, title, content, descript, tags, categroy } = ctx.request.body;
+    let { id, title, content, descript, tags, categroy } = ctx.request.body;
     if(!(title||content||descript||tags||categroy)) return ctx.body = Tip.paramError;
 
     try {
@@ -32,9 +32,15 @@ module.exports = {
         await service.article.updateArticle({id, title, content, descript, tagsId, cateId})
       } else {
         // 添加操作
-        await service.article.addArticle({content, title, descript, tagsId, cateId})
+        id = await service.article.addArticle({content, title, descript, tagsId, cateId})
       }
-      ctx.body = Tip.ok;
+      ctx.body = {
+        ...Tip.ok,
+        data: {
+          ...ctx.request.body,
+          id,
+        },
+      }
     } catch(e) {
       console.log('操作文章报错',e)
       ctx.body = Tip.datebaseError;
@@ -63,7 +69,11 @@ module.exports = {
       wheresql.push(`status='${status}'`)
     }
     if(categroyId) {
-      wheresql.push(`categroy_id=${categroyId}`)
+      const cateWhere = [];
+      categroyId.map(item => {
+        cateWhere.push(`categroy_id=${item}`)
+      })
+      wheresql.push(cateWhere.join(' or '))
     }
     if(tagId) {
       const tagsWhere = [];
@@ -114,5 +124,29 @@ module.exports = {
       console.log('查询文章列表报错', e);
       ctx.body= Tip.datebaseError
     }
+  },
+  
+  async articleDetail(ctx, next) {
+    const { id } = ctx.request.body;
+    if(!id) return ctx.body = { ...Tip.paramError };
+    let sql = `
+      select title, descript, name as categroy, article.id as id, content,status
+      from article, categroy
+      where article.categroy_id = categroy.id and article.id =${id}
+    `
+    let tagQuery = `
+      select name
+      from tag, article_tag
+      where article_tag.tag_id = tag.id and article_id=${id}
+    `
+    const [ data, list ] = await Promise.all([mysql.query(sql), mysql.query(tagQuery)]);
+    ctx.body = {
+      ...Tip.ok,
+      data: {
+        ...data[0],
+        tags: list.map(item => item.name),
+      }
+    }
+
   }
 }

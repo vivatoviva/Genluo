@@ -38,6 +38,7 @@ module.exports = {
     `
     const query =await mysql.query(sql)
     await this.operateTags(query.insertId, tagsId);
+    return query.insertId
   },
 
   async operateTags(id, tagsId) {

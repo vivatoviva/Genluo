@@ -1,7 +1,6 @@
 import React from 'react'
 import WithLink from '../WithLink';
 
-
 const IconTitle = ({
   icon,
   name,
@@ -89,7 +88,7 @@ export default class Title extends React.Component {
               icon="tags"
               name="标签"
             >
-              {tags.map(item => <><SpanLink link={`/blog/tag/${item.tag_id}`}>{item.name}</SpanLink>、</>)}
+              {tags.map(item => <><SpanLink link={`/blog/tag/${item.tag_id}`}>{item.name}</SpanLink></>)}
             </IconTitle>
             ) : ''
           }
