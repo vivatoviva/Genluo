@@ -8,6 +8,7 @@ function updateHash(ctx, user) {
   const hashValue = hash.randomWord(false, 20);
   let sql = `
     update auto_login set login_hash='${hashValue}'
+    where user_name='${user}'
   `
   mysql.query(sql);
   ctx.cookies.set("loginHash", hashValue, {
@@ -34,14 +35,24 @@ module.exports =  async function status(ctx, next) {
         select * from auto_login
         where user_name='${loginUser}' and login_hash='${loginHash}'
       `
-      let query = await mysql.query(sql);
-      if(query.length > 0 && moment(query[0].create_time).add(30,'days').unix() - moment().unix() > 0 ) {
-        // 可以进行登录
-        updateHash(ctx, user);
-        ctx.isLogin = true;
-        ctx.userName = loginUser;
-        return await next();
+      try {
+        let query = await mysql.query(sql);
+        const isFree =  moment(query[0].create_time).add(30,'days').unix() - moment().unix() > 0;
+
+        if(query.length > 0 && isFree ) {
+          // 可以进行登录
+          updateHash(ctx, loginUser);
+          ctx.session.isLogin = true;
+          ctx.session.userName = loginUser;
+          return await next();
+        } else if(ctx.session.isLogin){
+          // 并发请求的处理
+          return await next();
+        }
+      } catch(e) {
+        console.log(e);
       }
+     
     }
     ctx.body = Tip.noLogin;
   }
