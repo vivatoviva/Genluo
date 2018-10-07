@@ -138,7 +138,7 @@ class Index extends React.Component {
                 <li>
                   <a href="https://github.com/vivatoviva">
                     github.com/vivatoviva
-                    <span><i className="fas fa-github"></i></span>
+                    <span><i class="fab fa-github"></i></span>
                   </a>
                 </li>
                 <li>
