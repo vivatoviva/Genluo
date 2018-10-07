@@ -160,8 +160,9 @@ class Index extends React.Component {
                   title="实践经历"
                   icon="school"
                 >
-                  <Item time="2016.09 ~ 2017.09" tag="学生组织">重邮微校 · 项目部</Item>
+                  <Item time="2018.08 ~ 至今" tag="创业合伙人">校园行平台 · 技术合伙人</Item>
                   <Item time="2017.05 ~ 至今" tag="创业团队">勤奋峰 · 前端组</Item>
+                  <Item time="2016.09 ~ 2017.09" tag="学生组织">重邮微校 · 项目部</Item>
                 </Dividing>
               </section>
               <section>
@@ -183,7 +184,10 @@ class Index extends React.Component {
                   </Descript>
                   <Descript isItem>
                   熟练相关爬虫，主要使用的<span>Nodejs</span>和<span>Python</span>的<span>Scrapy</span>框架进行大规模爬取数据，并且熟悉相关爬虫库，并在github上开源的相关爬虫代码
-                  </Descript>            
+                  </Descript>
+                  <Descript isItem>
+                  
+                  </Descript>       
                 </Dividing>
               </section>
               <section>
@@ -229,12 +233,12 @@ class Index extends React.Component {
                 >
                   <Item time="2018.09 ~ 至今" tag="Link">个人站点建设</Item>
                   <Descript >
-                    个人站点的开发，主要包括博客、简历、介绍等几个主要模块，前端使用Nextjs进行同构处理，后端使用Koajs和mysql技术栈提供支持，管理端使用antd-desgin-pro进行搭建，并进行部署上线，使用nginx和node部署、按需加载、预加载等降低首屏渲染事件，为用户提供快速的响应，和优秀的网站体验，并将项目的项目的几个功能点抽离出来上传到npm，主要的genluo-cli、github-push、markdownToDom，koa-mysql等的封装。也是自己主要尝试新技术的实现项目，配置Https、http2.0等等新技术的实验地
+                    个人站点的开发，主要包括<span>博客</span>、<span>简历</span>、<span>介绍</span>等几个主要模块，前端使用<span>Nextjs</span>进行<span>同构处理</span>，后端使用<span>Koajs</span>和<span>mysql</span>技术栈提供支持，管理端使用antd-desgin-pro进行搭建，并进行部署上线，使用<span>nginx</span>和<span>node</span>部署、<span>按需加载</span>、<span>预加载</span>等降低首屏渲染事件，为用户提供快速的响应，和优秀的网站体验，并将项目的项目的几个功能点抽离出来上传到npm，主要的<span>genluo-cli</span>、<span>github-push</span>、<span>markdownToDom</span>，<span>koa-mysql</span>等的封装。也是自己主要尝试新技术的实现项目，配置<span>Https</span>、<span>http2.0</span>等等新技术的实验地
                   </Descript>
-                  <Item time="2018.9 ~ 至今" tag="Link">koa-mysql</Item>
+                  {/* <Item time="2018.9 ~ 至今" tag="Link">koa-mysql</Item>
                   <Descript >
                     个人站点抽离出的一个子项目，主要用于传入约定的对象，生成对应的mysql语句，方便与开发，主要是想模仿Moggoose、egg-mysql，实现方便的操作数据库
-                  </Descript>
+                  </Descript> */}
                 </Dividing>
               </section>
             </div>
