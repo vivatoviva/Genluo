@@ -25,21 +25,19 @@ class Item extends React.Component {
           </li>
         </div>
         <style jsx>{`
-          ul {
-            padding-left: 20px;
-          }
+
           li span {
             display: inline-block;
           }
           .time {
             width: 30%;
+            font-size: 14px;
           }
           .content {
             width: 35%;
 
           }
           li {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             position: relative;
             line-height: 1.7;
             list-style: circle;

@@ -10,7 +10,7 @@ export default class extends Component {
           p {
             padding: 5px 12px;
             text-align: justify;
-            line-height: 1.5;
+            line-height: 2.00;
             position: relative;
           }
           .item1 {
@@ -31,7 +31,7 @@ export default class extends Component {
         <style jsx global>{`
           p.descript span {
             background-color: #eee;
-            padding: 0 5px;
+            padding: 0px 5px;
           }
         `}</style>
       </div>

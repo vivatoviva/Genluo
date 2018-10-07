@@ -16,7 +16,8 @@ const Style = () =>
       }
       div.wraper {
         box-sizing: border-box;
-        padding:40px 0px;
+        color: #333;
+        font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
         width: 100%;
       }
       div.resume {
@@ -26,6 +27,7 @@ const Style = () =>
         box-shadow: 0px 0px 15px rgb(208, 208, 208);
       }
       h1 {
+        font-weight: normal;
         color: #fff;
         font-size: 50px;
         position:relative;
@@ -52,10 +54,10 @@ const Style = () =>
       ul li {
         text-align: right;
         color: #fff;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         line-height: 1.5;
         font-size: 14px;
         transition: color .3s ease;
+        font-family: Arial, "Microsoft YaHei";
       }
       ul li span {
         font-size: 13px;
@@ -122,19 +124,20 @@ class Index extends React.Component {
             </div>
             <div className="clear more-info">
               <ul className="left tech">
-                <li>男 / 1997.08</li>
-                <li>绩点： 3.53（ 前5% ）</li>
-                <li>重庆邮电大学 | 信息管理与信息系统</li>
+                <li>男 / 1997.08 </li>
+                <li>绩点：3.53 / 4.00</li>
+                <li>重庆邮电大学 | 信息管理与信息系统 | 本科 | 2020年毕业</li>
               </ul>
               <ul className="right influence">
-                <li>
-                  <a href="http://blogoog.com/">www.blogoog.com<span><i className="fas fa-home"></i> </span></a>
-                </li>
                 <li>
                   <a href="tel:17784455445">
                     17784455445 <span><i className="fas fa-phone"></i> </span>
                   </a>
                 </li>
+                <li>
+                  <a href="http://blogoog.com/">www.blogoog.com<span><i className="fas fa-home"></i> </span></a>
+                </li>
+
                 <li>
                   <a href="https://github.com/vivatoviva">
                     github.com/vivatoviva
@@ -157,8 +160,8 @@ class Index extends React.Component {
                   title="实践经历"
                   icon="school"
                 >
-                  <Item time="2018.7 - 2017.6" tag="创业团队">勤奋峰</Item>
-                  <Item time="2018.7 - 2017.6" tag="实习">阿里巴巴飞天事业部</Item>
+                  <Item time="2016.09 ~ 2017.09" tag="学生组织">重邮微校 · 项目部</Item>
+                  <Item time="2017.05 ~ 至今" tag="创业团队">勤奋峰 · 前端组</Item>
                 </Dividing>
               </section>
               <section>
@@ -167,29 +170,20 @@ class Index extends React.Component {
                   icon="tree"
                 > 
                   <Descript isItem>
-                  掌握Web前端开发基本技能，熟悉<span>W3C标准</span>、<span>页面布局架构</span>、<span>前端语义化</span>、<span>浏览器兼容性</span>等，懂些审美，擅长设计，重视用户体验与代码可维护性，有近2年的前端开发经验。
+                  掌握web开发基本技能，熟悉<span>W3c标准</span>、<span>页面架构布局</span>、<span>前端语义化</span>，懂些<span>审美</span>、重视<span>用户体验</span>及<span>代码可维护性</span>，有近两年的开发经验
                   </Descript>
                   <Descript isItem>
-                  掌握Web前端开发基本技能，熟悉<span>W3C标准</span>、<span>页面布局架构</span>、<span>前端语义化</span>、<span>浏览器兼容性</span>等，懂些审美，擅长设计，重视用户体验与代码可维护性，有近2年的前端开发经验。
+                  对现代的框架<span>React及其相关技术栈</span>、<span>Nextjs</span>、<span>Eggjs</span>、<span>Koajs</span>等有着较熟的实践和较深的感悟
                   </Descript>
                   <Descript isItem>
-                  掌握Web前端开发基本技能，熟悉<span>W3C标准</span>、<span>页面布局架构</span>、<span>前端语义化</span>、<span>浏览器兼容性</span>等，懂些审美，擅长设计，重视用户体验与代码可维护性，有近2年的前端开发经验。
+                  对<span>计算机网络</span>、<span>性能优化</span>、<span>前端工程化</span>、<span>前端安全</span>、<span>es6</span>、<span>Nodejs</span>等有一定的了解和思考
                   </Descript>
                   <Descript isItem>
-                  掌握Web前端开发基本技能，熟悉<span>W3C标准</span>、<span>页面布局架构</span>、<span>前端语义化</span>、<span>浏览器兼容性</span>等，懂些审美，擅长设计，重视用户体验与代码可维护性，有近2年的前端开发经验。
+                  熟练使用Git进行<span>版本控制</span>、<span>团队合作</span>，<span>Linux</span>、<span>Nginx</span>等环境部署，了解项目开发流程及其开发调试工具的使用。
                   </Descript>
                   <Descript isItem>
-                  掌握Web前端开发基本技能，熟悉<span>W3C标准</span>、<span>页面布局架构</span>、<span>前端语义化</span>、<span>浏览器兼容性</span>等，懂些审美，擅长设计，重视用户体验与代码可维护性，有近2年的前端开发经验。
-                  </Descript>
-                  <Descript isItem>
-                  掌握Web前端开发基本技能，熟悉<span>W3C标准</span>、<span>页面布局架构</span>、<span>前端语义化</span>、<span>浏览器兼容性</span>等，懂些审美，擅长设计，重视用户体验与代码可维护性，有近2年的前端开发经验。
-                  </Descript>
-                  <Descript isItem>
-                  掌握Web前端开发基本技能，熟悉<span>W3C标准</span>、<span>页面布局架构</span>、<span>前端语义化</span>、<span>浏览器兼容性</span>等，懂些审美，擅长设计，重视用户体验与代码可维护性，有近2年的前端开发经验。
-                  </Descript>
-                  <Descript isItem>
-                  掌握Web前端开发基本技能，熟悉<span>W3C标准</span>、<span>页面布局架构</span>、<span>前端语义化</span>、<span>浏览器兼容性</span>等，懂些审美，擅长设计，重视用户体验与代码可维护性，有近2年的前端开发经验。
-                  </Descript>
+                  熟练相关爬虫，主要使用的<span>Nodejs</span>和<span>Python</span>的<span>Scrapy</span>框架进行大规模爬取数据，并且熟悉相关爬虫库，并在github上开源的相关爬虫代码
+                  </Descript>            
                 </Dividing>
               </section>
               <section>
@@ -197,9 +191,9 @@ class Index extends React.Component {
                   title="奖项证书"
                   icon="certificate"
                 >
-                  <Item time="2018.7 - 2017.6" tag="教育部">计算机四级 网络技术</Item>
-                  <Item time="2018.7 - 2017.6" tag="校级">三好学生</Item>
-                  <Item time="2018.7 - 2017.6" tag="校级">二等奖学金</Item>
+                  <Item time="2017.10" tag="教育部">NCRE 网络工程师</Item>
+                  <Item time="2017.09" tag="校级">三好学生</Item>
+                  <Item time="2017.09" tag="校级">二等奖学金</Item>
                 </Dividing>
               </section>
             </div>
@@ -209,12 +203,23 @@ class Index extends React.Component {
                   title="项目经验"
                   icon="project-diagram"
                 >
-                  <Item time="2015.6" tag={{name: 'Link', link: "https://www.google.com/"}}>北京crm系统 · 中后台</Item>
-                  <Descript >学习了比较好的方法，苦于没有一直维护的项目，所以进行此项目，本项目将有自己全权维护，进行开发，在主页关于中有详细的说明</Descript>
-                  <Item time="2015.6" tag="Link">内部搭建系统 · 搭建生态</Item>
-                  <Descript >提出想法项目牵头产品策划前端开发代码开源 基于微信小程序MINA框架的WXML、WXSS、JS为代码语言进行开发，视图层采用Flex弹性布局，逻辑层采用模块化模式开发。 此外还利用gulp、Express、ejs、Echarts等技术完成对产品官网及数据大盘的开发。</Descript>
-                  <Item time="2015.6" tag="Link">享即达项目 · 外包项目</Item>
-                  <Descript >提出想法项目牵头产品策划前端开发代码开源 基于微信小程序MINA框架的WXML、WXSS、JS为代码语言进行开发，视图层采用Flex弹性布局，逻辑层采用模块化模式开发。 此外还利用gulp、Express、ejs、Echarts等技术完成对产品官网及数据大盘的开发。</Descript>
+                  <Item time="2018.10" tag="Link">宅居修项目 · 外包项目</Item>
+                  <Descript >
+                    <span>二期开发</span>，使用<span>Wepy</span>框架在一期项目的基础上进行小程序的二期开发，视图层采用<span>Flex弹性布局</span>，基于组件化的开发模式，<span>类VUE</span>的相关开发体验，此外，还使用<span>ant-desgin</span>相关技术对管理端进行二次开发，学习学长的相关代码
+                  </Descript>
+                  <Item time="2018.07" tag={{name: 'Link', link: "https://www.google.com/"}}>CRM系统 · 中后台</Item>
+                  <Descript>
+                    <span>项目推动</span>，<span>前端开发</span>，使用ant-degin-pro开发的一套后台系统，实现<span>权限管理</span>，<span>数据可视化</span>，<span>数据mock</span>等等，推动产品、后台共同交付此产品，并在项目后期进行相关维护、二次开发
+                  </Descript>
+                  <Item time="2018.02" tag="Link">内部搭建系统 · 搭建生态</Item>
+                  <Descript >
+                    <span>成长系统</span>大四学长带着做的一套系统，前期主要使用<span>Eggjs</span>负责搭建系统核心生态后端的构建和<span>管理端</span>的开发，弄懂整套系统的设计，后期作为系统的<span>负责人</span>，提出想法，并牵头进行开发，搭建并且维护线上<span>Linux服务器环境</span>
+                  </Descript>
+                  {/* <Item time="2015.6" tag="Link">ABO微信 · 微信H5</Item>
+                  <Descript >
+                    使用webpack配置项目，使用ejs、Zeptojs、sass等实现组件化，并且将其制作成勤奋峰前端脚手架工具，并且一直维护至今
+                  </Descript> */}
+
                 </Dividing>
               </section>
               <section>
@@ -222,16 +227,14 @@ class Index extends React.Component {
                   title="个人作品"
                   icon="user"
                 >
-                  <Item time="2018.7 - 2017.6" tag="Link">个人站点建设</Item>
-                  <Descript >学习了比较好的方法，苦于没有一直维护的项目，所以进行此项目，本项目将有自己全权维护，进行开发，在主页关于中有详细的说明</Descript>
-                  <Item time="2018.7 - 2017.6" tag="Link">个人站点建设</Item>
-                  <Descript >学习了比较好的方法，苦于没有一直维护的项目，所以进行此项目，本项目将有自己全权维护，进行开发，在主页关于中有详细的说明</Descript>
-                  <Item time="2018.7 - 2017.6" tag="Link">个人站点建设</Item>
-                  <Descript >学习了比较好的方法，苦于没有一直维护的项目，所以进行此项目，本项目将有自己全权维护，进行开发，在主页关于中有详细的说明</Descript>
-                  <Item time="2018.7 - 2017.6" tag="Link">个人站点建设</Item>
-                  <Descript >学习了比较好的方法，苦于没有一直维护的项目，所以进行此项目，本项目将有自己全权维护，进行开发，在主页关于中有详细的说明</Descript>
-                  <Item time="2018.7 - 2017.6" tag="Link">个人站点建设</Item>
-                  <Descript >学习了比较好的方法，苦于没有一直维护的项目，所以进行此项目，本项目将有自己全权维护，进行开发，在主页关于中有详细的说明</Descript>
+                  <Item time="2018.09 ~ 至今" tag="Link">个人站点建设</Item>
+                  <Descript >
+                    个人站点的开发，主要包括博客、简历、介绍等几个主要模块，前端使用Nextjs进行同构处理，后端使用Koajs和mysql技术栈提供支持，管理端使用antd-desgin-pro进行搭建，并进行部署上线，使用nginx和node部署、按需加载、预加载等降低首屏渲染事件，为用户提供快速的响应，和优秀的网站体验，并将项目的项目的几个功能点抽离出来上传到npm，主要的genluo-cli、github-push、markdownToDom，koa-mysql等的封装。也是自己主要尝试新技术的实现项目，配置Https、http2.0等等新技术的实验地
+                  </Descript>
+                  <Item time="2018.9 ~ 至今" tag="Link">koa-mysql</Item>
+                  <Descript >
+                    个人站点抽离出的一个子项目，主要用于传入约定的对象，生成对应的mysql语句，方便与开发，主要是想模仿Moggoose、egg-mysql，实现方便的操作数据库
+                  </Descript>
                 </Dividing>
               </section>
             </div>

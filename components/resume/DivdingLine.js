@@ -26,20 +26,15 @@ class Item extends React.Component {
             position: relative;
           }
           p.line {
-            width: 100%;
-            height: 6px;
-            background-color: rgb(237, 237, 237);
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: red;
-            z-index: -1;
+
           }
           p {
             display: inline-block;
             color: rgb(36, 36, 36);
             text-indent: 20px;
             line-height: 1;
+            background-color: #fff;
+            z-index: 200;
           }
           p i {
             line-height: 1;
