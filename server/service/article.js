@@ -1,9 +1,10 @@
 const mysql = require('../db')
 const moment = require('moment')
-const time = moment().format('YYYY-MM-DD HH:mm')
+
 
 module.exports = {
   async updateArticle({id, title, content, descript, tagsId, cateId}) {
+    const time = moment().format('YYYY-MM-DD HH:mm')
     // 首先添加新文章
     let sql = `
       update article set
@@ -18,6 +19,7 @@ module.exports = {
   },
 
   async addArticle({id,title, content, descript, tagsId, cateId}) {
+    const time = moment().format('YYYY-MM-DD HH:mm')
     let sql = `
       insert into article(
         title,

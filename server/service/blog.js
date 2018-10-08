@@ -31,6 +31,7 @@ async function getArticle({ page = 1, tagId, categroyId, id },hasContent = false
       )
       ` : ''}
       ${categroyId ? 'and categroy_id =' + categroyId: ''}
+    order by create_time DESC
     LIMIT ${(page - 1) * 10},
     10;
   `
