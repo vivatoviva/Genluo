@@ -15,6 +15,7 @@ const Style = () =>
       @media screen and (max-width: 1340px) {
       }
       div.wraper {
+        padding: 40px 0;
         box-sizing: border-box;
         color: #333;
         font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
@@ -160,9 +161,9 @@ class Index extends React.Component {
                   title="实践经历"
                   icon="school"
                 >
-                  <Item time="2018.08 ~ 至今" tag="创业合伙人">校园行平台 · 技术合伙人</Item>
+                  <Item time="2018.08 ~ 至今" tag="创业合伙人">校园行平台 · 合伙人</Item>
                   <Item time="2017.05 ~ 至今" tag="创业团队">勤奋峰 · 前端组</Item>
-                  <Item time="2016.09 ~ 2017.09" tag="学生组织">重邮微校 · 项目部</Item>
+                  <Item time="2016.09 ~ 09" tag="学生组织">重邮微校 · 项目部</Item>
                 </Dividing>
               </section>
               <section>
@@ -185,9 +186,20 @@ class Index extends React.Component {
                   <Descript isItem>
                   熟练相关爬虫，主要使用的<span>Nodejs</span>和<span>Python</span>的<span>Scrapy</span>框架进行大规模爬取数据，并且熟悉相关爬虫库，并在github上开源的相关爬虫代码
                   </Descript>
-                  <Descript isItem>
-                  
-                  </Descript>       
+                  {/* <Descript isItem>
+                  熟悉常见MV*框架，敢于尝试新的技术，不断挑战新的自己的舒适区，关注高效率工具，并尝试不断提高自己效率，会时间管理，能够有效利用时间
+                  </Descript>        */}
+                </Dividing>
+              </section>
+              <section>
+                <Dividing
+                  title="开源经历"
+                  icon="code"
+                >
+                  <Item time="2018.9 ~ 至今" tag="Link">koa-mysql</Item>
+                  <Descript >
+                    个人站点抽离出的一个子项目，主要用于传入约定的对象，生成对应的mysql语句，方便与开发，主要是想模仿Moggoose、egg-mysql，实现方便的操作数据库
+                  </Descript>
                 </Dividing>
               </section>
               <section>
@@ -207,7 +219,7 @@ class Index extends React.Component {
                   title="项目经验"
                   icon="project-diagram"
                 >
-                  <Item time="2018.10" tag="Link">宅居修项目 · 外包项目</Item>
+                  <Item time="2018.10" tag="Link">宅居修项目 · 外包</Item>
                   <Descript >
                     <span>二期开发</span>，使用<span>Wepy</span>框架在一期项目的基础上进行小程序的二期开发，视图层采用<span>Flex弹性布局</span>，基于组件化的开发模式，<span>类VUE</span>的相关开发体验，此外，还使用<span>ant-desgin</span>相关技术对管理端进行二次开发，学习学长的相关代码
                   </Descript>
@@ -215,14 +227,15 @@ class Index extends React.Component {
                   <Descript>
                     <span>项目推动</span>，<span>前端开发</span>，使用ant-degin-pro开发的一套后台系统，实现<span>权限管理</span>，<span>数据可视化</span>，<span>数据mock</span>等等，推动产品、后台共同交付此产品，并在项目后期进行相关维护、二次开发
                   </Descript>
-                  <Item time="2018.02" tag="Link">内部搭建系统 · 搭建生态</Item>
+                  <Item time="2018.6" tag="Link">ABO微信 · 微信H5</Item>
+                  <Descript >
+                    使用webpack配置项目，使用ejs、Zeptojs、sass等实现组件化,并且学习了相关脚手架项目
+                  </Descript>
+                  <Item time="2018.02" tag="Link">搭建系统 · 搭建生态</Item>
                   <Descript >
                     <span>成长系统</span>大四学长带着做的一套系统，前期主要使用<span>Eggjs</span>负责搭建系统核心生态后端的构建和<span>管理端</span>的开发，弄懂整套系统的设计，后期作为系统的<span>负责人</span>，提出想法，并牵头进行开发，搭建并且维护线上<span>Linux服务器环境</span>
                   </Descript>
-                  {/* <Item time="2015.6" tag="Link">ABO微信 · 微信H5</Item>
-                  <Descript >
-                    使用webpack配置项目，使用ejs、Zeptojs、sass等实现组件化，并且将其制作成勤奋峰前端脚手架工具，并且一直维护至今
-                  </Descript> */}
+
 
                 </Dividing>
               </section>
@@ -233,12 +246,8 @@ class Index extends React.Component {
                 >
                   <Item time="2018.09 ~ 至今" tag="Link">个人站点建设</Item>
                   <Descript >
-                    个人站点的开发，主要包括<span>博客</span>、<span>简历</span>、<span>介绍</span>等几个主要模块，前端使用<span>Nextjs</span>进行<span>同构处理</span>，后端使用<span>Koajs</span>和<span>mysql</span>技术栈提供支持，管理端使用antd-desgin-pro进行搭建，并进行部署上线，使用<span>nginx</span>和<span>node</span>部署、<span>按需加载</span>、<span>预加载</span>等降低首屏渲染事件，为用户提供快速的响应，和优秀的网站体验，并将项目的项目的几个功能点抽离出来上传到npm，主要的<span>genluo-cli</span>、<span>github-push</span>、<span>markdownToDom</span>，<span>koa-mysql</span>等的封装。也是自己主要尝试新技术的实现项目，配置<span>Https</span>、<span>http2.0</span>等等新技术的实验地
+                    个人站点的开发，主要包括<span>博客</span>、<span>简历</span>、<span>介绍</span>等几个主要模块，前端使用<span>Nextjs</span>进行<span>同构处理</span>，后端使用<span>Koajs</span>和<span>mysql</span>技术栈提供支持，管理端使用antd-desgin-pro进行搭建，并进行部署上线，使用<span>nginx</span>和<span>node</span>部署、<span>按需加载</span>、<span>预加载</span>等降低首屏渲染时间，为用户提供快速的响应，和优秀的网站体验，并将项目的项目的几个功能点抽离出来上传到npm。也是自己主要尝试新技术的实现项目，配置<span>Https</span>、<span>http2.0</span>等等新技术的实验地
                   </Descript>
-                  {/* <Item time="2018.9 ~ 至今" tag="Link">koa-mysql</Item>
-                  <Descript >
-                    个人站点抽离出的一个子项目，主要用于传入约定的对象，生成对应的mysql语句，方便与开发，主要是想模仿Moggoose、egg-mysql，实现方便的操作数据库
-                  </Descript> */}
                 </Dividing>
               </section>
             </div>

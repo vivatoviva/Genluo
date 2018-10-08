@@ -38,7 +38,7 @@ class Item extends React.Component {
           }
           p i {
             line-height: 1;
-            width: 13px;
+            width: 15px;
             text-indent: 0px;
             display: inline-block;
             vertical-align: -3%;
