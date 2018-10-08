@@ -2,6 +2,8 @@ const mysql = require('../db/index')
 const Tip = require('../utils/Tips')
 const hash = require('../utils/hash')
 const moment = require('moment')
+const config = require('../config/default');
+const { status } = require('../config/default')
 
 // 更新 hash 值
 function updateHash(ctx, user) {
@@ -18,11 +20,16 @@ function updateHash(ctx, user) {
     overwrite: false  // 是否允许重写
   });
 }
+
 module.exports =  async function status(ctx, next) {
   const url = ctx.url;
-  if(!/^\/api\/admin/g.test(url) || /^\/api\/admin\/user/g.test(url)) {
-    return await next()
-  }
+  const match = Array.isArray(status.match) ? status.match : [ status.match ];
+  // 判断是否开启此中间件
+  if(!status.enable) return await next();
+  // 判断是否过滤此接口
+  const isBy = match.map(item => match.test(url));
+  if(!isBy.includes(true)) return await next();
+
   if(ctx.session.isLogin) {
     // 当前是登录的
     return await next();
@@ -50,9 +57,7 @@ module.exports =  async function status(ctx, next) {
           return await next();
         }
       } catch(e) {
-        console.log(e);
       }
-     
     }
     ctx.body = Tip.noLogin;
   }

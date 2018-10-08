@@ -4,9 +4,9 @@ const router = new Router();
 
 
 // 登录
-router.post('/api/admin/user/login', controller.user.login);
+router.post('/api/user/login', controller.user.login);
 // 登出
-router.post('/api/admin/user/logout', controller.user.logout);
+router.post('/api/user/logout', controller.user.logout);
 // tag列表
 router.post('/api/admin/tags/list', controller.client.tagList)
 // cate列表
