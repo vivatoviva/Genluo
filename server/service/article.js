@@ -1,6 +1,6 @@
 const mysql = require('../db')
 const moment = require('moment')
-
+const { escapeHtml } = require('../utils/escapeHtml');
 
 module.exports = {
   async updateArticle({id, title, content, descript, tagsId, cateId}) {
@@ -9,7 +9,7 @@ module.exports = {
     let sql = `
       update article set
         title='${title}',
-        content='${content}',
+        content='${escapeHtml(content)}',
         descript='${descript}',
         categroy_id='${cateId}',
         update_time='${time}'
@@ -33,7 +33,7 @@ module.exports = {
         '${title}',
         '${time}',
         1,
-        '${content}',
+        '${escapeHtml(content)}',
         '${descript}',
         '${time}',
         ${cateId});

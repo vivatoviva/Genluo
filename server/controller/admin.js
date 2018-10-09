@@ -1,7 +1,7 @@
 const service = require('../service')
 const Tip = require('../utils/Tips')
 const mysql = require('../db')
-
+const { unescapeHtml } = require('../utils/escapeHtml')
 module.exports = {
   async deleteArticle(ctx, next) {
     const { id } = ctx.request.body;
@@ -144,6 +144,7 @@ module.exports = {
       ...Tip.ok,
       data: {
         ...data[0],
+        content: unescapeHtml(data[0].content),
         tags: list.map(item => item.name),
       }
     }

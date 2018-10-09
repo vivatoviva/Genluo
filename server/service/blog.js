@@ -1,5 +1,6 @@
 // 博客相关
 const mysql = require('../db')
+const { unescapeHtml } = require('../utils/escapeHtml');
 
 async function getArticle({ page = 1, tagId, categroyId, id },hasContent = false) {
   // 查询模板  
@@ -66,6 +67,7 @@ async function getArticle({ page = 1, tagId, categroyId, id },hasContent = false
     const tags = await Promise.all(tagsPromiseList);
     for(let i = 0; i<tags.length; i++) {
       data[i].tags = tags[i];
+      data[i].content = data[i].content && unescapeHtml(data[i].content)
     }
     result = {
       pagination: {
@@ -108,7 +110,7 @@ async function getCategroy() {
 async function getContent({id}) {
   let sql = `select content from article where id=${id}`
   let array = await mysql.query(sql);
-  return (array[0] &&  array[0].content) || null
+  return (array[0] &&  array[0].content && unescapeHtml(array[0].content)) || null
 }
 
 async function  getDetail({id}) {
