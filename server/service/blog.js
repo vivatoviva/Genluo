@@ -67,8 +67,15 @@ async function getArticle({ page = 1, tagId, categroyId, id },hasContent = false
     const tags = await Promise.all(tagsPromiseList);
     for(let i = 0; i<tags.length; i++) {
       data[i].tags = tags[i];
-      data[i].content = data[i].content && unescapeHtml(data[i].content)
+      
     }
+    // 文章转码
+    if(hasContent) {
+      for(let i = 0; i < data.length; i++) {
+        if(data[i].content) data[i].content = unescapeHtml(data[i].content)
+      }
+    }
+
     result = {
       pagination: {
         page,
