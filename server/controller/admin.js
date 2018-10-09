@@ -17,6 +17,7 @@ module.exports = {
       await ctx.mysql.query(sql);
       ctx.body = Tip.ok;
     } catch(e) {
+      ctx.logger.error(ctx.url, ctx.request.body, e);
       ctx.body=Tip.datebaseError;
     }
   },
@@ -42,7 +43,7 @@ module.exports = {
         },
       }
     } catch(e) {
-      console.log('操作文章报错',e)
+      ctx.logger.error(ctx.url, ctx.request.body, e);
       ctx.body = Tip.datebaseError;
     }
   },
@@ -114,14 +115,13 @@ module.exports = {
       const [ count, listquery ] = await Promise.all([mysql.query(countSql), mysql.query(querySql)])
       pagination.total = count[0]['count(*)'];
       list = listquery;
-
       ctx.body = { ...Tip.ok, data: {
           list,
           pagination,
         }
       }
     } catch(e) {
-      console.log('查询文章列表报错', e);
+      ctx.logger.error(ctx.url, ctx.request.body, e);
       ctx.body= Tip.datebaseError
     }
   },

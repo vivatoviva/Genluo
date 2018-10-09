@@ -33,6 +33,7 @@ module.exports = {
       }
       ctx.body = Tip.ok;
     } catch(e) {
+      ctx.logger.error(ctx.url, ctx.request.body, e);
       ctx.body = Tip.datebaseError;
     }
   },

@@ -9,7 +9,7 @@ module.exports = {
       data = await service.blog.getArticle({ page, tagId, categroyId })
       ctx.body = {...Tip.ok, data}
     } catch (e) {
-      console.log('================================articleList================' ,e);
+      ctx.logger.error(ctx.url, ctx.request.body, e);
       ctx.body = Tip.datebaseError;
     }
   },
@@ -17,17 +17,11 @@ module.exports = {
   async articleContent(ctx, next) {
     const { id } = ctx.params;
     let data = null;
-    // 测试会不会阻塞渲染，是会的
-    // await new Promise((resolve) => {
-    //   setTimeout(() => {
-    //     resolve()
-    //   },1000)
-    // })
     try {
       data = await service.blog.getContent({id}) 
       ctx.body = { ...Tip.ok, data }
     } catch (e) {
-      console.log('===============获取内容=============', e)
+      ctx.logger.error(ctx.url, ctx.request.body, e);
       ctx.body = Tip.datebaseError
     }
   },
@@ -39,7 +33,7 @@ module.exports = {
       data = await service.blog.getDetail({id}) 
       ctx.body = { ...Tip.ok, data }
     } catch (e) {
-      console.log('===============文章详情=============', e)
+      ctx.logger.error(ctx.url, ctx.request.body, e);
       ctx.body = Tip.datebaseError
     }
   },
@@ -50,6 +44,7 @@ module.exports = {
       data = await service.blog.getTag()
       ctx.body = {...Tip.ok, data}
     } catch (e) {
+      ctx.logger.error(ctx.url, ctx.request.body, e);
       ctx.body = Tip.datebaseError;
     }
   },
@@ -60,6 +55,7 @@ module.exports = {
       data = await service.blog.getCategroy()
       ctx.body = {...Tip.ok, data}
     } catch (e) {
+      ctx.logger.error(ctx.url, ctx.request.body, e);
       ctx.body = Tip.datebaseError;
     }
   },
@@ -71,8 +67,8 @@ module.exports = {
       data = await service.blog.read(id);
       ctx.body = { ...Tip.ok };
     } catch (e) {
+      ctx.logger.error(ctx.url, ctx.request.body, e);
       ctx.body = Tip.datebaseError;
-      console.log('报错', e);
   
     }
   },

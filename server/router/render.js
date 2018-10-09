@@ -15,8 +15,7 @@ function getCacheKey (ctx) {
 
 // 进行渲染缓存
 function renderAndCache(ctx, pagePath, queryParams) {
-  console.log(ctx.query)
-
+  
   const key = getCacheKey(ctx)
   // 命中缓存(存在优化点)
   if (ssrCache.has(key) && config.openUrlCache) {
