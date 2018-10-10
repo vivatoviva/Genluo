@@ -52,7 +52,7 @@ const SpanLink = ({
 
 export default class Title extends React.Component {
   render() {
-    const { article_id, categroyId, title, updateTime, createTime, categroyName, tags, readNum } = this.props;
+    const { data, articleId, categroyId, title, updateTime, createTime, categroyName, tags, readNum } = this.props;
     // 生成tag列表
     let tag = [];
     for(let item of tags) {
@@ -62,7 +62,11 @@ export default class Title extends React.Component {
     tag.pop();
 
     return <div>
-      <h1><span>{title}</span></h1>
+      <h1><span><WithLink 
+        paramsData={data}
+        href='/blog/article'
+        as={`/blog/${articleId}`}
+      ><span>{title}</span></WithLink></span></h1>
       <div className="data">
         <ul>
           {/* 发表时间 */}

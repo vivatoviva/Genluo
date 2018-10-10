@@ -47,6 +47,7 @@ export default class extends React.Component {
   render() {
     const { data } = this.props;
     const { now } = this.state;
+
     return (
       <Layout
         navIndex={0}

@@ -183,3 +183,780 @@
   sqlState: '42S22',
   index: 0,
   sql: '\n    SELECT\n      title,\n      update_time,\n      read_num,\n      descript,\n      create_time,\n      STATUS,\n      categroy_id,\n      \n      name as \'categroy_name\',\n      article.id AS \'article_id\'\n    FROM\n      article,\n      categroy\n    WHERE\n      article.categroy_id = categroy.id \n      \n      \n      and categroy_id =undefined\n    order by create_time DESC\n    LIMIT 0,\n    10;\n  ' }
+[2018-10-10T20:36:24.721][ERROR  15260  default] /api/article/detail/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    SELECT\n      title,\n      update_time,\n      read_num,\n      descript,\n      create_time,\n      STATUS,\n      categroy_id,\n      content,\n      name as \'categroy_name\',\n      article.id AS \'article_id\'\n    FROM\n      article,\n      categroy\n    WHERE\n      article.categroy_id = categroy.id \n      \n      and article.id = undefined\n      \n      \n      \n    order by create_time DESC\n    LIMIT 0,\n    10;\n  ' }
+[2018-10-10T20:36:24.835][ERROR  15260  default] /api/article/read/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    select\n      read_num\n    from article\n    where id = undefined\n  ' }
+[2018-10-10T20:36:56.943][ERROR  15260  default] /api/article/detail/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    SELECT\n      title,\n      update_time,\n      read_num,\n      descript,\n      create_time,\n      STATUS,\n      categroy_id,\n      content,\n      name as \'categroy_name\',\n      article.id AS \'article_id\'\n    FROM\n      article,\n      categroy\n    WHERE\n      article.categroy_id = categroy.id \n      \n      and article.id = undefined\n      \n      \n      \n    order by create_time DESC\n    LIMIT 0,\n    10;\n  ' }
+[2018-10-10T20:36:57.024][ERROR  15260  default] /api/article/read/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    select\n      read_num\n    from article\n    where id = undefined\n  ' }
+[2018-10-10T20:39:39.947][ERROR  15260  default] /api/article/detail/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    SELECT\n      title,\n      update_time,\n      read_num,\n      descript,\n      create_time,\n      STATUS,\n      categroy_id,\n      content,\n      name as \'categroy_name\',\n      article.id AS \'article_id\'\n    FROM\n      article,\n      categroy\n    WHERE\n      article.categroy_id = categroy.id \n      \n      and article.id = undefined\n      \n      \n      \n    order by create_time DESC\n    LIMIT 0,\n    10;\n  ' }
+[2018-10-10T20:39:40.033][ERROR  15260  default] /api/article/read/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    select\n      read_num\n    from article\n    where id = undefined\n  ' }
+[2018-10-10T20:41:24.048][ERROR  15260  default] /api/article/content/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select content from article where id=undefined' }
+[2018-10-10T20:41:24.126][ERROR  15260  default] /api/article/read/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    select\n      read_num\n    from article\n    where id = undefined\n  ' }
+[2018-10-10T20:42:30.220][ERROR  15260  default] /api/article/detail/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    SELECT\n      title,\n      update_time,\n      read_num,\n      descript,\n      create_time,\n      STATUS,\n      categroy_id,\n      content,\n      name as \'categroy_name\',\n      article.id AS \'article_id\'\n    FROM\n      article,\n      categroy\n    WHERE\n      article.categroy_id = categroy.id \n      \n      and article.id = undefined\n      \n      \n      \n    order by create_time DESC\n    LIMIT 0,\n    10;\n  ' }
+[2018-10-10T20:42:30.348][ERROR  15260  default] /api/article/read/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    select\n      read_num\n    from article\n    where id = undefined\n  ' }
+[2018-10-10T20:43:10.592][ERROR  15260  default] /api/article/detail/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    SELECT\n      title,\n      update_time,\n      read_num,\n      descript,\n      create_time,\n      STATUS,\n      categroy_id,\n      content,\n      name as \'categroy_name\',\n      article.id AS \'article_id\'\n    FROM\n      article,\n      categroy\n    WHERE\n      article.categroy_id = categroy.id \n      \n      and article.id = undefined\n      \n      \n      \n    order by create_time DESC\n    LIMIT 0,\n    10;\n  ' }
+[2018-10-10T20:43:10.603][ERROR  15260  default] /api/article/detail/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    SELECT\n      title,\n      update_time,\n      read_num,\n      descript,\n      create_time,\n      STATUS,\n      categroy_id,\n      content,\n      name as \'categroy_name\',\n      article.id AS \'article_id\'\n    FROM\n      article,\n      categroy\n    WHERE\n      article.categroy_id = categroy.id \n      \n      and article.id = undefined\n      \n      \n      \n    order by create_time DESC\n    LIMIT 0,\n    10;\n  ' }
+[2018-10-10T20:43:10.614][ERROR  15260  default] /api/article/detail/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    SELECT\n      title,\n      update_time,\n      read_num,\n      descript,\n      create_time,\n      STATUS,\n      categroy_id,\n      content,\n      name as \'categroy_name\',\n      article.id AS \'article_id\'\n    FROM\n      article,\n      categroy\n    WHERE\n      article.categroy_id = categroy.id \n      \n      and article.id = undefined\n      \n      \n      \n    order by create_time DESC\n    LIMIT 0,\n    10;\n  ' }
+[2018-10-10T20:43:10.617][ERROR  15260  default] /api/article/detail/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    SELECT\n      title,\n      update_time,\n      read_num,\n      descript,\n      create_time,\n      STATUS,\n      categroy_id,\n      content,\n      name as \'categroy_name\',\n      article.id AS \'article_id\'\n    FROM\n      article,\n      categroy\n    WHERE\n      article.categroy_id = categroy.id \n      \n      and article.id = undefined\n      \n      \n      \n    order by create_time DESC\n    LIMIT 0,\n    10;\n  ' }
+[2018-10-10T20:43:10.624][ERROR  15260  default] /api/article/detail/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    SELECT\n      title,\n      update_time,\n      read_num,\n      descript,\n      create_time,\n      STATUS,\n      categroy_id,\n      content,\n      name as \'categroy_name\',\n      article.id AS \'article_id\'\n    FROM\n      article,\n      categroy\n    WHERE\n      article.categroy_id = categroy.id \n      \n      and article.id = undefined\n      \n      \n      \n    order by create_time DESC\n    LIMIT 0,\n    10;\n  ' }
+[2018-10-10T20:43:10.678][ERROR  15260  default] /api/article/read/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    select\n      read_num\n    from article\n    where id = undefined\n  ' }
+[2018-10-10T20:43:10.702][ERROR  15260  default] /api/article/read/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    select\n      read_num\n    from article\n    where id = undefined\n  ' }
+[2018-10-10T20:43:10.713][ERROR  15260  default] /api/article/read/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    select\n      read_num\n    from article\n    where id = undefined\n  ' }
+[2018-10-10T20:43:10.716][ERROR  15260  default] /api/article/read/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    select\n      read_num\n    from article\n    where id = undefined\n  ' }
+[2018-10-10T20:43:10.718][ERROR  15260  default] /api/article/read/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    select\n      read_num\n    from article\n    where id = undefined\n  ' }
+[2018-10-10T20:44:19.709][ERROR  15260  default] /api/article/list { categroyId: 'undefined' } { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\github\personalSite\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (D:\github\personalSite\server\db\index.js:11:20)
+    at Ping.onOperationComplete (D:\github\personalSite\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (D:\github\personalSite\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (D:\github\personalSite\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\github\personalSite\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\github\personalSite\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: '\n    SELECT\n      title,\n      update_time,\n      read_num,\n      descript,\n      create_time,\n      STATUS,\n      categroy_id,\n      \n      name as \'categroy_name\',\n      article.id AS \'article_id\'\n    FROM\n      article,\n      categroy\n    WHERE\n      article.categroy_id = categroy.id \n      \n      \n      and categroy_id =undefined\n    order by create_time DESC\n    LIMIT 0,\n    10;\n  ' }

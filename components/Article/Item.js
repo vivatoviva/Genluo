@@ -18,45 +18,50 @@ export default ({
     categroy_id,
     tags
   }
-}) =>
-  <div className="wraper">
-    <Title
-      title={title}
-      updateTime={update_time}
-      createTime={create_time}
-      readNum={read_num}
-      categroyName={categroy_name}
-      categroyId={categroy_id}
-      tags={tags}
-    />
-    <Content
-      content={descript}
-    />
+}) => {
+  return (
+    <div className="wraper">
+      <Title
+        title={title}
+        updateTime={update_time}
+        createTime={create_time}
+        readNum={read_num}
+        categroyName={categroy_name}
+        categroyId={categroy_id}
+        article={article_id}
+        tags={tags}
+        data={data}
+      />
+      <Content
+        content={descript}
+      />
 
-    <Button.Artic
-      paramsData={data}
-      href='/blog/article'
-      as={`/blog/${article_id}`}
-    />
+      <Button.Artic
+        paramsData={data}
+        href='/blog/article'
+        as={`/blog/${article_id}`}
+      />
 
-    <style jsx>{`
-      .wraper {
-        padding: 50px 0 50px;
-        ${isDividing? 'border-bottom: 1px dotted #999;': ''}
-      }
-      p {
-        text-align: justify;
-        display: block;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-        font-size: 16px;
-        line-height: 2;
-        color: #555;
-      }
+      <style jsx>{`
+        .wraper {
+          padding: 50px 0 50px;
+          ${isDividing? 'border-bottom: 1px dotted #999;': ''}
+        }
+        p {
+          text-align: justify;
+          display: block;
+          margin-block-start: 1em;
+          margin-block-end: 1em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+          font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+          font-size: 16px;
+          line-height: 2;
+          color: #555;
+        }
 
-    `}</style>
-  </div>
+      `}</style>
+    </div>
+  )
+}
   
