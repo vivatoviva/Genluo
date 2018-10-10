@@ -15,16 +15,18 @@ export default ({
     create_time,
     read_num,
     categroy_name,
+    categroy_id,
     tags
   }
 }) =>
   <div className="wraper">
-    <Title 
+    <Title
       title={title}
       updateTime={update_time}
       createTime={create_time}
       readNum={read_num}
       categroyName={categroy_name}
+      categroyId={categroy_id}
       tags={tags}
     />
     <Content

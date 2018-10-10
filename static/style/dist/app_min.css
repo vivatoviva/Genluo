@@ -1,6 +1,3 @@
-body {
-  background-color: #ffffff; }
-
 body,
 ol,
 ul,
@@ -27,7 +24,6 @@ select {
 body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 13px;
-  background: #fff;
   -webkit-text-size-adjust: 100%; }
 
 a {
@@ -35,8 +31,7 @@ a {
   text-decoration: none; }
 
 a:hover {
-  color: #cd0200;
-  text-decoration: underline; }
+  color: #cd0200; }
 
 em {
   font-style: normal; }

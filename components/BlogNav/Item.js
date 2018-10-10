@@ -16,6 +16,9 @@ class Item extends React.PureComponent {
           {icon && <i className={`fas fa-${icon}`}></i>}
           {children}
           <style jsx>{`
+            a:hover {
+              color: #000;
+            }
             a {
               cursor: pointer;
               display: block;
@@ -42,6 +45,9 @@ class Item extends React.PureComponent {
       icon && <i className={`fas fa-${icon}`}></i>
     }{children}
       <style jsx>{`
+        a:hover {
+          color: #000;
+        }
         a {
           cursor: pointer;
           display: block;
@@ -70,8 +76,10 @@ class Item extends React.PureComponent {
           li {
             line-height: 2.5;
             position: relative;
+            padding: 3px 0;
             font-size: 13px;
-            margin: 5px 0px;
+            transition: all 300ms ease;
+            cursor: pointer;
           }
           li.navNow::before{
             content: '';
@@ -86,6 +94,15 @@ class Item extends React.PureComponent {
           }
           .navNow {
             background: rgb(249, 249, 249);
+          }
+          .navNow:hover a{
+            color: #000;
+          }
+          li:hover {
+            background: rgb(249, 249, 249);
+          }
+          li:hover a {
+            color: #000;
           }
         `}</style>
       </li>

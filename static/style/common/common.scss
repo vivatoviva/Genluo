@@ -1,6 +1,4 @@
 @import './default.scss';
-@import './resume/index.scss';
-@import './blog/index.scss';
 
 body,
 ol,
@@ -29,7 +27,6 @@ select {
 body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 13px;
-  background: #fff;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -40,7 +37,6 @@ a {
 
 a:hover {
   color: #cd0200;
-  text-decoration: underline
 }
 
 em {

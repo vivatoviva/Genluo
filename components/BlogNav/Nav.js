@@ -1,6 +1,6 @@
 import React from 'react'
 import withItem from '../withItem'
-import Link from 'next/link'
+import { withRouter } from 'next/router'
 
 
 const items = [{
@@ -32,6 +32,11 @@ class BlogNav extends React.Component {
     isBar: true,
   }
 
+  componentDidMount() {
+    const { router } = this.props
+    router.prefetch('/')
+  }
+
   handleClick = (currentIndex) => {
     this.setState({
       currentIndex,
@@ -42,6 +47,11 @@ class BlogNav extends React.Component {
     this.setState(prevState => ({
       isBar: !prevState.isBar,
     }))
+  }
+
+  goBack = () => {
+    const { router } = this.props;
+    router.push('/')
   }
 
 
@@ -57,7 +67,7 @@ class BlogNav extends React.Component {
           >
             <i className="fas fa-bars"></i> 
           </div>
-          <h1>Genluo</h1>
+          <h1 onClick={this.goBack}>Genluo</h1>
         </div>
         <ul className={this.state.isBar && 'tagle'}>
           {
@@ -65,6 +75,11 @@ class BlogNav extends React.Component {
           }
           {this.props.children}
         </ul>
+        <style jsx global>{`
+          h1 {
+            
+          }
+        `}</style>
       <style jsx>{`
         @media screen and (max-width: 1340px) {
           .btn {
@@ -99,6 +114,7 @@ class BlogNav extends React.Component {
           text-align: center;
           font-weight: 300;
           font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+          cursor: pointer;
         }
         ul {
           background: #fff;
@@ -145,4 +161,4 @@ class BlogNav extends React.Component {
   }
 }
 
-export default withItem(BlogNav);
+export default withRouter(withItem(BlogNav));
