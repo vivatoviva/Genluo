@@ -106,6 +106,9 @@ const buttonData = [{
   href: 'https://github.com/vivatoviva'
 }]
 
+
+
+
 class IndexPage extends React.Component {
 
   constructor(props) {
@@ -135,5 +138,6 @@ class IndexPage extends React.Component {
     )
   }
 }
+
 
 export default IndexPage;

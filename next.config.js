@@ -1,63 +1,26 @@
 
-const {
-  ANALYZE
-} = process.env
-const pro = process.env.NODE_ENV === 'production'
-const test = process.env.NODE_TEST === 'test'
-const path = require('path')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin") 
+const { ANALYZE } = process.env;
+const pro = process.env.NODE_ENV === 'production';
+const test = process.env.NODE_TEST === 'test';
+const path = require('path');
 
 module.exports = {
   useFileSystemPublicRoutes: false,
   webpack: (config, {
-    buildId,
-    dev,
     isServer,
-    defaultLoaders
   }) => {
-    console.log('服务器端配置', isServer);
-      
-    // 提取css文件
-    // config.module.rules.push({
-    //   test: /\.sass/,
-    //   loaders: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-    //   exclude: [
-    //     path.resolve(__dirname, 'node_modules')
-    //   ]
-    // })
-    // config.plugins.push(
-    //   new MiniCssExtractPlugin({
-    //     filename: "static/[name].css",
-    //   })
-    // )
-
-    // 配置eslint检测
-    // config.module.rules[0].use = [{
-    //   loader: 'eslint-loader', 
-    //   options: { fix: true }
-    // }, {
-    //   loader: 'hot-self-accept-loader',
-    //   options: { 
-    //     include: [ 'D:\\github\\personalSite\\pages' ],
-    //     extensions: /\.+(jsx|js)$/ 
-    //   } 
-    // }]
-
     // 配置快捷操作
-    config.resolve.alias['components'] = path.resolve(__dirname, './components')
+    config.resolve.alias['components'] = path.resolve(__dirname, './components');
+    config.resolve.extensions.push('jsx');
     // 打包分析插件
-    if(ANALYZE) {
+    if (ANALYZE) {
       const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
-
       config.plugins.push(new BundleAnalyzerPlugin({
         analyzerMode: 'server',
         analyzerPort: isServer ? 8888 : 8889,
-        openAnalyzer: true
-      }))
+        openAnalyzer: true,
+      }));
     }
-   
-
-    
     return config
   },
   exportPathMap: () => ({

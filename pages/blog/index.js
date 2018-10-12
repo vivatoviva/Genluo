@@ -1,8 +1,8 @@
+"use strict"
 import Layout from '../../layout/BlogLayout'
 import Article from '../../components/Article'
 import Pagination from '../../components/Pagination'
 import http from '../../utils/http'
-
 import React from 'react';
 
 class IndexPage extends React.Component {

@@ -4,9 +4,7 @@ import Content from '../Content'
 export default ({
   isDividing=true,
   onContentChange,
-  data,
   data: {
-    article_id,
     title, content,
     descript,
     update_time,
