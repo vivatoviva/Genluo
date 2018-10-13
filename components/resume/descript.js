@@ -8,10 +8,12 @@ export default class extends Component {
         <p className={isItem ? 'item1 descript' : 'descript'}>{children}</p>
         <style jsx>{`
           p {
-            padding: 5px 12px;
+            padding: 5px 10px;
             text-align: justify;
-            line-height: 2.00;
+            line-height: 2.30;
+            word-break: break-all;
             position: relative;
+            font-size: 13.5px;
           }
           .item1 {
             padding-left: 25px;

@@ -12,7 +12,7 @@ class Item extends React.Component {
     } else if(tag) { 
       tagName = tag
     }
-    
+
     return (
       <div>
         <div>
@@ -25,7 +25,6 @@ class Item extends React.Component {
           </li>
         </div>
         <style jsx>{`
-
           li span {
             display: inline-block;
           }
@@ -34,8 +33,9 @@ class Item extends React.Component {
             font-size: 14px;
           }
           .content {
-            width: 35%;
-
+            width: 40%;
+            margin-left: -28px;
+            text-align: center;
           }
           li {
             position: relative;
@@ -44,7 +44,7 @@ class Item extends React.Component {
             text-indent: 10px;
             overflow: hidden;
             padding: 5px 0px;
-            font-size: 14px;
+            font-size: 15px;
           }
           li span.tag {
             float: right;
