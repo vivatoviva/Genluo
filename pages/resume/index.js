@@ -245,7 +245,7 @@ class Index extends React.PureComponent {
                   <Descript>
                     <span>项目推动</span>，<span>前端开发</span>、<span>项目牵头</span>，使用ant-degin-pro开发的一套后台系统，实现<span>权限管理</span>，<span>数据可视化</span>，<span>数据mock</span>等等，推动产品、后台共同交付此产品，并在项目后期进行相关维护、产品迭代
                   </Descript>
-                  <Item time="2018.6" tag="Link">ABO微信 · 微信H5</Item>
+                  <Item time="2018.06" tag="Link">ABO微信 · 微信H5</Item>
                   <Descript >
                     <span>项目配置</span>、<span>项目负责</span>使用webpack配置项目，使用Ejs、Zeptojs、Sass等实现组件化,并且将整个项目初始配置封装成<span>genluo-cli</span>脚手架工具,方便后续开发H5项目
                   </Descript>
