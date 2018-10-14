@@ -107,8 +107,6 @@ const buttonData = [{
 }]
 
 
-
-
 class IndexPage extends React.Component {
 
   constructor(props) {
@@ -131,7 +129,6 @@ class IndexPage extends React.Component {
                   </Button></li>
               ))
             }
-   
           </nav>
         </div>
       </div>
