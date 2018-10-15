@@ -33,7 +33,7 @@ const IconTitle = ({
         li i {
           display: inline-block;
           line-height: 1;
-          margin-right: 7px;
+          margin-right: 2px;
         }
       `}
     </style>
@@ -59,8 +59,12 @@ const SpanLink = ({
     <style jsx>
       {`
         span {
-        text-decoration: underline;
-        display: inline-block;
+          text-decoration: underline;
+          display: inline-block;
+        }
+        a {
+          color: rgb(153, 153, 153);
+          cursor: pointer;
         }
       `}
     </style>
@@ -86,15 +90,15 @@ export default class Title extends React.Component {
   };
 
   static propTypes = {
-    data: PropTypes.object,
     articleId: PropTypes.number.isRequired,
     categroyId: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     updateTime: PropTypes.string.isRequired,
     createTime: PropTypes.string.isRequired,
     categroyName: PropTypes.string.isRequired,
-    tags: PropTypes.array.isRequired,
     readNum: PropTypes.number.isRequired,
+    tags: PropTypes.shape([]).isRequired,
+    data: PropTypes.shape({}).isRequired,
   }
 
 

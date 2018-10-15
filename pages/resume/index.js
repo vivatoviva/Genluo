@@ -17,7 +17,7 @@ const Style = () => (
       <style jsx>
         {`
         div.wraper {
-          margin: 0px auto 30px;
+          margin: 30px auto 30px;
           box-sizing: border-box;
           color: #333;
           width: 1024px;

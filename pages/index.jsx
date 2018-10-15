@@ -1,17 +1,13 @@
-import Head from "components/Head";
-import H from 'components/Head'
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Head from '../components/Head';
+import Button from '../components/Button';
 // 将图标添加到库中
-import dynamic from 'next/dynamic'
 
-const Button = dynamic(import('../components/Button'), {
-  loading: () => <p>...</p>,
-  ssr: true,
-  })
-
-const Style = () =>
+const Style = () => (
   <>
-    <style jsx>{`
+    <style jsx>
+      {`
       @media screen and (max-width: 768px) {
         h1{
           font-size: 100px!important;
@@ -75,66 +71,66 @@ const Style = () =>
       a:nth-child(n) {
         
       }
-    `}</style>
-    <style global jsx>{`
-      * {
-        padding: 0;
-      }
-      body {
-        font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-        background-image: radial-gradient(circle, #D7D7D7, #D7D7D7 1px, #FFF 1px, #FFF);
-        background-size: 28px 28px;
-      }
-  `}</style>
+    `}
+    </style>
+    <style global jsx>
+      {`
+        * {
+          padding: 0;
+        }
+        body {
+          font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+          background-image: radial-gradient(circle, #D7D7D7, #D7D7D7 1px, #FFF 1px, #FFF);
+          background-size: 28px 28px;
+        }
+    `}
+    </style>
   </>
+);
 
 const buttonData = [{
   name: 'HOME',
-  href: '/'
+  href: '/',
 }, {
   name: 'BLOG',
-  href: '/blog'
+  href: '/blog',
 }, {
   name: 'RESUME',
-  href: '/resume'
+  href: '/resume',
 }, {
   name: 'ABOUT',
-  href: '/about'
+  href: '/about',
 }, {
   name: 'GITHUB',
   icon: 'github',
-  href: 'https://github.com/vivatoviva'
-}]
+  href: 'https://github.com/vivatoviva',
+}];
 
+const LiButton = ({ href, icon, name }) => (
+  <li>
+    <Button href={href}>
+      {icon && <span className="fa fa-heart" />}
+      {name}
+    </Button>
+  </li>
+);
+LiButton.propTypes = {
+  href: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
 
-class IndexPage extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div className="index">
-        <Head title="主页" />
-        <Style />
-        <div className="index-page">
-          <h1>Genluo</h1>
-          <nav>
-            {
-              buttonData.map((item) => (
-                  <li><Button href={item.href}>
-                    {item.icon && <span className="fa fa-heart"></span>}
-                    {item.name}
-                  </Button></li>
-              ))
-            }
-          </nav>
-        </div>
-      </div>
-    )
-  }
-}
-
-
-export default IndexPage;
+export default () => (
+  <div className="index">
+    <Head title="主页" />
+    <Style />
+    <div className="index-page">
+      <h1>Genluo</h1>
+      <nav>
+        {
+          buttonData.map(item => <LiButton key={item} {...item} />)
+        }
+      </nav>
+    </div>
+  </div>
+);
