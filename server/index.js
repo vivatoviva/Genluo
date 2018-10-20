@@ -1,8 +1,8 @@
-const next = require('next')
-const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
-const handle = app.getRequestHandler()
-const config = require('./config/default')
+const next = require('next');
+const dev = process.env.NODE_ENV !== 'production';
+const app = next({ dev });
+const handle = app.getRequestHandler();
+const config = require('./config/default');
 
 const Koa = require('koa')
 const routers = require('./router/index')
@@ -17,10 +17,10 @@ const fs = require('fs')
 const { sessionConfig } = config;
 app.prepare()
   .then(() => {
-    const server = new Koa()
-    server.keys=['some secret hurr']
-    server.use(KoaSession(sessionConfig, server))
-    server.use(koaBody())
+    const server = new Koa();
+    server.keys=['some secret hurr'];
+    server.use(KoaSession(sessionConfig, server));
+    server.use(koaBody());
     // 中间件插件
     server.use(koaLogger)
     server.use(koaStatus)
