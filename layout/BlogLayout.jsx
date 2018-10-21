@@ -1,13 +1,13 @@
-import React from 'react'
-import Head from '../components/Head'
-import BlogNav from '../components/BlogNav'
-import BlogData from '../components/BlogData'
-import ToTop from '../components/ToTop'
-import Footer from '../components/Footer'
-import Modal from '../components/Modal'
-import Search from '../components/Search'
-import List from '../components/List'
-import Structure from '../components/BlogStructure'
+import React from 'react';
+import Head from '../components/Head';
+import BlogNav from '../components/BlogNav';
+import BlogData from '../components/BlogData';
+import ToTop from '../components/ToTop';
+import Footer from '../components/Footer';
+import Modal from '../components/Modal';
+import Search from '../components/Search';
+import List from '../components/List';
+import Structure from '../components/BlogStructure';
 
 
 class BlogPage extends React.Component {
@@ -25,35 +25,33 @@ class BlogPage extends React.Component {
   componentDidMount() {
     const height = this.nav.current.clientHeight + 10;
     const windowHeight = document.body.clientHeight + 100;
-    window.addEventListener('scroll', e => {
+    window.addEventListener('scroll', () => {
       const nowHeight = window.pageYOffset;
-      
-      if(nowHeight >= height) {
+      if (nowHeight >= height) {
         this.setState({
           isFixed: true,
-        })
+        });
       } else {
         this.setState({
           isFixed: false,
-        })
+        });
       }
-
-      if(nowHeight >= windowHeight) {
+      if (nowHeight >= windowHeight) {
         this.setState({
-          isDisplayToTop: true
-        })
+          isDisplayToTop: true,
+        });
       } else {
         this.setState({
           isDisplayToTop: false,
-        })
+        });
       }
-    })
+    });
   }
 
   changeVisible = () => {
     this.setState(prevSate => ({
       visible: !prevSate.visible,
-    }))
+    }));
   }
 
   handleModalOk = () => {
@@ -99,7 +97,7 @@ class BlogPage extends React.Component {
       name: '搜索',
       icon: 'search',
       onClick: this.changeVisible,
-    }]
+    }];
     return (
       <div className="wraper">
         <Head title={title || '博客主页'} />
@@ -109,20 +107,22 @@ class BlogPage extends React.Component {
               <BlogNav
                 navIndex={navIndex}
                 items={items}
-                renderItem= {
-                  (currentIndex, items) => {
-                    return items.map((item,index) => {
-                      return <BlogNav.Item 
-                                href={item.link}
-                                icon={item.icon}
-                                onClick={item.onClick}
-                                currentIndex={currentIndex === index}
-                              >{item.name}</BlogNav.Item>
-                    })
+                renderItem={
+                  (currentIndex, items) => items.map(
+                    ({ link, icon, onClick, name }, index) =>
+                      (
+                        <BlogNav.Item
+                          href={link}
+                          icon={icon}
+                          onClick={onClick}
+                          currentIndex={currentIndex === index}
+                        >
+                          {name}
+                        </BlogNav.Item>
+                      )
+                    )
                   }
-                }
-              >
-              </BlogNav>
+              />
               {
                 <Modal
                   onOK={this.handleModalOk}
@@ -131,26 +131,28 @@ class BlogPage extends React.Component {
                 >
                   <Search
                     onClose={this.handleModalCancel}
-                  ></Search>
+                  />
                   <div className="list">
-                    <List 
-                      dataSource={['xian','zai', 'xian', 'baijin', 'jinxing']}
+                    <List
+                      dataSource={['xian', 'zai', 'xian', 'baijin', 'jinxing']}
                       renderItem={item =>
-                        <List.Item
-                          title={item}
-                          content="xiand afsdfsdhfkjsdh"
-                        />
-                        }
+                        (
+                          <List.Item
+                            title={item}
+                            content="xiand afsdfsdhfkjsdh"
+                          />
+                        )
+                      }
                     />
                   </div>
                 </Modal>
               }
-              
             </div>
             {/* 在这边显示相关目录 */}
             <div className={!isFixed ? 'data' : 'data dataNow'}>
               {
-                isArticle ? <Structure data={content} now={now}></Structure> :
+                isArticle ? <Structure data={content} now={now}></Structure>
+                  :
                   <BlogData
                     {...statisticsData}
                   />
@@ -162,14 +164,15 @@ class BlogPage extends React.Component {
               {children}
             </div>
             <footer>
-              <Footer></Footer>
+              <Footer />
             </footer>
           </div>
         </div>
         <div className="toTap">
           <ToTop isDisplay={isDisplayToTop} />
         </div>
-        <style jsx>{`
+        <style jsx>
+          {`
           @media screen and (max-width: 1340px) {
             .left {
               width: 100%;
@@ -214,13 +217,15 @@ class BlogPage extends React.Component {
             overflow-y: scroll;
 
           }
-        `}</style>
-        <style global jsx>{`
-          body {
-            background: #f5f7f9!important;
-          }
-
-        `}</style>
+        `}
+        </style>
+        <style global jsx>
+          {`
+            body {
+              background: #f5f7f9!important;
+            }
+          `}
+        </style>
       </div>
     )
   }

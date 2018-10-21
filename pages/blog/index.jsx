@@ -5,7 +5,7 @@ import Pagination from '../../components/Pagination';
 import http from '../../utils/http';
 
 class IndexPage extends React.Component {
-  static async getInitialProps({ req, query, pathname }) {
+  static async getInitialProps({ query }) {
     const { page = 1 } = query;
     const contentPromise = http.request('/api/article/list', {
       body: JSON.stringify({
@@ -22,14 +22,13 @@ class IndexPage extends React.Component {
 
   render() {
     const { pagination, list, statisticsData } = this.props;
-    var a = 1;
     return (
       <Layout
         navIndex={0}
         statisticsData={statisticsData}
       >
         {
-          list.map((item, index) => 
+          list.map((item, index) =>
             <Article
               key={index}
               data={item}
