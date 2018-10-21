@@ -24,7 +24,7 @@ pushGithub() {
 
     git add .
     git commit -m "$commitName"
-    git push github
+    git push 
 
     echo $commitName
     return

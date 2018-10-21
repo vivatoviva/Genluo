@@ -28,17 +28,16 @@ app.prepare()
     server.use(async (ctx, next) => {
       ctx.mysql = mysql;
       await next();
-    })
-  
+    });
     // 添加相关路由
     routers.map(item => {
-      server.use(item.routes())
-    })
+      server.use(item.routes());
+    });
     // 静态资源渲染
     server.use(async (ctx) => {
       await handle(ctx.req, ctx.res)
       ctx.respond = false
-    })
+    });
     // 最后收尾返回404页面
     server.use(async (ctx, next) => {
       ctx.res.statusCode = 200
@@ -48,5 +47,5 @@ app.prepare()
     server.listen(port, (err) => {
       if (err) throw err
       console.info(`> Ready on http://localhost:${port}`)
-    })
-  })
+    });
+  });
