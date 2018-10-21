@@ -1,13 +1,13 @@
 import withItem from '../withItem';
 
-const BlogData =  () =>
+const BlogData =  ({articleCount, tagCount, cateCount }) =>
   <div className="warper">
     <div><a className="avtor" href="https://github.com/vivatoviva"></a></div>
     <h5>Genluo</h5>
     <ul>
-      <li><span>25</span><span>日志</span></li>
-      <li><span>25</span><span>分类</span></li>
-      <li><span>25</span><span>标签</span></li>
+      <li><span>{articleCount}</span><span>日志</span></li>
+      <li><span>{tagCount}</span><span>分类</span></li>
+      <li><span>{cateCount}</span><span>标签</span></li>
     </ul>
     <style jsx>{`
       .warper {

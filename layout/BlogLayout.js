@@ -16,7 +16,7 @@ class BlogPage extends React.Component {
     isDisplayToTop: false,
     visible: false,
   }
-  
+
   constructor(props) {
     super(props);
     this.nav = React.createRef();
@@ -59,18 +59,26 @@ class BlogPage extends React.Component {
   handleModalOk = () => {
     this.setState({
       visible: false,
-    })
+    });
   }
 
   handleModalCancel = () => {
     this.setState({
       visible: false,
-    })
+    });
   }
 
   render() {
     const { isFixed, isDisplayToTop, visible } = this.state;
-    const { children, navIndex, title, isArticle, content, now } = this.props;
+    const {
+      children,
+      navIndex,
+      title,
+      isArticle,
+      content,
+      now,
+      statisticsData,
+    } = this.props;
     const items = [{
       name: '首页',
       link: '/blog',
@@ -78,7 +86,7 @@ class BlogPage extends React.Component {
     }, {
       name: '标签',
       link: '/blog/tag',
-      icon: 'tags'
+      icon: 'tags',
     }, {
       name: '分类',
       link: '/blog/category',
@@ -86,11 +94,11 @@ class BlogPage extends React.Component {
     }, {
       name: '归档',
       link: '/blog/archives',
-      icon: 'archive'
+      icon: 'archive',
     }, {
       name: '搜索',
       icon: 'search',
-      onClick: this.changeVisible
+      onClick: this.changeVisible,
     }]
     return (
       <div className="wraper">
@@ -142,7 +150,10 @@ class BlogPage extends React.Component {
             {/* 在这边显示相关目录 */}
             <div className={!isFixed ? 'data' : 'data dataNow'}>
               {
-                isArticle ? <Structure data={content} now={now}></Structure> : <BlogData></BlogData>
+                isArticle ? <Structure data={content} now={now}></Structure> :
+                  <BlogData
+                    {...statisticsData}
+                  />
               }
             </div>
           </div>
