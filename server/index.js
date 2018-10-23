@@ -42,7 +42,8 @@ app.prepare()
     server.use(async (ctx, next) => {
       ctx.res.statusCode = 200
       await next()
-    })
+    });
+
 
     server.listen(port, (err) => {
       if (err) throw err

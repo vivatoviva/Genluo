@@ -13,7 +13,7 @@ function renderAndCache(ctx, pagePath, queryParams) {
   const key = getCacheKey(ctx);
   // 命中缓存(存在优化点)
   if (ssrCache.has(key) && config.openUrlCache) {
-    ctx.body = ssrCache.get(key)
+    ctx.body = ssrCache.get(key);
     return;
   }
   // 合并参数
@@ -21,6 +21,8 @@ function renderAndCache(ctx, pagePath, queryParams) {
     ...ctx.query,
     ...ctx.params,
   };
+  console.log(ctx.req);
+  
   return app.renderToHTML(ctx.req, ctx.res, pagePath, params)
     .then((html) => {
       // Let's cache this page

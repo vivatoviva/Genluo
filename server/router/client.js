@@ -16,5 +16,9 @@ router.post('/api/category/list', controller.client.categroyList);
 router.post('/api/article/read/:id', controller.client.articleRead);
 // 统计相关信息
 router.post('/api/statistics/detail', controller.client.statistics);
+// RSS订阅
+router.post('/api/article/rss');
 
 module.exports = router;
+
+// 使得中间代理可以产看返回的具体内容
