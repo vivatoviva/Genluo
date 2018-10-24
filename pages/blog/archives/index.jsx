@@ -10,14 +10,14 @@ class ActivePage extends React.Component {
     const { tagId, cateId, page } = query;
     const statisticPromise = http.request('/api/statistics/detail');
 
-    const listPromise = await http.request('/api/article/list', {
+    const listPromise = http.request('/api/article/list', {
       body: JSON.stringify({
         page,
         tagId,
         categroyId: cateId,
       }),
     });
-    const [{ data: { pagination, list } }, { data: statisticData }] = Promise.all([
+    const [{ data: { pagination, list } }, { data: statisticData }] = await Promise.all([
       listPromise,
       statisticPromise,
     ]);

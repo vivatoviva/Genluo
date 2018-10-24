@@ -8,8 +8,8 @@ import http from '../../../utils/http';
 class TagPage extends React.Component {
   static async getInitialProps() {
     const statisticPromise = http.request('/api/statistics/detail');
-    const listPromise = http.request('/api/tag/liat');
-    const [{ data }, { data: statisticsData }] = Promise.all(statisticPromise, listPromise);
+    const listPromise = http.request('/api/tag/list');
+    const [{ data }, { data: statisticsData }] = await Promise.all([listPromise, statisticPromise]);
     return { data, statisticsData };
   }
 

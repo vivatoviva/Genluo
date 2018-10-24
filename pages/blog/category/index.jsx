@@ -6,18 +6,15 @@ import http from '../../../utils/http';
 
 class CatePage extends React.Component {
   static async getInitialProps() {
-    const listPromise = await http.request('/api/category/list');
+    const listPromise = http.request('/api/category/list');
     const statisticPromise = http.request('/api/statistics/detail');
-    const [{ data }, { data: statisticData }] = Promise.all([
-      listPromise,
-      statisticPromise,
-    ]);
+    const [{ data }, { data: statisticData }] = await Promise.all([listPromise, statisticPromise]);
     return { data, statisticData };
   }
 
   static propTypes = {
     data: PropTypes.shape({}).isRequired,
-    statisticData: this.propTypes.shape({}).isRequired,
+    statisticData: PropTypes.shape({}).isRequired,
   }
 
   render() {
