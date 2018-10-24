@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Layout from '../../layout/BlogLayout';
 import Article from '../../components/Article';
 import Pagination from '../../components/Pagination';
@@ -20,6 +21,12 @@ class IndexPage extends React.Component {
     return { pagination, list, statisticsData };
   }
 
+  static propTypes = {
+    pagination: PropTypes.shape({}).isRequired,
+    list: PropTypes.shape([]).isRequired,
+    statisticsData: PropTypes.shape({}).isRequired,
+  }
+
   render() {
     const { pagination, list, statisticsData } = this.props;
     return (
@@ -28,12 +35,13 @@ class IndexPage extends React.Component {
         statisticsData={statisticsData}
       >
         {
-          list.map((item, index) =>
+          list.map((item, index) => (
             <Article
-              key={index}
+              key={item}
               data={item}
               isDividing={index === list.length - 1}
-            />)
+            />
+          ))
         }
         <Pagination
           pagination={pagination}
@@ -41,7 +49,7 @@ class IndexPage extends React.Component {
           paramName="page"
         />
       </Layout>
-    )
+    );
   }
 }
 
