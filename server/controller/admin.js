@@ -1,9 +1,10 @@
-const service = require('../service')
-const Tip = require('../utils/Tips')
-const mysql = require('../db')
-const { unescapeHtml } = require('../utils/escapeHtml')
+const service = require('../service');
+const Tip = require('../utils/Tips');
+const mysql = require('../db');
+const { unescapeHtml } = require('../utils/escapeHtml');
+
 module.exports = {
-  async deleteArticle(ctx, next) {
+  async deleteArticle(ctx) {
     const { id } = ctx.request.body;
     if(id.length === 0) return ctx.body = Tip.paramError;
     let  whereSql = id.map(item => `id=${item}`);
@@ -21,13 +22,14 @@ module.exports = {
     }
   },
 
-  async operateArticle(ctx, next) {
+  async operateArticle(ctx) {
     // 新建和编辑页面
     let { id, title, content, descript, tags, categroy } = ctx.request.body;
-    if(!(title||content||descript||tags||categroy)) return ctx.body = Tip.paramError;
-
+    if (!(title || content || descript || tags || categroy)) return ctx.body = Tip.paramError;
     try {
-      const [ tagsId, cateId ] = await Promise.all([service.tag.getTagsId(tags), service.tag.getCategroyId(categroy)])
+      // const [ tagsId, cateId ] = await Promise.all([service.tag.getTagsId(tags), service.tag.getCategroyId(categroy)]);
+      const tagsId = await service.tag.getTagsId(tags);
+      const cateId = await service.tag.getCategroyId(categroy);
       if (id) {
         // 更新操作
         await service.article.updateArticle({id, title, content, descript, tagsId, cateId})

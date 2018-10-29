@@ -3,7 +3,7 @@ const mysql = require('../db')
 module.exports = {
   async getTagsId(tags) {
     const tagIds = [];
-    for (let i = 0; i<tags.length; i++) {
+    for (let i = 0; i < tags.length; i += 1) {
       const tag = tags[i];
       let tagId;
       const querySql = `
@@ -18,10 +18,10 @@ module.exports = {
         const { num } = query[0];
         const addNumSql = `
           update tag
-            set num = ${num += 1}
+            set num = ${num + 1}
             where id = ${tagId}
         `;
-        mysql.sql(addNumSql);
+        mysql.query(addNumSql);
       }
       tagIds.push(tagId);
     }
@@ -46,7 +46,7 @@ module.exports = {
       const { num } = query[0];
       const addNumSql = `
         update categroy 
-          set num = ${num += 1}
+          set num = ${num + 1}
           where id = ${id}
       `;
       mysql.query(addNumSql);

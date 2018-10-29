@@ -38,20 +38,6 @@ class ActivePage extends React.Component {
     statisticData: PropTypes.shape({}).isRequired,
   }
 
-  // handlePageChange = async (page) => {
-  //   const res = await http.request('/api/article/list', {
-  //     body: JSON.stringify({
-  //       page,
-  //       tagId,
-  //     }),
-  //   });
-  //   const { data: { pagination, list } } = await res.json();
-  //   this.setState({
-  //     pagination,
-  //     list,
-  //   });
-  // }
-
   renderPagination = () => {
     const { pagination, cateId, tagId } = this.props;
     const paramsData = { tagId, cateId };

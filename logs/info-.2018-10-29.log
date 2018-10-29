@@ -35,3 +35,92 @@
   sqlState: '42S22',
   index: 0,
   sql: '\n    select\n      read_num\n    from article\n    where id = undefined\n  ' }
+[2018-10-29T21:26:50.175][ERROR  16324  default] /api/admin/article/operate { title: 'ceshi',
+  content: '现在进行时',
+  descript: '描述',
+  tags: '前端',
+  categroy: '前端' } TypeError: Assignment to constant variable.
+    at Object.getCategroyId (S:\github\Genluo\server\service\tag.js:49:27)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+[2018-10-29T21:29:21.985][ERROR  14992  default] /api/admin/article/operate { title: 'ceshi',
+  content: '现在进行时',
+  descript: '描述',
+  tags: '前端',
+  categroy: '前端' } TypeError: Assignment to constant variable.
+    at Object.getTagsId (s:\github\Genluo\server\service\tag.js:21:29)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+[2018-10-29T21:29:30.766][ERROR  14992  default] /api/admin/article/operate { title: 'ceshi',
+  content: '现在进行时',
+  descript: '描述',
+  tags: '前端',
+  categroy: '前端' } TypeError: Assignment to constant variable.
+    at Object.getCategroyId (s:\github\Genluo\server\service\tag.js:49:27)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+[2018-10-29T21:34:10.668][ERROR  16208  default] /api/admin/article/operate { title: 'ceshi',
+  content: '现在进行时',
+  descript: '描述',
+  tags: '前端',
+  categroy: '前端' } TypeError: Assignment to constant variable.
+    at Object.getCategroyId (s:\github\Genluo\server\service\tag.js:50:27)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+[2018-10-29T21:34:15.254][ERROR  16208  default] /api/admin/article/operate { title: 'ceshi',
+  content: '现在进行时',
+  descript: '描述',
+  tags: '前端',
+  categroy: '前端' } TypeError: Assignment to constant variable.
+    at Object.getTagsId (s:\github\Genluo\server\service\tag.js:21:29)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+[2018-10-29T21:41:21.556][ERROR  7456  default] /api/admin/article/operate { title: 'ceshi',
+  content: '现在进行时',
+  descript: '描述',
+  tags: '前端',
+  categroy: '前端' } TypeError: Assignment to constant variable.
+    at Object.getCategroyId (s:\github\Genluo\server\service\tag.js:53:27)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+[2018-10-29T21:42:08.129][ERROR  6748  default] /api/admin/article/operate { title: 'ceshi',
+  content: '现在进行时',
+  descript: '描述',
+  tags: '前端',
+  categroy: '前端' } { Error: ER_NO_REFERENCED_ROW_2: Cannot add or update a child row: a foreign key constraint fails (`personSite`.`article`, CONSTRAINT `article_ibfk_1` FOREIGN KEY (`categroy_id`) REFERENCES `categroy` (`id`))
+    at Query.Sequence._packetToError (s:\github\Genluo\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (s:\github\Genluo\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (s:\github\Genluo\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (s:\github\Genluo\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (s:\github\Genluo\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (s:\github\Genluo\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (s:\github\Genluo\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:601:20)
+    --------------------
+    at Protocol._enqueue (s:\github\Genluo\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (s:\github\Genluo\node_modules\mysql\lib\Connection.js:200:25)
+    at pool.getConnection (s:\github\Genluo\server\db\index.js:11:20)
+    at Ping.onOperationComplete (s:\github\Genluo\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (s:\github\Genluo\node_modules\mysql\lib\Connection.js:502:10)
+    at Ping._callback (s:\github\Genluo\node_modules\mysql\lib\Connection.js:468:16)
+    at Ping.Sequence.end (s:\github\Genluo\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (s:\github\Genluo\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (s:\github\Genluo\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (s:\github\Genluo\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (s:\github\Genluo\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (s:\github\Genluo\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (s:\github\Genluo\node_modules\mysql\lib\Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+  code: 'ER_NO_REFERENCED_ROW_2',
+  errno: 1452,
+  sqlMessage: 'Cannot add or update a child row: a foreign key constraint fails (`personSite`.`article`, CONSTRAINT `article_ibfk_1` FOREIGN KEY (`categroy_id`) REFERENCES `categroy` (`id`))',
+  sqlState: '23000',
+  index: 0,
+  sql: '\n      insert into article(\n        title,\n        update_time,\n        read_num,\n        content,\n        descript,\n        create_time,\n        categroy_id )\n      values(\n        \'ceshi\',\n        \'2018-10-29 21:42\',\n        1,\n        \'现在进行时\',\n        \'描述\',\n        \'2018-10-29 21:42\',\n        1);\n    ' }
