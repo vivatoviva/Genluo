@@ -1,22 +1,24 @@
+import React from 'react';
+import PropsTypes from 'prop-types';
+import WithLink from '../WithLink';
 
-import React from 'react'
-import WithLink from './../WithLink'
+const ArticButton = ({
+  href,
+  as,
+  paramsData,
+  children,
+}) => (
+  <button type="button">
+    <WithLink
+      href={href}
+      as={as}
+      paramsData={paramsData}
+    >
+      <a href={false}>{children}</a>
+    </WithLink>
 
-class ArticButton extends React.Component {
-  render() {
-    const buttonText = this.props.children || '阅读全文 »';
-    const { href, as, paramsData } = this.props;
-    return (
-      <button>
-        <WithLink
-          href={href}
-          as={as}
-          paramsData={paramsData}
-        >
-        <a>{buttonText}</a>
-        </WithLink>
-      
-      <style jsx>{`
+    <style jsx>
+      {`
         button {
           background-color: #fff;
           outline: 0;
@@ -45,8 +47,20 @@ class ArticButton extends React.Component {
           color: #fff;
           text-decoration: none;
         }
-      `}</style></button>
-    )
-  }
-}
-export default ArticButton
+      `}
+    </style>
+  </button>
+);
+
+ArticButton.propTypes = {
+  href: PropsTypes.string.isRequired,
+  as: PropsTypes.string.isRequired,
+  paramsData: PropsTypes.shape({}).isRequired,
+  children: PropsTypes.string,
+};
+
+ArticButton.defaultProps = {
+  children: '阅读全文',
+};
+
+export default ArticButton;

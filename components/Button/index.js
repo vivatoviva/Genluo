@@ -1,5 +1,5 @@
-import IndexButton from './IndexButton'
-import ArticButton from './ArticButton'
+import IndexButton from './IndexButton';
+import ArticButton from './ArticButton';
 
 const Button = IndexButton;
 Button.Artic = ArticButton;

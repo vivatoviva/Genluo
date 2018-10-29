@@ -3,5 +3,5 @@ module.exports = {
   // 本地环境
   domain: 'http://localhost',
   // 线上环境
-  // domain: 'http://120.78.71.60:3000'
+  // domain: 'http://120.78.71.60'
 }

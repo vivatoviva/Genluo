@@ -9,7 +9,7 @@ module.exports = {
     let data = null;
     try {
       data = await service.blog.getArticle({ page, tagId, categroyId })
-      ctx.body = {...Tip.ok, data}
+      ctx.body = { ...Tip.ok, data };
     } catch (e) {
       ctx.logger.error(ctx.url, ctx.request.body, e);
       ctx.body = Tip.datebaseError;

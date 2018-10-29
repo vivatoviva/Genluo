@@ -115,9 +115,13 @@ const LiButton = ({ href, icon, name }) => (
   </li>
 );
 LiButton.propTypes = {
+  icon: PropTypes.string,
   href: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+};
+
+LiButton.defaultProps = {
+  icon: '',
 };
 
 export default () => (
@@ -128,7 +132,7 @@ export default () => (
       <h1>Genluo</h1>
       <nav>
         {
-          buttonData.map(item => <LiButton key={item} {...item} />)
+          buttonData.map(item => <LiButton key={item.name} {...item} />)
         }
       </nav>
     </div>

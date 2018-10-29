@@ -25,7 +25,7 @@ class BlogPage extends React.Component {
   componentDidMount() {
     const height = this.nav.current.clientHeight + 10;
     const windowHeight = document.body.clientHeight + 100;
-    window.addEventListener('scroll', () => {
+    const windowHandle = () => {
       const nowHeight = window.pageYOffset;
       if (nowHeight >= height) {
         this.setState({
@@ -45,7 +45,9 @@ class BlogPage extends React.Component {
           isDisplayToTop: false,
         });
       }
-    });
+    };
+    windowHandle(); // 页面加载，进行一次计算
+    window.addEventListener('scroll', windowHandle);
   }
 
   changeVisible = () => {

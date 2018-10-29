@@ -1,9 +1,11 @@
-import React from 'react'
-import WithLink from '../WithLink'
+import React from 'react';
+import WithLink from '../WithLink';
+
 // 圆角button
 // 点击阅读的button
-const Style = () =>
-  <style jsx>{`
+const Style = () => (
+  <style jsx>
+    {`
     @media screen and (max-width: 750px) {
       .button {
         font-size: 17px!important;
@@ -32,8 +34,9 @@ const Style = () =>
       color: #000;
       border-color: #000;
     }
-  `}</style>
-
+  `}
+  </style>
+)
 class IndexButton extends React.Component {
 
   renderButton = () => {

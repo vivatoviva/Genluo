@@ -1,17 +1,17 @@
-const mysql = require('../db')
+const mysql = require('../db');
 
 module.exports = {
   async getTagsId(tags) {
     const tagIds = [];
-    for (let i = 0; i < tags.length; i += 1) {
-      const tag = tags[i];
+    const tagIdsPromise = [];
+    const getTagId = async (tag) => {
       let tagId;
       const querySql = `
         select * from tag where name='${tag}'
       `;
       const query = await mysql.query(querySql);
       if (query.length === 0) {
-        const insert = await mysql.query(`insert into tag(name, num) values('${tag}', 1);`)
+        const insert = await mysql.query(`insert into tag(name, num) values('${tag}', 1);`);
         tagId = insert.insertId;
       } else {
         tagId = query[0].id;
@@ -24,6 +24,10 @@ module.exports = {
         mysql.query(addNumSql);
       }
       tagIds.push(tagId);
+
+    };
+    for (let i = 0; i < tags.length; i += 1) {
+      tagIdsPromise.push(getTagId(tags[i]));
     }
     return tagIds;
   },
