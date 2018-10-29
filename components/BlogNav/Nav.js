@@ -75,11 +75,6 @@ class BlogNav extends React.Component {
           }
           {this.props.children}
         </ul>
-        <style jsx global>{`
-          h1 {
-            
-          }
-        `}</style>
       <style jsx>{`
         @media screen and (max-width: 1340px) {
           .btn {

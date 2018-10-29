@@ -5,9 +5,7 @@ export default ({title}) => {
     <div>
       <Head>
         <title>{title} | Genluo</title>
-
       </Head>
-
     </div>
   )
 }

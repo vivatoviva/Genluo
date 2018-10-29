@@ -5,7 +5,6 @@ import Head from '../../components/Head';
 
 export default class extends Component {
   handleClick = () => {
-    console.log('xianzia');
   }
 
   render() {

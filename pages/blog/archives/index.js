@@ -75,11 +75,11 @@ class ActivePage extends React.Component {
   }
 
   render() {
-    const { list } = this.props;
-    // 这边要渲染三种路由，分别是tag、category、archives
+    const { list, statisticData } = this.props;
     return (
       <Layout
         navIndex={3}
+        statisticsData={statisticData}
       >
         <TimeLine list={list} />
         {

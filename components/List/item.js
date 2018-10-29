@@ -3,7 +3,6 @@ import React from 'react'
 export default class extends React.PureComponent {
   render() {
     const { title, content } = this.props;
-    console.log(title);
     return (
       <div>
         <h3>前端进行时</h3>

@@ -21,7 +21,6 @@ function renderAndCache(ctx, pagePath, queryParams) {
     ...ctx.query,
     ...ctx.params,
   };
-  console.log(ctx.req);
   
   return app.renderToHTML(ctx.req, ctx.res, pagePath, params)
     .then((html) => {
@@ -30,7 +29,6 @@ function renderAndCache(ctx, pagePath, queryParams) {
       ssrCache.set(key, html);
     })
     .catch((err) => {
-      console.log('render error')
       return app.renderError(err, ctx.req, ctx.res, pagePath, queryParams)
     })
 }

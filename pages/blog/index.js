@@ -29,6 +29,7 @@ class IndexPage extends React.Component {
 
   render() {
     const { pagination, list, statisticsData } = this.props;
+
     return (
       <Layout
         navIndex={0}

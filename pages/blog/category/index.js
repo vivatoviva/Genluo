@@ -8,8 +8,8 @@ class CatePage extends React.Component {
   static async getInitialProps() {
     const listPromise = http.request('/api/category/list');
     const statisticPromise = http.request('/api/statistics/detail');
-    const [{ data }, { data: statisticData }] = await Promise.all([listPromise, statisticPromise]);
-    return { data, statisticData };
+    const [{ data }, { data: statisticsData }] = await Promise.all([listPromise, statisticPromise]);
+    return { data, statisticsData };
   }
 
   static propTypes = {
@@ -18,12 +18,12 @@ class CatePage extends React.Component {
   }
 
   render() {
-    const { data, statisticData } = this.props;
+    const { data, statisticsData } = this.props;
     return (
       <Layout
         navIndex={2}
         title="分类"
-        statisticData={statisticData}
+        statisticsData={statisticsData}
       >
         <h1>Categories</h1>
         <div>

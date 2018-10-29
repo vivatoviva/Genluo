@@ -70,8 +70,6 @@ export default class Modal extends PureComponent {
             }
           </div>
           <div className="mask"></div>
-          <style jsx global>{`
-          `}</style>
           <style jsx>{`
             .wrapper {
               width: 100%;
