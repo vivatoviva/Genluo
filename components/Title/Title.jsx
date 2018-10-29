@@ -105,10 +105,10 @@ export default class Title extends React.Component {
   renderTags = () => {
     const { tags } = this.props;
     const tag = [];
-    for (const item of tags) {
+    tags.forEach((item) => {
       tag.push(<><SpanLink link={`/blog/tag/${item.tag_id}`}>{item.name}</SpanLink></>);
       tag.push(<span>、</span>);
-    }
+    });
     tag.pop();
     return tag;
   }

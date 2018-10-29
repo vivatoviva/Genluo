@@ -193,7 +193,7 @@ class Index extends React.PureComponent {
                     掌握web开发基本技能，熟悉<span>W3c标准</span>、<span>页面架构布局</span>、<span>前端语义化</span>，懂些<span>审美</span>、重视<span>用户体验</span>及<span>代码可维护性</span>，有近两年的前端开发经验
                   </Descript>
                   <Descript isItem>
-                    对现代的框架<span>React及其相关技术栈</span>、<span>Next</span>、<span>Ant Desgin</span>等有着较熟的实践和较深的感悟
+                    对现代的框架<span>React及其相关技术栈</span>、<span>Next</span>、<span>Ant Design</span>等有着较熟的实践和较深的感悟
                   </Descript>
                   <Descript isItem>
                     有<span>全栈开发</span>项目经验，熟练使用使用<span>Koa</span>、<span>Egg</span>开发web项目，了解常见的后端逻辑，能够和后端高效的定位问题、进行合作开发。
@@ -239,11 +239,11 @@ class Index extends React.PureComponent {
                 >
                   <Item time="2018.10" tag="Link">宅居修项目 · 小程序</Item>
                   <Descript>
-                    <span>二期开发</span>、<span>页面重构</span>，使用<span>Wepy</span>框架在一期项目的基础上进行小程序的二期开发，视图层采用<span>Flex弹性布局</span>，<span>逻辑层</span>采用组件化模式开发。此外，还使用<span>ant-desgin</span>相关技术对管理端进行二次开发。
+                    <span>二期开发</span>、<span>页面重构</span>，使用<span>Wepy</span>框架在一期项目的基础上进行小程序的二期开发，视图层采用<span>Flex弹性布局</span>，<span>逻辑层</span>采用组件化模式开发。此外，还使用<span>Ant-Design</span>相关技术对管理端进行二次开发。
                   </Descript>
                   <Item time="2018.07" tag={{name: 'Link', link: "https://www.google.com/"}}>CRM系统 · 中后台</Item>
                   <Descript>
-                    <span>项目推动</span>，<span>前端开发</span>、<span>项目牵头</span>，使用ant-degin-pro开发的一套后台系统，实现<span>权限管理</span>，<span>数据可视化</span>，<span>数据mock</span>等等，推动产品、后台共同交付此产品，并在项目后期进行相关维护、产品迭代
+                    <span>项目推动</span>，<span>前端开发</span>、<span>项目牵头</span>，使用Ant-degin-pro开发的一套后台系统，实现<span>权限管理</span>，<span>数据可视化</span>，<span>数据mock</span>等等，推动产品、后台共同交付此产品，并在项目后期进行相关维护、产品迭代
                   </Descript>
                   <Item time="2018.06" tag="Link">ABO微信 · 微信H5</Item>
                   <Descript >
@@ -262,7 +262,7 @@ class Index extends React.PureComponent {
                 >
                   <Item time="2018.09 ~ 至今" tag="Link">个人站点建设</Item>
                   <Descript >
-                    <span>全栈开发</span>、<span>个人站点</span>、<span>开源作品</span>个人站点的建设，主要包括<span>博客</span>、<span>简历</span>、<span>介绍</span>等几个主要模块，前端使用<span>Nextjs</span>进行<span>同构处理</span>，后端使用<span>Koa</span>和<span>mysql</span>技术栈提供后台服务，管理端使用antd-desgin进行搭建，并进行部署上线，使用<span>nginx</span>和<span>node</span>部署，<span>按需加载</span>、<span>预加载</span>等降低首屏渲染时间，为用户提供快速的响应，和优秀的网站体验，并将项目的项目的几个功能点抽离出来上传到npm进行开源，此站点也是自己尝试新技术提升网站性能的实验站点。
+                    <span>全栈开发</span>、<span>个人站点</span>、<span>开源作品</span>个人站点的建设，主要包括<span>博客</span>、<span>简历</span>、<span>介绍</span>等几个主要模块，前端使用<span>Nextjs</span>进行<span>同构处理</span>，后端使用<span>Koa</span>和<span>mysql</span>技术栈提供后台服务，管理端使用Antd-Design进行搭建，并进行部署上线，使用<span>nginx</span>和<span>node</span>部署，<span>按需加载</span>、<span>预加载</span>等降低首屏渲染时间，为用户提供快速的响应，和优秀的网站体验，并将项目的项目的几个功能点抽离出来上传到npm进行开源，此站点也是自己尝试新技术提升网站性能的实验站点。
                   </Descript>
                 </Dividing>
               </section>
