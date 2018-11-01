@@ -25,7 +25,7 @@ export default class extends React.Component {
       };
     }
     http.request(`/api/article/read/${id}`);
-    data.read_num += 1;
+    data.read_num = parseInt(data.read_num, 10) + 1;
     return { data };
   }
 

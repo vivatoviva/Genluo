@@ -24,14 +24,13 @@ module.exports = {
         mysql.query(addNumSql);
       }
       tagIds.push(tagId);
-
     };
     for (let i = 0; i < tags.length; i += 1) {
       tagIdsPromise.push(getTagId(tags[i]));
     }
     return tagIds;
   },
-
+  
   async getCategroyId(categroy) {
     // 获取文章分类ID;
     const querySql = `
