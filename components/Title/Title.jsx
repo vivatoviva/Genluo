@@ -25,11 +25,8 @@ const IconTitle = ({
         li {
           padding: 0 10px 0 10px;
           line-height: 1;
-          margin: 5px 0px;
+          margin: 2px 0px;
           color: rgb(153, 153, 153);
-        }
-        li + li {
-          border-left: 1.5px solid #eee;
         }
         li i {
           display: inline-block;
@@ -164,8 +161,8 @@ export default class Title extends React.Component {
         <div className="data">
           <ul>
             {
-              list.map((item, index) => {
-                return index !== list.length - 1 ? (<IconTitle
+              list.map((item, index) =>
+                index === list.length - 1 ? (<IconTitle
                   icon={item.icon}
                   name={item.name}
                 >
@@ -173,9 +170,19 @@ export default class Title extends React.Component {
                     item.value
                   }
                 </IconTitle>) : (
-                  <></>
+                  <>
+                  <IconTitle
+                  icon={item.icon}
+                  name={item.name}
+                >
+                  {
+                    item.value
+                  }
+                </IconTitle>
+                <Division />
+                </>
                 )
-              })
+              )
             }
           </ul>
         </div>
@@ -191,9 +198,10 @@ export default class Title extends React.Component {
               display: flex;
               justify-content: center;
               flex-wrap: wrap;
+              height: 17px;
             }
-
             h1 span:hover {
+              height: 23px;
               border-bottom: 2px solid #000;
             }
         `}
