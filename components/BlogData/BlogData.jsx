@@ -1,15 +1,36 @@
+import PropTypes from 'prop-types';
+import React from 'react';
 import withItem from '../withItem';
+import Division from '../Division';
 
-const BlogData =  ({articleCount, tagCount, cateCount }) =>
+const BlogData = ({
+  articleCount,
+  tagCount,
+  cateCount,
+}) => (
   <div className="warper">
-    <div><a className="avtor" href="https://github.com/vivatoviva"></a></div>
+    <div>
+      <a className="avtor" href="https://github.com/vivatoviva" />
+    </div>
     <h5>Genluo</h5>
     <ul>
-      <li><span>{articleCount}</span><span>日志</span></li>
-      <li><span>{tagCount}</span><span>分类</span></li>
-      <li><span>{cateCount}</span><span>标签</span></li>
+      <li>
+        <span>{articleCount}</span>
+        <span>日志</span>
+      </li>
+      <Division />
+      <li>
+        <span>{tagCount}</span>
+        <span>分类</span>
+      </li>
+      <Division />
+      <li>
+        <span>{cateCount}</span>
+        <span>标签</span>
+      </li>
     </ul>
-    <style jsx>{`
+    <style jsx>
+      {`
       .warper {
         padding: 30px 0 30px;
         background-color: #fff;
@@ -45,7 +66,8 @@ const BlogData =  ({articleCount, tagCount, cateCount }) =>
         margin: 10px 0 30px;
       }
       ul {
-        width: 212px;
+        height: 40px;
+        width: 216px;
         margin:0 auto;
       }
       li {
@@ -66,10 +88,15 @@ const BlogData =  ({articleCount, tagCount, cateCount }) =>
         font-size: 15px;
         margin-top: 3px;
       }
-      li + li {
-        border-left: 1px solid rgb(238, 238, 238);
-      }
-    `}</style>
+    `}
+    </style>
   </div>
+);
+
+BlogData.propTypes = {
+  articleCount: PropTypes.string.isRequired,
+  tagCount: PropTypes.string.isRequired,
+  cateCount: PropTypes.number.isRequired,
+};
 
 export default withItem(BlogData);

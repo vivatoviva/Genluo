@@ -1,7 +1,16 @@
 import React from 'react';
 
 export default () => (
-  <div>
-    <span>现在进行时</span>
-  </div>
+  <span>
+    <style jsx>
+      {`
+      span {
+        display: inline-block;
+        width: 2px;
+        height: 100%;
+        background-color: #eee;
+      }
+      `}
+    </style>
+  </span>
 );

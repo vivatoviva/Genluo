@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
 import WithLink from '../WithLink';
+import Division from '../Division';
 
 const IconTitle = ({
   icon,
@@ -28,7 +29,7 @@ const IconTitle = ({
           color: rgb(153, 153, 153);
         }
         li + li {
-          border-left: 1.5px solid rgb(153, 153, 153);
+          border-left: 1.5px solid #eee;
         }
         li i {
           display: inline-block;
@@ -163,16 +164,18 @@ export default class Title extends React.Component {
         <div className="data">
           <ul>
             {
-              list.map(item => (
-                <IconTitle
+              list.map((item, index) => {
+                return index !== list.length - 1 ? (<IconTitle
                   icon={item.icon}
                   name={item.name}
                 >
                   {
                     item.value
                   }
-                </IconTitle>
-              ))
+                </IconTitle>) : (
+                  <></>
+                )
+              })
             }
           </ul>
         </div>
