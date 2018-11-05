@@ -161,28 +161,31 @@ export default class Title extends React.Component {
         <div className="data">
           <ul>
             {
-              list.map((item, index) =>
-                index === list.length - 1 ? (<IconTitle
-                  icon={item.icon}
-                  name={item.name}
-                >
-                  {
-                    item.value
-                  }
-                </IconTitle>) : (
-                  <>
+              list.map((item, index) => (
+                index === list.length - 1 ? (
                   <IconTitle
-                  icon={item.icon}
-                  name={item.name}
-                >
-                  {
-                    item.value
-                  }
-                </IconTitle>
-                <Division />
+                    icon={item.icon}
+                    name={item.name}
+                  >
+                    {
+                      item.value
+                    }
+                  </IconTitle>) : (
+                  <>
+                    <IconTitle
+                      icon={item.icon}
+                      name={item.name}
+                    >
+                      {
+                        item.value
+                      }
+                    </IconTitle>
+                    <li>
+                      <Division />
+                    </li>
                 </>
                 )
-              )
+              ))
             }
           </ul>
         </div>
@@ -199,6 +202,9 @@ export default class Title extends React.Component {
               justify-content: center;
               flex-wrap: wrap;
               height: 17px;
+            }
+            ul li {
+              height: 13px;
             }
             h1 span:hover {
               height: 23px;
