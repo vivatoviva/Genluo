@@ -4,6 +4,7 @@ import Layout from '../../layout/BlogLayout';
 import Article from '../../components/Article';
 import http from '../../utils/http';
 import mdUtils from '../../utils/markdownToHtml';
+import Input from '../../components/Input';
 
 export default class extends React.Component {
   static async getInitialProps({ query }) {
@@ -62,6 +63,11 @@ export default class extends React.Component {
         {
           data ? <Article.Detail data={data} onContentChange={this.handleContentChange} /> : ''
         }
+        <Input
+          ok={(value) => { console.log(value); }}
+          avtorImgUrl="https://avatars1.githubusercontent.com/u/26970959?v=3"
+          isNeedAvtor
+        />
       </Layout>
     );
   }
