@@ -5,6 +5,7 @@ import Article from '../../components/Article';
 import http from '../../utils/http';
 import mdUtils from '../../utils/markdownToHtml';
 import Input from '../../components/Input';
+import Comment from '../../components/Comment';
 
 export default class extends React.Component {
   static async getInitialProps({ query }) {
@@ -67,6 +68,13 @@ export default class extends React.Component {
           ok={(value) => { console.log(value); }}
           avtorImgUrl="https://avatars1.githubusercontent.com/u/26970959?v=3"
           isNeedAvtor
+        />
+        <Comment 
+          userName="Genluo"
+          content="写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错"
+          avtorImgUrl="https://avatars1.githubusercontent.com/u/26970959?v=3"
+          defaultLikeNum={100}
+          time="2016-9-9 10:10"
         />
       </Layout>
     );
