@@ -69,7 +69,7 @@ export default class extends React.Component {
           avtorImgUrl="https://avatars1.githubusercontent.com/u/26970959?v=3"
           isNeedAvtor
         />
-        <Comment 
+        <Comment
           userName="Genluo"
           content="写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错写的真不错"
           avtorImgUrl="https://avatars1.githubusercontent.com/u/26970959?v=3"

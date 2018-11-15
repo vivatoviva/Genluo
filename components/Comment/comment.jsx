@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Avtor from '../Avtor';
 import Icon from '../Icon';
+import Input from '../Input';
 
 class Comment extends Component {
   static propTypes = {
@@ -23,6 +24,7 @@ class Comment extends Component {
     this.state = {
       likeNum: props.defaultLikeNum,
       likeActive: false,
+      replayActive: false,
     };
   }
 
@@ -38,7 +40,15 @@ class Comment extends Component {
   }
 
   handleReployClick = () => {
+    this.setState(({ replayActive }) => ({
+      replayActive: !replayActive,
+    }));
+  }
 
+  handleFocusChange = () => {
+    this.setState({
+      replayActive: false,
+    })
   }
 
   render() {
@@ -48,7 +58,7 @@ class Comment extends Component {
       userName,
       time,
     } = this.props;
-    const { likeNum, likeActive } = this.state;
+    const { likeNum, likeActive, replayActive } = this.state;
     return (
       <div className="wrapper">
         <div className="avtor">
@@ -81,6 +91,9 @@ class Comment extends Component {
               </div>
             </div>
           </div>
+          {
+            replayActive && <Input defaultInputFocus handleFocusChange={this.handleFocusChange} />
+          }
           <div className="reply-list">
             {/* 回复列表 */}
           </div>

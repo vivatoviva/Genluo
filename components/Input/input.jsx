@@ -7,24 +7,41 @@ export default class Input extends Component {
     isNeedAvtor: PropTypes.bool,
     ok: PropTypes.func,
     avtorImgUrl: PropTypes.string,
+    defaultInputFocus: PropTypes.bool,
   }
 
   static defaultProps = {
     isNeedAvtor: false,
     ok: null,
     avtorImgUrl: '',
+    defaultInputFocus: false,
+  }
+
+  constructor(props) {
+    super(props);
+    this.input = React.createRef();
   }
 
   state = {
     inputValue: '',
+    operateActive: false,
+  }
+
+  componentDidMount() {
+    const { defaultInputFocus } = this.props;
+    if (defaultInputFocus) {
+      this.input.current.focus();
+    }
   }
 
   handleOk = () => {
     const { ok } = this.props;
     const { inputValue } = this.state;
     // 存在成功回掉函数
-    if (ok) {
+    if (ok && inputValue) {
       ok(inputValue);
+    } else {
+      this.input.current.focus();
     }
   }
 
@@ -34,8 +51,14 @@ export default class Input extends Component {
     });
   }
 
+  handleInputFocus = () => {
+    this.setState(({ operateActive }) => ({
+      operateActive: !operateActive,
+    }));
+  }
+
   render() {
-    const { inputValue } = this.state;
+    const { inputValue, operateActive } = this.state;
     const { isNeedAvtor, avtorImgUrl } = this.props;
     return (
       <div className="wrapper">
@@ -49,17 +72,24 @@ export default class Input extends Component {
               type="text"
               value={inputValue}
               onChange={this.handleInputChange}
+              onFocus={this.handleInputFocus}
+              onBlur={this.handleInputFocus}
+              ref={this.input}
             />
+            {
+              operateActive && (
+                <div className="operate">
+                  <button onClick={this.handleOk} type="button">评论</button>
+                </div>
+              )
+            }
           </div>
         </div>
-        {/* <div className="operate">
-          <button onClick={this.handleOk} type="button">确定</button>
-        </div> */}
         <style jsx>
           {`
             .wrapper {
               width: 100%;
-              height: 80px;
+              min-height: 80px;
               overflow: hidden;
               padding: 15px 0;
               box-sizing: border-box;
@@ -86,6 +116,24 @@ export default class Input extends Component {
               box-sizing: border-box;
               padding: 5px 10px;
               font-sizing: 20px;
+            }
+            .input .operate {
+              width: 100%;
+              box-sizing: border-box;
+              padding: 10px 0px;
+              overflow: hidden;
+            }
+            .operate button {
+              width: 80px;
+              line-height: 33px;
+              font-size: 15px;
+              background: #027fff;
+              outline: 0;
+              cursor: pointer;
+              color: #fff;
+              border-radius: 4px;
+              text-align: center;
+              float: right;
             }
           `}
         </style>
