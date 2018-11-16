@@ -21,6 +21,7 @@ class Comment extends Component {
 
   constructor(props) {
     super(props);
+    this.hide = false;
     this.state = {
       likeNum: props.defaultLikeNum,
       likeActive: false,
@@ -45,10 +46,13 @@ class Comment extends Component {
     }));
   }
 
-  handleFocusChange = () => {
-    this.setState({
-      replayActive: false,
-    })
+  handleInputHide = () => {
+    // 避免点击回复按钮的时候，首先执行handleInputHide，然后执行handleReployClick，通过时间循环，将执行顺序向后延迟
+    setTimeout(() => {
+      this.setState({
+        replayActive: false,
+      });
+    }, 100);
   }
 
   render() {
@@ -92,7 +96,12 @@ class Comment extends Component {
             </div>
           </div>
           {
-            replayActive && <Input defaultInputFocus handleFocusChange={this.handleFocusChange} />
+          replayActive && (
+            <Input
+              defaultInputFocus
+              hide={this.handleInputHide}
+            />
+          )
           }
           <div className="reply-list">
             {/* 回复列表 */}
@@ -108,6 +117,8 @@ class Comment extends Component {
               width: 50px;
               height: 50px;
               float: left;
+              box-sizing: border-box;
+              padding: 5px;
             }
             .content-box {
               float: left;
