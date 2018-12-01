@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Avtor from '../Avtor';
 
-
 export default class Input extends Component {
   static propTypes = {
     isNeedAvtor: PropTypes.bool,
@@ -69,7 +68,8 @@ export default class Input extends Component {
     }
   }
 
-  handleInputFocus = () => {
+  handleInputFocus = (e) => {
+    console.log(e.target.setSelectionRangit);
     this.setState({
       operateActive: true,
     });
@@ -101,7 +101,7 @@ export default class Input extends Component {
             isNeedAvtor && <div className="avtor"><Avtor imgUrl={avtorImgUrl} /></div>
           }
           <div className="input-wrapper">
-            <div className="input-box">
+            <div className={`input-box ${operateActive && 'active'}`}>
               <div
                 className={canSubmit ? 'rich-input' : 'rich-input empty'}
                 ref={this.input}
@@ -160,8 +160,11 @@ export default class Input extends Component {
               width: 100%;
               height: 100%;
               box-sizing: border-box;
-              border: 1px solid rgb(0, 127, 255);
+              border: 1px solid #eee;
               border-radius: 4px;
+            }
+            .input-box.active {
+              border: 1px solid rgb(0, 127, 255);
             }
             .rich-input {
               outline: 0;

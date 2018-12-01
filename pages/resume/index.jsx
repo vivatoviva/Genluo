@@ -16,6 +16,12 @@ const Style = () => (
       </style>
       <style jsx>
         {`
+        {/* 打印调用函数 */}
+        @media print {
+          div#wrapper {
+            margin: 0 auto;
+          }
+         }
         div.wraper {
           margin: 30px auto 30px;
           box-sizing: border-box;
@@ -124,7 +130,7 @@ const Style = () => (
 class Index extends React.PureComponent {
   render() {
     return (
-      <div className="wraper">
+      <div className="wraper" id="wrapper">
         <Head title="简历" />
         <div className="resume">
           <header>

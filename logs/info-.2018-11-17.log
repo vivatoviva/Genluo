@@ -257,3 +257,114 @@
   index: 0,
   sql:
    '\n    select\n      read_num\n    from article\n    where id = undefined\n  ' }
+[2018-11-17T21:11:31.519][ERROR  89516  default] /api/article/read/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:278:23)
+    at Parser.write (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:502:10)
+    at Socket.emit (events.js:182:13)
+    at addChunk (_stream_readable.js:283:12)
+    at readableAddChunk (_stream_readable.js:264:11)
+    at Socket.Readable.push (_stream_readable.js:219:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+    --------------------
+    at Protocol._enqueue (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at PoolConnection.query (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:200:25)
+    at pool.getConnection (/Users/ligen/code/github/Genluo/server/db/index.js:11:20)
+    at Ping.onOperationComplete (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Pool.js:110:5)
+    at Ping.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:502:10)
+    at Ping._callback (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:468:16)
+    at Ping.Sequence.end (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/sequences/Sequence.js:92:8)
+    at Protocol._parsePacket (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:278:23)
+    at Parser.write (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:502:10)
+    at Socket.emit (events.js:182:13)
+    at addChunk (_stream_readable.js:283:12)
+    at readableAddChunk (_stream_readable.js:264:11)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql:
+   '\n    select\n      read_num\n    from article\n    where id = undefined\n  ' }
+[2018-11-17T21:11:31.688][ERROR  89516  default] /api/article/read/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:278:23)
+    at Parser.write (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:502:10)
+    at Socket.emit (events.js:182:13)
+    at addChunk (_stream_readable.js:283:12)
+    at readableAddChunk (_stream_readable.js:264:11)
+    at Socket.Readable.push (_stream_readable.js:219:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+    --------------------
+    at Protocol._enqueue (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at PoolConnection.query (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:200:25)
+    at pool.getConnection (/Users/ligen/code/github/Genluo/server/db/index.js:11:20)
+    at Ping.onOperationComplete (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Pool.js:110:5)
+    at Ping.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:502:10)
+    at Ping._callback (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:468:16)
+    at Ping.Sequence.end (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/sequences/Sequence.js:92:8)
+    at Protocol._parsePacket (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:278:23)
+    at Parser.write (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:502:10)
+    at Socket.emit (events.js:182:13)
+    at addChunk (_stream_readable.js:283:12)
+    at readableAddChunk (_stream_readable.js:264:11)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql:
+   '\n    select\n      read_num\n    from article\n    where id = undefined\n  ' }
+[2018-11-17T21:24:09.606][ERROR  89516  default] /api/article/read/undefined {} { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:278:23)
+    at Parser.write (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:502:10)
+    at Socket.emit (events.js:182:13)
+    at addChunk (_stream_readable.js:283:12)
+    at readableAddChunk (_stream_readable.js:264:11)
+    at Socket.Readable.push (_stream_readable.js:219:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+    --------------------
+    at Protocol._enqueue (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at PoolConnection.query (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:200:25)
+    at pool.getConnection (/Users/ligen/code/github/Genluo/server/db/index.js:11:20)
+    at Ping.onOperationComplete (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Pool.js:110:5)
+    at Ping.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:502:10)
+    at Ping._callback (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:468:16)
+    at Ping.Sequence.end (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/sequences/Sequence.js:92:8)
+    at Protocol._parsePacket (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:278:23)
+    at Parser.write (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:502:10)
+    at Socket.emit (events.js:182:13)
+    at addChunk (_stream_readable.js:283:12)
+    at readableAddChunk (_stream_readable.js:264:11)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'undefined\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql:
+   '\n    select\n      read_num\n    from article\n    where id = undefined\n  ' }
