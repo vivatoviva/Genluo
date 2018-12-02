@@ -1,8 +1,9 @@
-const mysql = require('../db/index')
-const Tip = require('../utils/Tips')
-const hash = require('../utils/hash')
-const moment = require('moment')
-const { status } = require('../config/default')
+const moment = require('moment');
+const mysql = require('../db/index');
+const Tip = require('../utils/Tips');
+const hash = require('../utils/hash');
+
+const { status } = require('../config/defaultConfig')
 
 // 更新 hash 值
 function updateHash(ctx, user) {

@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-unfetch';
-import config from '../config';
+import config from '../server/config';
 
 const request = async (url, option) => {
   const defaultOption = {

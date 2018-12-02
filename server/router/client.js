@@ -1,11 +1,12 @@
 const Router = require('koa-router');
 const controller = require('../controller');
+
 const router = new Router();
 
 // 博文列表
 router.post('/api/article/list', controller.client.articleList);
 // 博文内容
-router.post('/api/article/content/:id',controller.client.articleContent);
+router.post('/api/article/content/:id', controller.client.articleContent);
 // 博文详情
 router.post('/api/article/detail/:id', controller.client.articleDetail);
 // 标签列表

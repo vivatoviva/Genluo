@@ -2,17 +2,16 @@ const Next = require('next');
 const Koa = require('koa');
 const koaBody = require('koa-body');
 const KoaSession = require('koa-session');
-const config = require('./config/default');
+const config = require('./config');
 const routers = require('./router/index');
 const mysql = require('./db');
 const koaStatus = require('./middleware/status');
 const koaLogger = require('./middleware/log');
 
-const dev = process.env.NODE_ENV !== 'production';
-const app = Next({ dev });
+const isDev = process.env.NODE_ENV !== 'production';
+const app = Next({ dev: isDev });
 const handle = app.getRequestHandler();
-const port = parseInt(process.env.PORT, 10) || config.port;
-const { sessionConfig } = config;
+const { sessionConfig, port } = config;
 
 app.prepare()
   .then(() => {
