@@ -1,5 +1,5 @@
 {
-  "debug.node.autoAttach": "on",
+  "debug.node.autoAttach": "off",
   "path-intellisense.mappings": {
       "component": "${workspaceRoot}/component",
     },
