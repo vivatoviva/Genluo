@@ -121,7 +121,7 @@ module.exports = {
           list,
           pagination,
         }
-      }
+      };
     } catch(e) {
       ctx.logger.error(ctx.url, ctx.request.body, e);
       ctx.body= Tip.datebaseError

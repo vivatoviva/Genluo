@@ -1,14 +1,24 @@
 const service = require('../service');
 const Tip = require('../utils/Tips');
-const mysql = require('../db')
+const mysql = require('../db');
+const Cache = require('../utils/cache');
 
+const { apiCache } = require('../config');
+
+const cache = Cache.createCache(apiCache);
+
+const getArticleCache = cache(service.blog.getArticle);
+const getContentCache = cache(service.blog.getContent);
+const getDetailCache = cache(service.blog.getDetail);
+const getTagCache = cache(service.blog.getTag);
+const getCategroyCache = cache(service.blog.getCategroy);
 
 module.exports = {
   async articleList(ctx) {
     const { page, tagId, categroyId } = ctx.request.body;
     let data = null;
     try {
-      data = await service.blog.getArticle({ page, tagId, categroyId })
+      data = await getArticleCache({ page, tagId, categroyId });
       ctx.body = { ...Tip.ok, data };
     } catch (e) {
       ctx.logger.error(ctx.url, ctx.request.body, e);
@@ -20,8 +30,8 @@ module.exports = {
     const { id } = ctx.params;
     let data = null;
     try {
-      data = await service.blog.getContent({id}) 
-      ctx.body = { ...Tip.ok, data }
+      data = await getContentCache({ id });
+      ctx.body = { ...Tip.ok, data };
     } catch (e) {
       ctx.logger.error(ctx.url, ctx.request.body, e);
       ctx.body = Tip.datebaseError;
@@ -32,7 +42,7 @@ module.exports = {
     const { id } = ctx.params;
     let data = null;
     try {
-      data = await service.blog.getDetail({id});
+      data = await getDetailCache({ id });
       ctx.body = { ...Tip.ok, data };
     } catch (e) {
       ctx.logger.error(ctx.url, ctx.request.body, e);
@@ -43,7 +53,7 @@ module.exports = {
   async tagList(ctx) {
     let data = null;
     try {
-      data = await service.blog.getTag()
+      data = await getTagCache();
       ctx.body = { ...Tip.ok, data };
     } catch (e) {
       ctx.logger.error(ctx.url, ctx.request.body, e);
@@ -54,7 +64,7 @@ module.exports = {
   async categroyList(ctx) {
     let data = null;
     try {
-      data = await service.blog.getCategroy();
+      data = await getCategroyCache();
       ctx.body = { ...Tip.ok, data };
     } catch (e) {
       ctx.logger.error(ctx.url, ctx.request.body, e);
@@ -64,13 +74,13 @@ module.exports = {
 
   async articleRead(ctx) {
     const { id } = ctx.params;
+    let data = null;
     try {
       data = await service.blog.read(id);
       ctx.body = { ...Tip.ok };
     } catch (e) {
       ctx.logger.error(ctx.url, ctx.request.body, e);
       ctx.body = Tip.datebaseError;
-  
     }
   },
 
@@ -88,7 +98,7 @@ module.exports = {
     select count(*) as num from categroy
     `;
     try {
-      const [ articleCount, tagCount, cateCount ] = await Promise.all([query(articleCountSql), query(tagCountSql), query(cateCountSql)]);
+      const [articleCount, tagCount, cateCount] = await Promise.all([query(articleCountSql), query(tagCountSql), query(cateCountSql)]);
       data = {
         articleCount: articleCount[0].num,
         tagCount: tagCount[0].num,

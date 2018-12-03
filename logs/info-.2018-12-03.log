@@ -1,0 +1,1003 @@
+[2018-12-03T11:16:32.140][ERROR  36859  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:12:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:16:32.335][ERROR  36859  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:12:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:16:42.573][ERROR  36859  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:12:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:16:42.663][ERROR  36859  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:12:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:16:52.884][ERROR  36859  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:12:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:16:52.976][ERROR  36859  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:12:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:17:03.206][ERROR  36859  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:12:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:17:03.307][ERROR  36859  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:12:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:17:13.536][ERROR  36859  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:12:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:17:13.639][ERROR  36859  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:12:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:17:23.859][ERROR  36859  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:12:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:17:23.943][ERROR  36859  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:12:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:17:34.159][ERROR  36859  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:12:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:17:34.249][ERROR  36859  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:12:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:17:45.444][ERROR  36859  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:12:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:17:45.531][ERROR  36859  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:12:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:20:54.532][ERROR  37047  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:20:54.722][ERROR  37047  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:21:15.203][ERROR  37047  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:22:03.949][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:22:04.150][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:22:14.433][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:22:14.519][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:22:24.793][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:22:24.881][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:22:35.169][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:22:35.251][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:22:45.527][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:22:45.617][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:22:55.917][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:22:56.004][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:23:07.266][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:23:07.362][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:23:17.635][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:23:17.718][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:23:28.001][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:23:28.087][ERROR  37112  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:16:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:23:39.428][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:23:39.622][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:23:49.892][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:23:49.985][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:24:00.256][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:24:00.351][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:24:10.655][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:24:10.753][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:24:21.039][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:24:21.133][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:24:31.405][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:24:31.497][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:24:42.890][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:24:42.983][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:24:53.264][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:24:53.348][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:25:03.631][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:25:03.717][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:25:14.003][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:25:14.095][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:25:24.374][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
+[2018-12-03T11:25:24.459][ERROR  37194  default] /api/article/list { page: 1 } TypeError: Cannot read property 'isOpen' of undefined
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:18:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at koaStatus (/Users/ligen/code/github/Genluo/server/middleware/status.js:31:41)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at log (/Users/ligen/code/github/Genluo/server/middleware/log.js:8:22)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-body/index.js:110:14
