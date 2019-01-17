@@ -21,7 +21,7 @@ const Style = () => (
           div#wrapper {
             margin: 0 auto;
           }
-         }
+        }
         div.wraper {
           margin: 30px auto 30px;
           box-sizing: border-box;
@@ -186,7 +186,7 @@ class Index extends React.PureComponent {
                     <span>团队介绍</span>勤奋蜂团队是一个互联网初创团队，涵盖产品、运营、前端、后台、移动、设计等部门。团队拥有校园说、校招导师、零食峰等多个产品，先后参与比赛并获得多个国家级奖项。其中，校招导师产品运营的工作号超过<span>15k</span>的用户,日平均浏览量达<span>1K</span>
                   </Descript>
                   <Descript>
-                    <span>前端组主要成员</span>负责团队项目的开发，维护及其<span>性能优化</span>,同时参与了团队的建设、日常技术分享和codeReview。期间积攒了各类项目开发经验和<span>团队、部门合作经验</span>
+                    <span>前端组核心成员</span>负责团队项目的开发，维护及其<span>性能优化</span>,同时参与了团队的建设、带动新成员学习、日常技术分享和<span>codeReview</span>。期间积攒了各类项目开发经验和<span>团队、部门合作经验</span>
                   </Descript>
                 </Dividing>
               </section>
@@ -199,16 +199,18 @@ class Index extends React.PureComponent {
                     掌握web开发基本技能，熟悉<span>W3c标准</span>、<span>页面架构布局</span>、<span>前端语义化</span>，懂些<span>审美</span>、重视<span>用户体验</span>及<span>代码可维护性</span>，有近两年的前端开发经验
                   </Descript>
                   <Descript isItem>
-                    对现代的框架<span>React及其相关技术栈</span>、<span>Next</span>、<span>Ant Design</span>等有着较熟的实践和较深的感悟
+                    对现代框架<span>React及其相关技术栈</span>、<span>Next js</span>、<span>Ant Design</span>等有着较熟的实践和较深的感悟
                   </Descript>
                   <Descript isItem>
                     有<span>全栈开发</span>项目经验，熟练使用使用<span>Koa</span>、<span>Egg</span>开发web项目，了解常见的后端逻辑，能够和后端高效的定位问题、进行合作开发。
                   </Descript>
                   <Descript isItem>
-                    对<span>计算机网络</span>、<span>数据结构</span>、<span>性能优化</span>、<span>前端工程化</span>、<span>前端安全</span>、<span>es6</span>、<span>Nodejs</span>等有一定的了解和思考
+                    对<span>性能优化</span>、<span>前端工程化</span>、<span>web安全</span>、<span>es6</span>、<span>计算机网络</span>、<span>数据结构</span>、<span>常见算法</span>、<span>计算机操作系统</span>等有一定的了解和思考
                   </Descript>
                   <Descript isItem>
-                    熟练使用Git进行<span>版本控制</span>、<span>团队合作</span>，了解<span>Linux</span>、<span>Nginx</span>等环境部署，了解项目开发流程及其开发调试工具的使用。
+                    熟练使用Git进行<span>版本控制</span>、<span>代码托管</span>、<span>团队合作开发</span>、<span>markdown</span>文档编写，
+                    并以<span>Mac os</span>、<span>Linux</span>、<span>VS Code</span>作为日常开发环境进行开发
+                    了解<span>Linux</span>、<span>Nginx</span>等环境部署，了解项目开发流程及其开发调试工具的使用。
                   </Descript>
                   {/* <Descript isItem>
                   熟练相关爬虫，主要使用的<span>Nodejs</span>和<span>Python</span>的<span>Scrapy</span>框架进行大规模爬取数据，并且熟悉相关爬虫库，并在github上开源的相关爬虫代码
@@ -249,15 +251,22 @@ class Index extends React.PureComponent {
                   </Descript>
                   <Item time="2018.07" tag={{name: 'Link', link: "https://www.google.com/"}}>CRM系统 · 中后台</Item>
                   <Descript>
-                    <span>项目推动</span>，<span>前端开发</span>、<span>项目牵头</span>，使用Ant-degin-pro开发的一套后台系统，实现<span>权限管理</span>，<span>数据可视化</span>，<span>数据mock</span>等等，推动产品、后台共同交付此产品，并在项目后期进行相关维护、产品迭代
+                    <span>项目推动</span>，<span>前端开发</span>、<span>项目牵头</span>，主要为一家海外留学教育公司实现的一套客户关系管理系统，销售人员可以持续跟进对应的客户，并将客户按照成交状态、重要性、处理时间进行分类，然后对客户持续跟进，最大化客户的签约率和留存率，改善与销售、市场营销、客户服务和支持等领域的客户关系有关的商业流程
                   </Descript>
-                  <Item time="2018.06" tag="Link">ABO微信 · 微信H5</Item>
+                  <Descript>
+                    使用<span>Ant-degin-pro</span>开发的一套后台系统，实现<span>客服、销售、主管三种权限管理</span>，<span>销售历史数据可视化</span>，<span>前端数据mock</span>等等，推动产品、后台共同交付此产品，并在项目后期进行相关维护、产品迭代
+                  </Descript>
+                  {/* <Item time="2018.06" tag="Link">ABO微信 · 微信H5</Item>
                   <Descript >
                     <span>项目配置</span>、<span>项目负责</span>使用webpack配置项目，使用Ejs、Zeptojs、Sass等实现组件化,并且将整个项目初始配置封装成<span>genluo-cli</span>脚手架工具,方便后续开发H5项目
-                  </Descript>
+                  </Descript> */}
                   <Item time="2018.02" tag="Link">搭建系统 · 搭建生态</Item>
-                  <Descript >
-                    <span>成长系统</span>、<span>后端支持</span>大四学长带着做的一套<span>模块化搭建平台</span>系统，实现活动页的<span>可视化</span>操作、预览、发布、修改页面的功能，前期主要使用<span>Egg</span>负责搭建系统核心生态后端的构建和<span>管理端</span>的开发，弄懂整套系统的设计，后期作为系统的<span>负责人</span>，提出想法，并牵头进行开发，搭建并且维护线上<span>Linux服务器环境</span>
+                  <Descript>
+                    <span>成长系统</span>、<span>页面可视化搭建</span>、<span>后端支持</span>大四学长带着做的一套<span>模块化页面可视化搭建平台</span>系统，实现H5活动页的<span>可视化</span>构建生成、自动化发布、动态修改线上页面等操作
+                  </Descript>
+                  <Descript>
+                    使用<span>Egg</span>负责搭建系统核心生态的后端构建和<span>管理端接口</span>的开发，实现<span>页面的搭建生成相关流程</span>、<span>开发人员开发模块流程</span>、配合gitlab相关钩子实现自动化部署流程
+                    {/* 弄懂整套系统的设计，后期作为系统的<span>负责人</span>，提出想法，并牵头进行开发，搭建并且维护线上<span>Linux服务器环境</span> */}
                   </Descript>
                 </Dividing>
               </section>
@@ -268,7 +277,13 @@ class Index extends React.PureComponent {
                 >
                   <Item time="2018.09 ~ 至今" tag="Link">个人站点建设</Item>
                   <Descript >
-                    <span>全栈开发</span>、<span>个人站点</span>、<span>开源作品</span>个人站点的建设，主要包括<span>博客</span>、<span>简历</span>、<span>介绍</span>等几个主要模块，前端使用<span>Nextjs</span>进行<span>同构处理</span>，后端使用<span>Koa</span>和<span>mysql</span>技术栈提供后台服务，管理端使用Antd-Design进行搭建，并进行部署上线，使用<span>nginx</span>和<span>node</span>部署，<span>按需加载</span>、<span>预加载</span>等降低首屏渲染时间，为用户提供快速的响应，和优秀的网站体验，并将项目的项目的几个功能点抽离出来上传到npm进行开源，此站点也是自己尝试新技术提升网站性能的实验站点。
+                    <span>全栈开发</span>、<span>个人站点</span>、<span>开源作品</span>
+                    个人站点的建设，主要包括<span>博客</span>、<span>简历</span>、<span>介绍</span>等几个主要板块。
+                    前端使用<span>React技术栈</span>进行组件化开发
+                    后端使用<span>Next js</span>、<span>Koa</span>进行<span>同构化处理</span>，
+                    使用<span>mysql</span>提供数据存储服务，
+                    管理端使用<span>Antd-Design</span>进行搭建，使用<span>nginx</span>和<span>PM2</span>部署，实现<span>按需加载</span>、<span>预加载</span>等降低首屏渲染时间，实现<span>markdown转html</span>的通用工具，并在开发过程中提取出一套脚手架CLi，用于后续提供开发效率
+                    {/* 为用户提供快速的响应，和优秀的网站体验，并将项目的项目的几个功能点抽离出来上传到npm进行开源，此站点也是自己尝试新技术提升网站性能的实验站点。 */}
                   </Descript>
                 </Dividing>
               </section>
