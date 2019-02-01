@@ -1,0 +1,58 @@
+[2019-01-28T14:59:18.016][ERROR  3378  default] /api/statistics/detail {} { Error: Handshake inactivity timeout
+    at Handshake.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:163:17)
+    at Handshake.emit (events.js:182:13)
+    at Handshake._onTimeout (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/sequences/Sequence.js:124:8)
+    at Timer._onTimeout (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Timer.js:32:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+    --------------------
+    at Protocol._enqueue (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:118:18)
+    at Pool.getConnection (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise (/Users/ligen/code/github/Genluo/server/db/index.js:7:10)
+    at new Promise (<anonymous>)
+    at query (/Users/ligen/code/github/Genluo/server/db/index.js:6:10)
+    at statistics (/Users/ligen/code/github/Genluo/server/controller/client.js:101:70)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at server.use (/Users/ligen/code/github/Genluo/server/index.js:28:13)
+  code: 'PROTOCOL_SEQUENCE_TIMEOUT',
+  fatal: true,
+  timeout: 10000 }
+[2019-01-28T14:59:18.020][ERROR  3378  default] /api/article/list { page: 1 } { Error: Handshake inactivity timeout
+    at Handshake.<anonymous> (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:163:17)
+    at Handshake.emit (events.js:182:13)
+    at Handshake._onTimeout (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/sequences/Sequence.js:124:8)
+    at Timer._onTimeout (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Timer.js:32:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+    --------------------
+    at Protocol._enqueue (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Connection.js:118:18)
+    at Pool.getConnection (/Users/ligen/code/github/Genluo/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise (/Users/ligen/code/github/Genluo/server/db/index.js:7:10)
+    at new Promise (<anonymous>)
+    at Object.query (/Users/ligen/code/github/Genluo/server/db/index.js:6:10)
+    at getArticle (/Users/ligen/code/github/Genluo/server/service/blog.js:57:54)
+    at invokeFun (/Users/ligen/code/github/Genluo/server/utils/cache.js:13:16)
+    at articleList (/Users/ligen/code/github/Genluo/server/controller/client.js:21:20)
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:45:18)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:346:16
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/ligen/code/github/Genluo/node_modules/koa-router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/ligen/code/github/Genluo/node_modules/koa-router/lib/router.js:351:31)
+  code: 'PROTOCOL_SEQUENCE_TIMEOUT',
+  fatal: true,
+  timeout: 10000 }

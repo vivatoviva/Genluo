@@ -46,7 +46,7 @@ const Style = () => (
         header {
           background-color: rgb(0, 179, 138);
           overflow: hidden;
-          padding: 70px 55px 50px;
+          padding: 20px 55px 50px;
           box-sizing: border-box;
         }
         .left {
@@ -154,7 +154,7 @@ class Index extends React.PureComponent {
                   </a>
                 </li>
                 <li>
-                  <a href="http://blogoog.com/">www.blogoog.com<span><i className="fas fa-home"></i> </span></a>
+                  <a href="http://www.genluo.site/">www.genluo.site<span><i className="fas fa-home"></i> </span></a>
                 </li>
 
                 <li>
@@ -209,7 +209,7 @@ class Index extends React.PureComponent {
                   </Descript>
                   <Descript isItem>
                     熟练使用Git进行<span>版本控制</span>、<span>代码托管</span>、<span>团队合作开发</span>、<span>markdown</span>文档编写，
-                    并以<span>Mac os</span>、<span>Linux</span>、<span>VS Code</span>作为日常开发环境进行开发
+                    并以<span>Mac os</span>、<span>Linux</span>、<span>VS Code</span>作为日常开发环境进行开发，
                     了解<span>Linux</span>、<span>Nginx</span>等环境部署，了解项目开发流程及其开发调试工具的使用。
                   </Descript>
                   {/* <Descript isItem>
@@ -251,10 +251,10 @@ class Index extends React.PureComponent {
                   </Descript>
                   <Item time="2018.07" tag={{name: 'Link', link: "https://www.google.com/"}}>CRM系统 · 中后台</Item>
                   <Descript>
-                    <span>项目推动</span>，<span>前端开发</span>、<span>项目牵头</span>，主要为一家海外留学教育公司实现的一套客户关系管理系统，销售人员可以持续跟进对应的客户，并将客户按照成交状态、重要性、处理时间进行分类，然后对客户持续跟进，最大化客户的签约率和留存率，改善与销售、市场营销、客户服务和支持等领域的客户关系有关的商业流程
+                    <span>项目推动</span>，<span>前端开发</span>、<span>项目牵头</span>，主要为一家海外留学教育机构实现的一套客户关系管理系统，销售人员可以将客户按照成交状态、重要性、处理时间进行分类，然后对客户持续跟进，最大化客户的签约率和留存率，改善与统一销售、市场营销、客户服务和支持等领域的客户关系有关的商业流程
                   </Descript>
                   <Descript>
-                    使用<span>Ant-degin-pro</span>开发的一套后台系统，实现<span>客服、销售、主管三种权限管理</span>，<span>销售历史数据可视化</span>，<span>前端数据mock</span>等等，推动产品、后台共同交付此产品，并在项目后期进行相关维护、产品迭代
+                    使用<span>Ant-degin-pro</span>开发的一套后台系统，实现<span>客服、销售、主管三种权限管理</span>，<span>客户历史数据可视化</span>，<span>前端数据 mock</span>等等，推动产品、后台共同交付此产品，并在项目后期进行相关维护、产品迭代
                   </Descript>
                   {/* <Item time="2018.06" tag="Link">ABO微信 · 微信H5</Item>
                   <Descript >
@@ -262,10 +262,10 @@ class Index extends React.PureComponent {
                   </Descript> */}
                   <Item time="2018.02" tag="Link">搭建系统 · 搭建生态</Item>
                   <Descript>
-                    <span>成长系统</span>、<span>页面可视化搭建</span>、<span>后端支持</span>大四学长带着做的一套<span>模块化页面可视化搭建平台</span>系统，实现H5活动页的<span>可视化</span>构建生成、自动化发布、动态修改线上页面等操作
+                    <span>成长系统</span>、<span>页面可视化搭建</span>、<span>后端支持</span>大四学长带着做的一套<span>模块化页面可视化搭建平台</span>系统，服务于非技术人员，实现H5活动页的<span>可视化</span>构建生成、自动化发布、逆向修改等功能
                   </Descript>
                   <Descript>
-                    使用<span>Egg</span>负责搭建系统核心生态的后端构建和<span>管理端接口</span>的开发，实现<span>页面的搭建生成相关流程</span>、<span>开发人员开发模块流程</span>、配合gitlab相关钩子实现自动化部署流程
+                    使用<span>Egg</span>负责搭建系统<span>页面生成</span>的后端构建和<span>管理端接口</span>的开发，实现<span>页面的搭建生成的相关流程</span>、<span>模块开发的相关流程</span>、配合gitlab相关钩子实现自动化部署流程
                     {/* 弄懂整套系统的设计，后期作为系统的<span>负责人</span>，提出想法，并牵头进行开发，搭建并且维护线上<span>Linux服务器环境</span> */}
                   </Descript>
                 </Dividing>
@@ -282,7 +282,7 @@ class Index extends React.PureComponent {
                     前端使用<span>React技术栈</span>进行组件化开发
                     后端使用<span>Next js</span>、<span>Koa</span>进行<span>同构化处理</span>，
                     使用<span>mysql</span>提供数据存储服务，
-                    管理端使用<span>Antd-Design</span>进行搭建，使用<span>nginx</span>和<span>PM2</span>部署，实现<span>按需加载</span>、<span>预加载</span>等降低首屏渲染时间，实现<span>markdown转html</span>的通用工具，并在开发过程中提取出一套脚手架CLi，用于后续提供开发效率
+                    管理端使用<span>Antd-Design</span>进行搭建，使用<span>nginx</span>和<span>PM2</span>部署，实现<span>按需加载</span>、<span>预加载</span>等降低首屏渲染时间，实现<span>markdown转html</span>的通用工具，并在开发过程中提取出一套脚手架CLI，提高后续开发效率
                     {/* 为用户提供快速的响应，和优秀的网站体验，并将项目的项目的几个功能点抽离出来上传到npm进行开源，此站点也是自己尝试新技术提升网站性能的实验站点。 */}
                   </Descript>
                 </Dividing>
