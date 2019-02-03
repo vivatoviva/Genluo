@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Head from '../components/Head';
 import Button from '../components/Button';
+import renderIf from '../utils/renderIf';
+
 // 将图标添加到库中
 
 const Style = () => (
@@ -109,7 +111,7 @@ const buttonData = [{
 const LiButton = ({ href, icon, name }) => (
   <li>
     <Button href={href}>
-      {icon && <span className="fa fa-heart" />}
+      {renderIf(icon)(<span className="fa fa-heart" />)}
       {name}
     </Button>
   </li>
