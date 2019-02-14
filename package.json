@@ -13,7 +13,7 @@
     "css:dev": "webpack --config webpack-css.js --watch --progress --color",
     "lint": "eslint --ext .js pages",
     "analyze": "cross-env ANALYZE=1 next build",
-    "deploy": "npm run build && pm2 stop index &&cross-env NODE_ENV=production pm2 start server/index.js"
+    "deploy": "npm run build && pm2 stop index && cross-env NODE_ENV=production pm2 start server/index.js"
   },
   "eslintConfig": {
     "parserOptions": {
