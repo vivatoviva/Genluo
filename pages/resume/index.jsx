@@ -154,7 +154,7 @@ class Index extends React.PureComponent {
                   </a>
                 </li>
                 <li>
-                  <a href="http://www.genluo.site/">www.genluo.site<span><i className="fas fa-home"></i> </span></a>
+                  <a href="http://120.78.71.60/">www.genluo.site<span><i className="fas fa-home"></i> </span></a>
                 </li>
 
                 <li>
@@ -186,7 +186,7 @@ class Index extends React.PureComponent {
                     <span>团队介绍</span>勤奋蜂团队是一个互联网初创团队，涵盖产品、运营、前端、后台、移动、设计等部门。团队拥有校园说、校招导师、零食峰等多个产品，先后参与比赛并获得多个国家级奖项。其中，校招导师产品运营的工作号超过<span>15k</span>的用户,日平均浏览量达<span>1K</span>
                   </Descript>
                   <Descript>
-                    <span>前端组核心成员</span>负责团队项目的开发，维护及其<span>性能优化</span>,同时参与了团队的建设、带动新成员学习、日常技术分享和<span>codeReview</span>。期间积攒了各类项目开发经验和<span>团队、部门合作经验</span>
+                    <span>web前端组</span>负责团队项目的开发，维护及其<span>性能优化</span>,同时参与了团队的建设、带动新成员学习、日常技术分享和<span>codeReview</span>。期间积攒了各类项目开发经验和<span>团队、部门合作经验</span>
                   </Descript>
                 </Dividing>
               </section>
@@ -208,7 +208,7 @@ class Index extends React.PureComponent {
                     对<span>性能优化</span>、<span>前端工程化</span>、<span>web安全</span>、<span>es6</span>、<span>计算机网络</span>、<span>数据结构</span>、<span>常见算法</span>、<span>计算机操作系统</span>等有一定的了解和思考
                   </Descript>
                   <Descript isItem>
-                    熟练使用Git进行<span>版本控制</span>、<span>代码托管</span>、<span>团队合作开发</span>、<span>markdown</span>文档编写，
+                    熟练使用Git进行<span>版本控制</span>、<span>代码托管</span>、<span>合作开发</span>、<span>markdown</span>文档编写，
                     并以<span>Mac os</span>、<span>Linux</span>、<span>VS Code</span>作为日常开发环境进行开发，
                     了解<span>Linux</span>、<span>Nginx</span>等环境部署，了解项目开发流程及其开发调试工具的使用。
                   </Descript>
@@ -262,7 +262,7 @@ class Index extends React.PureComponent {
                   </Descript> */}
                   <Item time="2018.02" tag="Link">搭建系统 · 搭建生态</Item>
                   <Descript>
-                    <span>成长系统</span>、<span>页面可视化搭建</span>、<span>后端支持</span>大四学长带着做的一套<span>模块化页面可视化搭建平台</span>系统，服务于非技术人员，实现H5活动页的<span>可视化</span>构建生成、自动化发布、逆向修改等功能
+                    <span>成长系统</span>、<span>页面可视化搭建</span>、<span>后端支持</span>这是一套<span>模块化页面可视化搭建平台</span>系统，服务于非技术人员，实现H5活动页的<span>可视化</span>构建生成、自动化发布、逆向修改等功能
                   </Descript>
                   <Descript>
                     使用<span>Egg</span>负责搭建系统<span>页面生成</span>的后端构建和<span>管理端接口</span>的开发，实现<span>页面的搭建生成的相关流程</span>、<span>模块开发的相关流程</span>、配合gitlab相关钩子实现自动化部署流程
