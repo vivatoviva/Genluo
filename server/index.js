@@ -7,7 +7,6 @@ const routers = require('./router/index');
 const mysql = require('./db');
 const koaStatus = require('./middleware/status');
 const koaLogger = require('./middleware/log');
-
 const isDev = process.env.NODE_ENV !== 'production';
 const app = Next({ dev: isDev });
 const handle = app.getRequestHandler();
@@ -16,7 +15,7 @@ const { sessionConfig, port } = config;
 app.prepare()
   .then(() => {
     const server = new Koa();
-    server.keys = ['some secret hurr'];
+    server.keys = ['some secret'];
     server.use(KoaSession(sessionConfig, server));
     server.use(koaBody());
     // use middleware

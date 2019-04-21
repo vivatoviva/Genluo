@@ -1,7 +1,7 @@
 import React from 'react'
 import mdUtils  from '../../utils/markdownToHtml'
 import '../../static/prismjs/prism.js'
-
+import Remarkable from 'remarkable';
 
 export default class Content extends React.Component {
   constructor(props) {
@@ -44,12 +44,16 @@ export default class Content extends React.Component {
 
   render() {
     const { content } = this.props;
+    console.log(content);
+    const md = new Remarkable();
+    const html = md.render(content);
+
     return (
       <div>
         <div
         style={{}}
           dangerouslySetInnerHTML={{
-            __html: this.converter.toHtml()
+            __html: html
           }}></div>
       </div>
     )

@@ -1,11 +1,11 @@
 import WithLink from '../WithLink';
 import Title from '../Title';
-import Content from '../Content'
-import Button from '../Button'
+import Content from '../Content';
+import Button from '../Button';
 
 
 export default ({
-  isDividing=true,
+  isDividing = true,
   data,
   data: {
     article_id,
@@ -16,10 +16,9 @@ export default ({
     read_num,
     categroy_name,
     categroy_id,
-    tags
-  }
-}) => {
-  return (
+    tags,
+  },
+}) => (
     <div className="wraper">
       <Title
         title={title}
@@ -41,7 +40,6 @@ export default ({
         href='/blog/article'
         as={`/blog/${article_id}`}
       />
-
       <style jsx>{`
         .wraper {
           padding: 50px 0 50px;
@@ -62,6 +60,5 @@ export default ({
 
       `}</style>
     </div>
-  )
-}
-  
+  );
+
