@@ -44,7 +44,7 @@
     "babel-eslint": "^10.0.1",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-plugin-html": "^4.0.6",
-    "i": "^0.3.6",
+    "i": "^0.3.7",
     "isomorphic-unfetch": "^3.0.0",
     "koa": "^2.5.2",
     "koa-body": "^4.0.4",
